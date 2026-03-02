@@ -1,272 +1,60 @@
 ---
-import { readFileSync } from 'fs';
-import { join } from 'path';
 import Layout from '../layouts/Layout.astro';
+import type { MenuPage } from '../types/MenuPage';
+import { loadCategories } from '../lib/menu';
+import { slugify, label } from '../lib/utils';
 
-const rawData = readFileSync(join(process.cwd(), 'public/html/categories-full.json'), 'utf-8');
-const categories = JSON.parse(rawData) as Array<{
-  category: string;
-  items: Array<{
-    name: string;
-    url: string;
-    customizationGroups?: Array<{
-      id: string;
-      name: string;
-      type: 'radio' | 'checkbox';
-      options: Array<{
-        name: string;
-        displayName: string;
-        info: string | null;
-      }>;
-    }>;
-  }>;
-}>;
+// ---------------------------------------------------------------------------
+// Data source — raw categories JSON mapped into MenuPage.
+// When a real GraphQL endpoint is available, replace this block with a query
+// and the template below stays untouched.
+// ---------------------------------------------------------------------------
 
-function formatCategoryLabel(slug: string): string {
-  return slug
-    .replace(/-/g, ' ')
-    .replace(/\b\w/g, (c) => c.toUpperCase())
-    .replace(/11pm 11am/i, '(11PM–11AM)')
-    .replace(/Jr /i, 'Jr. ');
-}
+const raw = loadCategories();
+
+const page: MenuPage = {
+  Title: 'Categories',
+  Categories: raw.map(({ category }) => ({
+    Name: label(category),
+    Asset: {
+      __typename: 'ContentReference',
+      url: { __typename: 'ContentUrl', default: '/images/Whataburger30.png' },
+    },
+  })),
+};
 ---
 
 <Layout>
-  <header>
-    <div class="header-inner">
-      <span class="brand">Whataburger</span>
-      <span class="subtitle">Menu</span>
+  <div class="page">
+    <header>
+      <span class="back">&lsaquo; BACK</span>
+      <span class="brand">WHATABURGER</span>
+      <span class="spacer" />
+    </header>
+
+    <div class="content">
+      <h1 class="page-title">{page.Title}</h1>
+
+      <div class="section-divider">
+        <span class="divider-line" />
+        <span class="divider-text">{page.Title}</span>
+        <span class="divider-line" />
+      </div>
+
+      <ul class="category-grid">
+        {page.Categories.map((cat) => (
+          <li>
+            <a class="cat-card" href={slugify(cat.Name)}>
+              <div class="card-img-wrap">
+                <img src={cat.Asset.url?.default ?? ''} alt={cat.Name} class="card-img" />
+              </div>
+              <div class="caption">
+                <h4>{cat.Name}</h4>
+              </div>
+            </a>
+          </li>
+        ))}
+      </ul>
     </div>
-  </header>
-
-  <nav class="cat-nav" aria-label="Menu categories">
-    {categories.map(({ category }) => (
-      <a class="cat-tab" href={`#${category}`}>
-        {formatCategoryLabel(category)}
-      </a>
-    ))}
-  </nav>
-
-  <main>
-    {categories.map(({ category, items }) => (
-      <section id={category} class="category-section">
-        <h2 class="category-heading">{formatCategoryLabel(category)}</h2>
-        <ul class="item-grid">
-          {items.map((item) => (
-            <li class="item-card">
-              <h3 class="item-name">{item.name}</h3>
-              {item.customizationGroups && item.customizationGroups.length > 0 && (
-                <details class="customization">
-                  <summary>Customize</summary>
-                  {item.customizationGroups.map((group) => {
-                    const opts = group.options.filter((o) => o.name !== 'quantity');
-                    return opts.length > 0 ? (
-                      <div class="cust-group">
-                        <p class="cust-group-name">{group.name}</p>
-                        <ul class="cust-options">
-                          {opts.map((opt) => (
-                            <li class="cust-option">
-                              <span class="opt-label">{opt.displayName}</span>
-                              {opt.info && <span class="opt-info">{opt.info}</span>}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    ) : null;
-                  })}
-                </details>
-              )}
-            </li>
-          ))}
-        </ul>
-      </section>
-    ))}
-  </main>
+  </div>
 </Layout>
-
-<style>
-  header {
-    position: sticky;
-    top: 0;
-    z-index: 20;
-    background: #e2231a;
-    color: #fff;
-    padding: 12px 24px;
-    box-shadow: 0 2px 6px rgba(0,0,0,.25);
-  }
-
-  .header-inner {
-    max-width: 1100px;
-    margin: 0 auto;
-    display: flex;
-    align-items: baseline;
-    gap: 10px;
-  }
-
-  .brand {
-    font-size: 1.5rem;
-    font-weight: 800;
-    letter-spacing: -0.02em;
-  }
-
-  .subtitle {
-    font-size: 1rem;
-    opacity: 0.85;
-  }
-
-  .cat-nav {
-    position: sticky;
-    top: 52px;
-    z-index: 10;
-    background: #fff;
-    border-bottom: 2px solid #e2231a;
-    display: flex;
-    gap: 0;
-    overflow-x: auto;
-    scrollbar-width: none;
-    padding: 0 24px;
-    max-width: 100%;
-  }
-
-  .cat-nav::-webkit-scrollbar { display: none; }
-
-  .cat-tab {
-    flex-shrink: 0;
-    padding: 10px 16px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    text-decoration: none;
-    color: #444;
-    white-space: nowrap;
-    border-bottom: 3px solid transparent;
-    transition: color 0.15s, border-color 0.15s;
-  }
-
-  .cat-tab:hover {
-    color: #e2231a;
-    border-bottom-color: #e2231a;
-  }
-
-  main {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 32px 24px 64px;
-  }
-
-  .category-section {
-    margin-bottom: 48px;
-    scroll-margin-top: 110px;
-  }
-
-  .category-heading {
-    font-size: 1.4rem;
-    font-weight: 800;
-    color: #e2231a;
-    border-bottom: 2px solid #f0f0f0;
-    padding-bottom: 8px;
-    margin: 0 0 20px;
-  }
-
-  .item-grid {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 16px;
-  }
-
-  .item-card {
-    background: #fff;
-    border: 1px solid #e8e8e8;
-    border-radius: 10px;
-    padding: 16px;
-    box-shadow: 0 1px 3px rgba(0,0,0,.06);
-    transition: box-shadow 0.15s;
-  }
-
-  .item-card:hover {
-    box-shadow: 0 4px 12px rgba(0,0,0,.1);
-  }
-
-  .item-name {
-    font-size: 1rem;
-    font-weight: 700;
-    margin: 0 0 10px;
-    color: #1a1a1a;
-  }
-
-  .customization {
-    font-size: 0.85rem;
-  }
-
-  .customization > summary {
-    cursor: pointer;
-    color: #e2231a;
-    font-weight: 600;
-    user-select: none;
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 4px;
-  }
-
-  .customization > summary::-webkit-details-marker { display: none; }
-
-  .customization > summary::after {
-    content: '▸';
-    font-size: 0.75rem;
-    transition: transform 0.15s;
-  }
-
-  .customization[open] > summary::after {
-    transform: rotate(90deg);
-  }
-
-  .cust-group {
-    margin-top: 10px;
-    border-left: 2px solid #f0c040;
-    padding-left: 10px;
-  }
-
-  .cust-group-name {
-    margin: 0 0 6px;
-    font-weight: 600;
-    color: #555;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 0.02em;
-  }
-
-  .cust-options {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-  }
-
-  .cust-option {
-    display: flex;
-    justify-content: space-between;
-    gap: 8px;
-    color: #333;
-  }
-
-  .opt-label {
-    font-weight: 500;
-  }
-
-  .opt-info {
-    color: #888;
-    font-size: 0.8rem;
-    white-space: nowrap;
-  }
-
-  @media (max-width: 600px) {
-    .item-grid {
-      grid-template-columns: 1fr;
-    }
-  }
-</style>

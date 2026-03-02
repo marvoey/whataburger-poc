@@ -1,6 +1,6 @@
 [
   {
-    "category": "breakfast-11pm-11am",
+    "category": "marvins-breakfast",
     "items": [
       {
         "name": "Honey Butter Chicken Biscuit",
@@ -379,8 +379,8 @@
             "type": "checkbox",
             "options": [
               {
-                "name": "Picante Style - Jalapeños Mixed in Egg and Sauce",
-                "displayName": "Picante Style - Jalapeños Mixed in Egg and Sauce",
+                "name": "Picante Style - Jalape\u00f1os Mixed in Egg and Sauce",
+                "displayName": "Picante Style - Jalape\u00f1os Mixed in Egg and Sauce",
                 "info": "$0.50 extra, 5 Cal"
               }
             ]
@@ -1107,8 +1107,8 @@
             "type": "checkbox",
             "options": [
               {
-                "name": "Whole Jalapeño",
-                "displayName": "Whole Jalapeño",
+                "name": "Whole Jalape\u00f1o",
+                "displayName": "Whole Jalape\u00f1o",
                 "info": "$0.65 extra, 0 Cal"
               },
               {
@@ -1340,7 +1340,7 @@
         ]
       },
       {
-        "name": "Breakfast On A Bun®",
+        "name": "Breakfast On A Bun\u00ae",
         "url": "/locations/447/menu/categories/breakfast-4/recipes/breakfast-on-a-bun-54/customization/1",
         "customizationGroups": [
           {
@@ -1504,8 +1504,8 @@
             "type": "checkbox",
             "options": [
               {
-                "name": "Picante Style - Jalapeños Mixed in Egg and Sauce",
-                "displayName": "Picante Style - Jalapeños Mixed in Egg and Sauce",
+                "name": "Picante Style - Jalape\u00f1os Mixed in Egg and Sauce",
+                "displayName": "Picante Style - Jalape\u00f1os Mixed in Egg and Sauce",
                 "info": "$0.50 extra, 5 Cal"
               }
             ]
@@ -1692,8 +1692,8 @@
             "type": "checkbox",
             "options": [
               {
-                "name": "Picante Style - Jalapeños Mixed in Egg and Sauce",
-                "displayName": "Picante Style - Jalapeños Mixed in Egg and Sauce",
+                "name": "Picante Style - Jalape\u00f1os Mixed in Egg and Sauce",
+                "displayName": "Picante Style - Jalape\u00f1os Mixed in Egg and Sauce",
                 "info": "$0.50 extra, 5 Cal"
               }
             ]
@@ -1879,8 +1879,8 @@
             "type": "checkbox",
             "options": [
               {
-                "name": "Picante Style - Jalapeños Mixed in Egg and Sauce",
-                "displayName": "Picante Style - Jalapeños Mixed in Egg and Sauce",
+                "name": "Picante Style - Jalape\u00f1os Mixed in Egg and Sauce",
+                "displayName": "Picante Style - Jalape\u00f1os Mixed in Egg and Sauce",
                 "info": "$0.50 extra, 5 Cal"
               }
             ]
@@ -2195,8 +2195,8 @@
             "type": "checkbox",
             "options": [
               {
-                "name": "Picante Style - Jalapeños Mixed in Egg and Sauce",
-                "displayName": "Picante Style - Jalapeños Mixed in Egg and Sauce",
+                "name": "Picante Style - Jalape\u00f1os Mixed in Egg and Sauce",
+                "displayName": "Picante Style - Jalape\u00f1os Mixed in Egg and Sauce",
                 "info": "$0.50 extra, 5 Cal"
               }
             ]
@@ -2339,21 +2339,2373 @@
             "type": "checkbox",
             "options": [
               {
-                "name": "Picante Style - Jalapeños Mixed in Egg and Sauce",
-                "displayName": "Picante Style - Jalapeños Mixed in Egg and Sauce",
+                "name": "Picante Style - Jalape\u00f1os Mixed in Egg and Sauce",
+                "displayName": "Picante Style - Jalape\u00f1os Mixed in Egg and Sauce",
                 "info": "$0.50 extra, 5 Cal"
               }
             ]
           }
         ]
       }
-    ]
+    ],
+    "name": "Marvin's Breakfast"
+  },
+  {
+    "category": "breakfast-11pm-11am",
+    "items": [
+      {
+        "name": "Honey Butter Chicken Biscuit",
+        "url": "/locations/447/menu/categories/breakfast-4/recipes/honey-butter-chicken-biscuit-item-343/customization/1",
+        "customizationGroups": [
+          {
+            "id": "CustomizationGroup-72",
+            "name": "Bread (Choose One):",
+            "type": "radio",
+            "options": [
+              {
+                "name": "Buttermilk Biscuit",
+                "displayName": "Buttermilk Biscuit",
+                "info": "No extra charge, 330 Cal"
+              },
+              {
+                "name": "Jalapeno Cheddar Biscuit",
+                "displayName": "Jalapeno Cheddar Biscuit",
+                "info": "No extra charge, 330 Cal"
+              }
+            ]
+          },
+          {
+            "id": "CustomizationGroup-85",
+            "name": "Chicken (Comes with 1 Strip):",
+            "type": "radio",
+            "options": [
+              {
+                "name": "Chicken Strip",
+                "displayName": "Chicken Strip",
+                "info": "No extra charge, 160 Cal"
+              }
+            ]
+          },
+          {
+            "id": "CustomizationGroup-120",
+            "name": "Cheese (Add $):",
+            "type": "checkbox",
+            "options": [
+              {
+                "name": "American Cheese",
+                "displayName": "American Cheese",
+                "info": "$0.50 extra, 45 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Monterey Jack Cheese",
+                "displayName": "Monterey Jack Cheese",
+                "info": "$0.60 extra, 60 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              }
+            ]
+          },
+          {
+            "id": "CustomizationGroup-150",
+            "name": "Popular Add-Ons (Add $):",
+            "type": "checkbox",
+            "options": [
+              {
+                "name": "Bacon Slices",
+                "displayName": "Bacon Slices",
+                "info": "$1.10 extra, 45 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Egg",
+                "displayName": "Egg",
+                "info": "$0.90 extra, 90 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              }
+            ]
+          },
+          {
+            "id": "CustomizationGroup-84",
+            "name": "Signature Sauces (Currently available):",
+            "type": "checkbox",
+            "options": [
+              {
+                "name": "Honey Butter",
+                "displayName": "Honey Butter",
+                "info": "No extra charge, 80 Cal"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Honey Butter Chicken Biscuit",
+        "url": "/locations/447/menu/categories/breakfast-4/recipes/honey-butter-chicken-biscuit-item-343/customization/1",
+        "customizationGroups": [
+          {
+            "id": "CustomizationGroup-72",
+            "name": "Bread (Choose One):",
+            "type": "radio",
+            "options": [
+              {
+                "name": "Buttermilk Biscuit",
+                "displayName": "Buttermilk Biscuit",
+                "info": "No extra charge, 330 Cal"
+              },
+              {
+                "name": "Jalapeno Cheddar Biscuit",
+                "displayName": "Jalapeno Cheddar Biscuit",
+                "info": "No extra charge, 330 Cal"
+              }
+            ]
+          },
+          {
+            "id": "CustomizationGroup-85",
+            "name": "Chicken (Comes with 1 Strip):",
+            "type": "radio",
+            "options": [
+              {
+                "name": "Chicken Strip",
+                "displayName": "Chicken Strip",
+                "info": "No extra charge, 160 Cal"
+              }
+            ]
+          },
+          {
+            "id": "CustomizationGroup-120",
+            "name": "Cheese (Add $):",
+            "type": "checkbox",
+            "options": [
+              {
+                "name": "American Cheese",
+                "displayName": "American Cheese",
+                "info": "$0.50 extra, 45 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Monterey Jack Cheese",
+                "displayName": "Monterey Jack Cheese",
+                "info": "$0.60 extra, 60 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              }
+            ]
+          },
+          {
+            "id": "CustomizationGroup-150",
+            "name": "Popular Add-Ons (Add $):",
+            "type": "checkbox",
+            "options": [
+              {
+                "name": "Bacon Slices",
+                "displayName": "Bacon Slices",
+                "info": "$1.10 extra, 45 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Egg",
+                "displayName": "Egg",
+                "info": "$0.90 extra, 90 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              }
+            ]
+          },
+          {
+            "id": "CustomizationGroup-84",
+            "name": "Signature Sauces (Currently available):",
+            "type": "checkbox",
+            "options": [
+              {
+                "name": "Honey Butter",
+                "displayName": "Honey Butter",
+                "info": "No extra charge, 80 Cal"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Biscuit Sandwich with Bacon",
+        "url": "/locations/447/menu/categories/breakfast-4/recipes/Biscuit-Sandwich-with-Bacon-under550-466/customization/1",
+        "customizationGroups": [
+          {
+            "id": "CustomizationGroup-72",
+            "name": "Bread (Choose One):",
+            "type": "radio",
+            "options": [
+              {
+                "name": "Buttermilk Biscuit",
+                "displayName": "Buttermilk Biscuit",
+                "info": "No extra charge, 330 Cal"
+              },
+              {
+                "name": "Jalapeno Cheddar Biscuit",
+                "displayName": "Jalapeno Cheddar Biscuit",
+                "info": "No extra charge, 330 Cal"
+              }
+            ]
+          },
+          {
+            "id": "CustomizationGroup-209",
+            "name": "Protein (Included):",
+            "type": "radio",
+            "options": [
+              {
+                "name": "Bacon",
+                "displayName": "Bacon",
+                "info": "No extra charge, 45 Cal"
+              }
+            ]
+          },
+          {
+            "id": "CustomizationGroup-24",
+            "name": "Egg:",
+            "type": "checkbox",
+            "options": [
+              {
+                "name": "Egg",
+                "displayName": "Egg",
+                "info": "No extra charge, 90 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              }
+            ]
+          },
+          {
+            "id": "CustomizationGroup-218",
+            "name": "Included Cheese (Choose One):",
+            "type": "radio",
+            "options": [
+              {
+                "name": "American Cheese",
+                "displayName": "American Cheese",
+                "info": "No extra charge, 45 Cal"
+              },
+              {
+                "name": "Monterey Jack Cheese",
+                "displayName": "Monterey Jack Cheese",
+                "info": "No extra charge, 60 Cal"
+              },
+              {
+                "name": "No Cheese",
+                "displayName": "No Cheese",
+                "info": null
+              }
+            ]
+          },
+          {
+            "id": "CustomizationGroup-319",
+            "name": "Popular Add-Ons (Add $):",
+            "type": "checkbox",
+            "options": [
+              {
+                "name": "American Cheese",
+                "displayName": "American Cheese",
+                "info": "$0.50 extra, 45 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Monterey Jack Cheese",
+                "displayName": "Monterey Jack Cheese",
+                "info": "$0.60 extra, 60 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Extra Sausage",
+                "displayName": "Extra Sausage",
+                "info": "$1.00 extra, 210 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Extra Bacon",
+                "displayName": "Extra Bacon",
+                "info": "$1.10 extra, 45 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Grilled Jalapenos",
+                "displayName": "Grilled Jalapenos",
+                "info": "$0.65 extra, 10 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Jalapenos",
+                "displayName": "Jalapenos",
+                "info": "$0.65 extra, 0 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Avocado",
+                "displayName": "Avocado",
+                "info": "$1.30 extra, 90 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Grilled Peppers & Onions",
+                "displayName": "Grilled Peppers & Onions",
+                "info": "$1.29 extra, 25 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Cream Gravy with Sausage",
+                "displayName": "Cream Gravy with Sausage",
+                "info": "$1.35 extra, 180 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              }
+            ]
+          },
+          {
+            "id": "CustomizationGroup-57",
+            "name": "Ranchero (Add $):",
+            "type": "checkbox",
+            "options": [
+              {
+                "name": "Picante Style - Jalape\u00f1os Mixed in Egg and Sauce",
+                "displayName": "Picante Style - Jalape\u00f1os Mixed in Egg and Sauce",
+                "info": "$0.50 extra, 5 Cal"
+              }
+            ]
+          },
+          {
+            "id": "CustomizationGroup-84",
+            "name": "Signature Sauces (Currently available):",
+            "type": "checkbox",
+            "options": [
+              {
+                "name": "Honey Butter",
+                "displayName": "Honey Butter",
+                "info": "No extra charge, 80 Cal"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Biscuit and Gravy",
+        "url": "/locations/447/menu/categories/breakfast-4/recipes/biscuit-and-gravy-49/customization/1",
+        "customizationGroups": [
+          {
+            "id": "CustomizationGroup-72",
+            "name": "Bread (Choose One):",
+            "type": "radio",
+            "options": [
+              {
+                "name": "Buttermilk Biscuit",
+                "displayName": "Buttermilk Biscuit",
+                "info": "No extra charge, 330 Cal"
+              },
+              {
+                "name": "Jalapeno Cheddar Biscuit",
+                "displayName": "Jalapeno Cheddar Biscuit",
+                "info": "No extra charge, 330 Cal"
+              }
+            ]
+          },
+          {
+            "id": "CustomizationGroup-102",
+            "name": "Eggs (Add $):",
+            "type": "checkbox",
+            "options": [
+              {
+                "name": "Scrambled Eggs",
+                "displayName": "Scrambled Eggs",
+                "info": "$1.80 extra, 60 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              }
+            ]
+          },
+          {
+            "id": "CustomizationGroup-151",
+            "name": "Cheese (Extra Add $):",
+            "type": "checkbox",
+            "options": [
+              {
+                "name": "Shredded Cheese",
+                "displayName": "Shredded Cheese",
+                "info": "$0.70 extra, 110 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              }
+            ]
+          },
+          {
+            "id": "CustomizationGroup-152",
+            "name": "Popular Add-Ons (Add $):",
+            "type": "checkbox",
+            "options": [
+              {
+                "name": "Grilled Jalapenos",
+                "displayName": "Grilled Jalapenos",
+                "info": "$0.65 extra, 10 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Jalapenos",
+                "displayName": "Jalapenos",
+                "info": "$0.65 extra, 0 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Avocado",
+                "displayName": "Avocado",
+                "info": "$1.30 extra, 90 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Grilled Peppers & Onions",
+                "displayName": "Grilled Peppers & Onions",
+                "info": "$1.29 extra, 25 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              }
+            ]
+          },
+          {
+            "id": "CustomizationGroup-153",
+            "name": "Signature Sauces (Currently Available):",
+            "type": "radio",
+            "options": [
+              {
+                "name": "Cream Gravy with Sausage",
+                "displayName": "Cream Gravy with Sausage",
+                "info": "No extra charge, 180 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Pancake Platter",
+        "url": "/locations/447/menu/categories/breakfast-4/recipes/pancakes-platter-356/customization/1",
+        "customizationGroups": [
+          {
+            "id": "CustomizationGroup-99",
+            "name": "Pancakes (Comes with 3):",
+            "type": "radio",
+            "options": [
+              {
+                "name": "Pancakes",
+                "displayName": "Pancakes",
+                "info": "No extra charge, 630 Cal"
+              }
+            ]
+          },
+          {
+            "id": "CustomizationGroup-201",
+            "name": "Protein (Choose One):",
+            "type": "radio",
+            "options": [
+              {
+                "name": "Bacon",
+                "displayName": "Bacon",
+                "info": "$4.89, 315 Cal"
+              },
+              {
+                "name": "Sausage",
+                "displayName": "Sausage",
+                "info": "$4.89 , 480 Cal"
+              }
+            ]
+          },
+          {
+            "id": "CustomizationGroup-102",
+            "name": "Eggs (Add $):",
+            "type": "checkbox",
+            "options": [
+              {
+                "name": "Scrambled Eggs",
+                "displayName": "Scrambled Eggs",
+                "info": "$1.80 extra, 60 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              }
+            ]
+          },
+          {
+            "id": "CustomizationGroup-77",
+            "name": "Popular Add-Ons (Add $):",
+            "type": "checkbox",
+            "options": [
+              {
+                "name": "Bacon Slices",
+                "displayName": "Bacon Slices",
+                "info": "$1.10 extra, 45 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Sausage Patty",
+                "displayName": "Sausage Patty",
+                "info": "$1.00 extra, 210 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Grilled Jalapenos",
+                "displayName": "Grilled Jalapenos",
+                "info": "$0.65 extra, 10 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Jalapenos",
+                "displayName": "Jalapenos",
+                "info": "$0.65 extra, 0 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Avocado",
+                "displayName": "Avocado",
+                "info": "$1.30 extra, 90 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Grilled Peppers & Onions",
+                "displayName": "Grilled Peppers & Onions",
+                "info": "$1.29 extra, 25 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Cream Gravy with Sausage",
+                "displayName": "Cream Gravy with Sausage",
+                "info": "$1.35 extra, 180 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Biscuit with Bacon",
+        "url": "/locations/447/menu/categories/breakfast-4/recipes/biscuit-and-bacon-1-448/customization/1",
+        "customizationGroups": [
+          {
+            "id": "CustomizationGroup-72",
+            "name": "Bread (Choose One):",
+            "type": "radio",
+            "options": [
+              {
+                "name": "Buttermilk Biscuit",
+                "displayName": "Buttermilk Biscuit",
+                "info": "No extra charge, 330 Cal"
+              },
+              {
+                "name": "Jalapeno Cheddar Biscuit",
+                "displayName": "Jalapeno Cheddar Biscuit",
+                "info": "No extra charge, 330 Cal"
+              }
+            ]
+          },
+          {
+            "id": "CustomizationGroup-78",
+            "name": "Protein:",
+            "type": "radio",
+            "options": [
+              {
+                "name": "Bacon",
+                "displayName": "Bacon",
+                "info": "No extra charge, 65 Cal"
+              }
+            ]
+          },
+          {
+            "id": "CustomizationGroup-120",
+            "name": "Cheese (Add $):",
+            "type": "checkbox",
+            "options": [
+              {
+                "name": "American Cheese",
+                "displayName": "American Cheese",
+                "info": "$0.50 extra, 45 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Monterey Jack Cheese",
+                "displayName": "Monterey Jack Cheese",
+                "info": "$0.60 extra, 60 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              }
+            ]
+          },
+          {
+            "id": "CustomizationGroup-191",
+            "name": "Popular Add-Ons (Add $):",
+            "type": "checkbox",
+            "options": [
+              {
+                "name": "Extra Bacon",
+                "displayName": "Extra Bacon",
+                "info": "$1.10 extra, 45 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Biscuit with Sausage",
+        "url": "/locations/447/menu/categories/breakfast-4/recipes/biscuit-with-sausage-2-452/customization/1",
+        "customizationGroups": [
+          {
+            "id": "CustomizationGroup-72",
+            "name": "Bread (Choose One):",
+            "type": "radio",
+            "options": [
+              {
+                "name": "Buttermilk Biscuit",
+                "displayName": "Buttermilk Biscuit",
+                "info": "No extra charge, 330 Cal"
+              },
+              {
+                "name": "Jalapeno Cheddar Biscuit",
+                "displayName": "Jalapeno Cheddar Biscuit",
+                "info": "No extra charge, 330 Cal"
+              }
+            ]
+          },
+          {
+            "id": "CustomizationGroup-192",
+            "name": "Protein:",
+            "type": "radio",
+            "options": [
+              {
+                "name": "Sausage",
+                "displayName": "Sausage",
+                "info": "No extra charge, 230 Cal"
+              }
+            ]
+          },
+          {
+            "id": "CustomizationGroup-120",
+            "name": "Cheese (Add $):",
+            "type": "checkbox",
+            "options": [
+              {
+                "name": "American Cheese",
+                "displayName": "American Cheese",
+                "info": "$0.50 extra, 45 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Monterey Jack Cheese",
+                "displayName": "Monterey Jack Cheese",
+                "info": "$0.60 extra, 60 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              }
+            ]
+          },
+          {
+            "id": "CustomizationGroup-80",
+            "name": "Popular Add-Ons (Add $):",
+            "type": "checkbox",
+            "options": [
+              {
+                "name": "Extra Sausage",
+                "displayName": "Extra Sausage",
+                "info": "$1.00 extra, 210 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Jalapeno Cheddar Biscuit",
+        "url": "/locations/447/menu/categories/breakfast-4/recipes/Jalapeno-Cheddar-Biscuit--Parent-6399/customization/1",
+        "customizationGroups": [
+          {
+            "id": "CustomizationGroup-82",
+            "name": "Biscuits:",
+            "type": "radio",
+            "options": [
+              {
+                "name": "Jalapeno Cheddar Biscuit",
+                "displayName": "Jalapeno Cheddar Biscuit",
+                "info": "No extra charge, 330 Cal"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Biscuit",
+        "url": "/locations/447/menu/categories/breakfast-4/recipes/biscuit-item-285/customization/1",
+        "customizationGroups": [
+          {
+            "id": "CustomizationGroup-155",
+            "name": "Biscuits:",
+            "type": "radio",
+            "options": [
+              {
+                "name": "Buttermilk Biscuit",
+                "displayName": "Buttermilk Biscuit",
+                "info": "$1.99, 330 Cal"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Taquito with Cheese",
+        "url": "/locations/447/menu/categories/breakfast-4/recipes/taquito-1-52/customization/1",
+        "customizationGroups": [
+          {
+            "id": "CustomizationGroup-197",
+            "name": "Proteins (Choose One Free):",
+            "type": "radio",
+            "options": [
+              {
+                "name": "Sausage",
+                "displayName": "Sausage",
+                "info": "$0.00, 390 Cal"
+              },
+              {
+                "name": "Bacon",
+                "displayName": "Bacon",
+                "info": "$0.00, 355 Cal"
+              },
+              {
+                "name": "Potato",
+                "displayName": "Potato",
+                "info": "$0.00, 400 Cal"
+              },
+              {
+                "name": "Chorizo",
+                "displayName": "Chorizo",
+                "info": "$0.00, 400 Cal"
+              }
+            ]
+          },
+          {
+            "id": "CustomizationGroup-218",
+            "name": "Included Cheese (Choose One):",
+            "type": "radio",
+            "options": [
+              {
+                "name": "American Cheese",
+                "displayName": "American Cheese",
+                "info": "No extra charge, 45 Cal"
+              },
+              {
+                "name": "Monterey Jack Cheese",
+                "displayName": "Monterey Jack Cheese",
+                "info": "No extra charge, 60 Cal"
+              },
+              {
+                "name": "No Cheese",
+                "displayName": "No Cheese",
+                "info": null
+              }
+            ]
+          },
+          {
+            "id": "CustomizationGroup-131",
+            "name": "Popular Add-Ons (Add $):",
+            "type": "checkbox",
+            "options": [
+              {
+                "name": "American Cheese",
+                "displayName": "American Cheese",
+                "info": "$0.50 extra, 45 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Monterey Jack Cheese",
+                "displayName": "Monterey Jack Cheese",
+                "info": "$0.60 extra, 60 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Bacon Slices",
+                "displayName": "Bacon Slices",
+                "info": "$1.10 extra, 45 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Potato",
+                "displayName": "Potato",
+                "info": "$1.29 extra, 90 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Grilled Jalapenos",
+                "displayName": "Grilled Jalapenos",
+                "info": "$0.65 extra, 10 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Jalapenos",
+                "displayName": "Jalapenos",
+                "info": "$0.65 extra, 0 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Avocado",
+                "displayName": "Avocado",
+                "info": "$1.30 extra, 90 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Grilled Peppers & Onions",
+                "displayName": "Grilled Peppers & Onions",
+                "info": "$1.29 extra, 25 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Cinnamon Roll",
+        "url": "/locations/447/menu/categories/breakfast-4/recipes/cinnamon-roll-169/customization/1",
+        "customizationGroups": [
+          {
+            "id": "CustomizationGroup-157",
+            "name": "Buns:",
+            "type": "radio",
+            "options": [
+              {
+                "name": "Cinnamon Roll",
+                "displayName": "Cinnamon Roll",
+                "info": "$3.19, 570 Cal"
+              },
+              {
+                "name": "Tray of 6 Cinnamon Rolls",
+                "displayName": "Tray of 6 Cinnamon Rolls",
+                "info": "$12.19 , 3420 Cal"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Hash Brown Sticks",
+        "url": "/locations/447/menu/categories/breakfast-4/recipes/hash-brown-sticks-284/customization/1",
+        "customizationGroups": [
+          {
+            "id": "CustomizationGroup-26",
+            "name": "Hash Brown Sticks (Comes with 4):",
+            "type": "radio",
+            "options": [
+              {
+                "name": "Hash Brown Sticks",
+                "displayName": "Hash Brown Sticks",
+                "info": "$1.99, 190 Cal"
+              }
+            ]
+          },
+          {
+            "id": "CustomizationGroup-118",
+            "name": "Dipping Sauces (Add $):",
+            "type": "checkbox",
+            "options": [
+              {
+                "name": "Honey Mustard",
+                "displayName": "Honey Mustard",
+                "info": "$0.50 extra, 200 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Creamy Pepper",
+                "displayName": "Creamy Pepper",
+                "info": "$0.50 extra, 240 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Honey BBQ",
+                "displayName": "Honey BBQ",
+                "info": "$0.50 extra, 90 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Buttermilk Ranch",
+                "displayName": "Buttermilk Ranch",
+                "info": "$0.50 extra, 240 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Buffalo Sauce",
+                "displayName": "Buffalo Sauce",
+                "info": "$0.50 extra, 30 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Jalapeno Ranch",
+                "displayName": "Jalapeno Ranch",
+                "info": "$0.50 extra, 280 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Gravy",
+                "displayName": "Gravy",
+                "info": "$0.75 extra, 60 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              }
+            ]
+          },
+          {
+            "id": "CustomizationGroup-98",
+            "name": "Extras:",
+            "type": "checkbox",
+            "options": [
+              {
+                "name": "Whole Jalape\u00f1o",
+                "displayName": "Whole Jalape\u00f1o",
+                "info": "$0.65 extra, 0 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Fancy Ketchup",
+                "displayName": "Fancy Ketchup",
+                "info": "No extra charge, 35 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Spicy Ketchup",
+                "displayName": "Spicy Ketchup",
+                "info": "No extra charge, 30 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Salsa Verde",
+                "displayName": "Salsa Verde",
+                "info": "No extra charge, 5 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Picante",
+                "displayName": "Picante",
+                "info": "No extra charge, 5 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Pancakes",
+        "url": "/locations/447/menu/categories/breakfast-4/recipes/pancakes-141/customization/1",
+        "customizationGroups": [
+          {
+            "id": "CustomizationGroup-99",
+            "name": "Pancakes (Comes with 3):",
+            "type": "radio",
+            "options": [
+              {
+                "name": "Pancakes",
+                "displayName": "Pancakes",
+                "info": "$3.49, 630 Cal"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Breakfast Platter",
+        "url": "/locations/447/menu/categories/breakfast-4/recipes/breakfast-platter-14/customization/1",
+        "customizationGroups": [
+          {
+            "id": "CustomizationGroup-72",
+            "name": "Bread (Choose One):",
+            "type": "radio",
+            "options": [
+              {
+                "name": "Buttermilk Biscuit",
+                "displayName": "Buttermilk Biscuit",
+                "info": "No extra charge, 330 Cal"
+              },
+              {
+                "name": "Jalapeno Cheddar Biscuit",
+                "displayName": "Jalapeno Cheddar Biscuit",
+                "info": "No extra charge, 330 Cal"
+              }
+            ]
+          },
+          {
+            "id": "CustomizationGroup-203",
+            "name": "Protein:",
+            "type": "radio",
+            "options": [
+              {
+                "name": "Bacon",
+                "displayName": "Bacon",
+                "info": "$5.29, 75 Cal"
+              },
+              {
+                "name": "Sausage",
+                "displayName": "Sausage",
+                "info": "$5.29 , 240 Cal"
+              }
+            ]
+          },
+          {
+            "id": "CustomizationGroup-235",
+            "name": "Eggs (Extra Add $):",
+            "type": "radio",
+            "options": [
+              {
+                "name": "Scrambled Eggs",
+                "displayName": "Scrambled Eggs",
+                "info": "No extra charge, 250 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              }
+            ]
+          },
+          {
+            "id": "CustomizationGroup-120",
+            "name": "Cheese (Add $):",
+            "type": "checkbox",
+            "options": [
+              {
+                "name": "American Cheese",
+                "displayName": "American Cheese",
+                "info": "$0.50 extra, 45 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Monterey Jack Cheese",
+                "displayName": "Monterey Jack Cheese",
+                "info": "$0.60 extra, 60 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              }
+            ]
+          },
+          {
+            "id": "CustomizationGroup-77",
+            "name": "Popular Add-Ons (Add $):",
+            "type": "checkbox",
+            "options": [
+              {
+                "name": "Bacon Slices",
+                "displayName": "Bacon Slices",
+                "info": "$1.10 extra, 45 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Sausage Patty",
+                "displayName": "Sausage Patty",
+                "info": "$1.00 extra, 210 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Grilled Jalapenos",
+                "displayName": "Grilled Jalapenos",
+                "info": "$0.65 extra, 10 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Jalapenos",
+                "displayName": "Jalapenos",
+                "info": "$0.65 extra, 0 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Avocado",
+                "displayName": "Avocado",
+                "info": "$1.30 extra, 90 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Grilled Peppers & Onions",
+                "displayName": "Grilled Peppers & Onions",
+                "info": "$1.29 extra, 25 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Cream Gravy with Sausage",
+                "displayName": "Cream Gravy with Sausage",
+                "info": "$1.35 extra, 180 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Breakfast On A Bun\u00ae",
+        "url": "/locations/447/menu/categories/breakfast-4/recipes/breakfast-on-a-bun-54/customization/1",
+        "customizationGroups": [
+          {
+            "id": "CustomizationGroup-55",
+            "name": "Bread:",
+            "type": "radio",
+            "options": [
+              {
+                "name": "Small Bun (4inches)",
+                "displayName": "Small Bun (4\")",
+                "info": "No extra charge, 170 Cal"
+              },
+              {
+                "name": "Toast Both Sides",
+                "displayName": "Toast Both Sides",
+                "info": null
+              },
+              {
+                "name": "Brioche Bun (4inches)",
+                "displayName": "Brioche Bun (4\")",
+                "info": "No extra charge, 230 Cal"
+              }
+            ]
+          },
+          {
+            "id": "CustomizationGroup-198",
+            "name": "Protein:",
+            "type": "radio",
+            "options": [
+              {
+                "name": "Sausage",
+                "displayName": "Sausage",
+                "info": "$0.00, 220 Cal"
+              },
+              {
+                "name": "Bacon",
+                "displayName": "Bacon",
+                "info": "$0.00, 55 Cal"
+              }
+            ]
+          },
+          {
+            "id": "CustomizationGroup-24",
+            "name": "Egg:",
+            "type": "checkbox",
+            "options": [
+              {
+                "name": "Egg",
+                "displayName": "Egg",
+                "info": "No extra charge, 90 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              }
+            ]
+          },
+          {
+            "id": "CustomizationGroup-218",
+            "name": "Included Cheese (Choose One):",
+            "type": "radio",
+            "options": [
+              {
+                "name": "American Cheese",
+                "displayName": "American Cheese",
+                "info": "No extra charge, 45 Cal"
+              },
+              {
+                "name": "Monterey Jack Cheese",
+                "displayName": "Monterey Jack Cheese",
+                "info": "No extra charge, 60 Cal"
+              },
+              {
+                "name": "No Cheese",
+                "displayName": "No Cheese",
+                "info": null
+              }
+            ]
+          },
+          {
+            "id": "CustomizationGroup-219",
+            "name": "Popular Add-Ons (Add $):",
+            "type": "checkbox",
+            "options": [
+              {
+                "name": "American Cheese",
+                "displayName": "American Cheese",
+                "info": "$0.50 extra, 45 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Monterey Jack Cheese",
+                "displayName": "Monterey Jack Cheese",
+                "info": "$0.60 extra, 60 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Extra Sausage",
+                "displayName": "Extra Sausage",
+                "info": "$1.00 extra, 210 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Extra Bacon",
+                "displayName": "Extra Bacon",
+                "info": "$1.10 extra, 45 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Grilled Jalapenos",
+                "displayName": "Grilled Jalapenos",
+                "info": "$0.65 extra, 10 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Jalapenos",
+                "displayName": "Jalapenos",
+                "info": "$0.65 extra, 0 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Grilled Peppers & Onions",
+                "displayName": "Grilled Peppers & Onions",
+                "info": "$1.29 extra, 25 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              }
+            ]
+          },
+          {
+            "id": "CustomizationGroup-57",
+            "name": "Ranchero (Add $):",
+            "type": "checkbox",
+            "options": [
+              {
+                "name": "Picante Style - Jalape\u00f1os Mixed in Egg and Sauce",
+                "displayName": "Picante Style - Jalape\u00f1os Mixed in Egg and Sauce",
+                "info": "$0.50 extra, 5 Cal"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Biscuit Sandwich",
+        "url": "/locations/447/menu/categories/breakfast-4/recipes/biscuit-sandwich-11/customization/1",
+        "customizationGroups": [
+          {
+            "id": "CustomizationGroup-147",
+            "name": "Protein:",
+            "type": "radio",
+            "options": [
+              {
+                "name": "Sausage",
+                "displayName": "Sausage",
+                "info": "$4.49, 240 Cal"
+              },
+              {
+                "name": "Bacon",
+                "displayName": "Bacon",
+                "info": "$4.49 , 75 Cal"
+              }
+            ]
+          },
+          {
+            "id": "CustomizationGroup-72",
+            "name": "Bread (Choose One):",
+            "type": "radio",
+            "options": [
+              {
+                "name": "Buttermilk Biscuit",
+                "displayName": "Buttermilk Biscuit",
+                "info": "No extra charge, 330 Cal"
+              },
+              {
+                "name": "Jalapeno Cheddar Biscuit",
+                "displayName": "Jalapeno Cheddar Biscuit",
+                "info": "No extra charge, 330 Cal"
+              }
+            ]
+          },
+          {
+            "id": "CustomizationGroup-24",
+            "name": "Egg:",
+            "type": "checkbox",
+            "options": [
+              {
+                "name": "Egg",
+                "displayName": "Egg",
+                "info": "No extra charge, 90 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              }
+            ]
+          },
+          {
+            "id": "CustomizationGroup-218",
+            "name": "Included Cheese (Choose One):",
+            "type": "radio",
+            "options": [
+              {
+                "name": "American Cheese",
+                "displayName": "American Cheese",
+                "info": "No extra charge, 45 Cal"
+              },
+              {
+                "name": "Monterey Jack Cheese",
+                "displayName": "Monterey Jack Cheese",
+                "info": "No extra charge, 60 Cal"
+              },
+              {
+                "name": "No Cheese",
+                "displayName": "No Cheese",
+                "info": null
+              }
+            ]
+          },
+          {
+            "id": "CustomizationGroup-319",
+            "name": "Popular Add-Ons (Add $):",
+            "type": "checkbox",
+            "options": [
+              {
+                "name": "American Cheese",
+                "displayName": "American Cheese",
+                "info": "$0.50 extra, 45 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Monterey Jack Cheese",
+                "displayName": "Monterey Jack Cheese",
+                "info": "$0.60 extra, 60 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Extra Sausage",
+                "displayName": "Extra Sausage",
+                "info": "$1.00 extra, 210 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Extra Bacon",
+                "displayName": "Extra Bacon",
+                "info": "$1.10 extra, 45 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Grilled Jalapenos",
+                "displayName": "Grilled Jalapenos",
+                "info": "$0.65 extra, 10 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Jalapenos",
+                "displayName": "Jalapenos",
+                "info": "$0.65 extra, 0 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Avocado",
+                "displayName": "Avocado",
+                "info": "$1.30 extra, 90 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Grilled Peppers & Onions",
+                "displayName": "Grilled Peppers & Onions",
+                "info": "$1.29 extra, 25 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Cream Gravy with Sausage",
+                "displayName": "Cream Gravy with Sausage",
+                "info": "$1.35 extra, 180 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              }
+            ]
+          },
+          {
+            "id": "CustomizationGroup-57",
+            "name": "Ranchero (Add $):",
+            "type": "checkbox",
+            "options": [
+              {
+                "name": "Picante Style - Jalape\u00f1os Mixed in Egg and Sauce",
+                "displayName": "Picante Style - Jalape\u00f1os Mixed in Egg and Sauce",
+                "info": "$0.50 extra, 5 Cal"
+              }
+            ]
+          },
+          {
+            "id": "CustomizationGroup-84",
+            "name": "Signature Sauces (Currently available):",
+            "type": "checkbox",
+            "options": [
+              {
+                "name": "Honey Butter",
+                "displayName": "Honey Butter",
+                "info": "No extra charge, 80 Cal"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Breakfast Burger",
+        "url": "/locations/447/menu/categories/breakfast-4/recipes/Breakfast-Burger-6223/customization/1",
+        "customizationGroups": [
+          {
+            "id": "CustomizationGroup-254",
+            "name": "Bread:",
+            "type": "radio",
+            "options": [
+              {
+                "name": "Small Bun (4inches)",
+                "displayName": "Small Bun (4\")",
+                "info": "No extra charge, 170 Cal"
+              },
+              {
+                "name": "Toast Both Sides",
+                "displayName": "Toast Both Sides",
+                "info": null
+              },
+              {
+                "name": "Brioche Bun (4inches)",
+                "displayName": "Brioche Bun (4\")",
+                "info": "No extra charge, 230 Cal"
+              },
+              {
+                "name": "No Bun",
+                "displayName": "No Bun",
+                "info": "No extra charge, 0 Cal"
+              }
+            ]
+          },
+          {
+            "id": "CustomizationGroup-19",
+            "name": "Beef (Extra Items Add $):",
+            "type": "radio",
+            "options": [
+              {
+                "name": "Small Beef Patty (4inches)",
+                "displayName": "Small Beef Patty (4\")",
+                "info": "No extra charge, 120 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              }
+            ]
+          },
+          {
+            "id": "CustomizationGroup-255",
+            "name": "Egg (Extra Items Add $):",
+            "type": "radio",
+            "options": [
+              {
+                "name": "Egg",
+                "displayName": "Egg",
+                "info": "No extra charge, 90 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              }
+            ]
+          },
+          {
+            "id": "CustomizationGroup-257",
+            "name": "Hash Brown Sticks:",
+            "type": "radio",
+            "options": [
+              {
+                "name": "Hash Brown Sticks",
+                "displayName": "Hash Brown Sticks",
+                "info": "No extra charge, 140 Cal"
+              }
+            ]
+          },
+          {
+            "id": "CustomizationGroup-120",
+            "name": "Cheese (Add $):",
+            "type": "checkbox",
+            "options": [
+              {
+                "name": "American Cheese",
+                "displayName": "American Cheese",
+                "info": "No extra charge, 45 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Monterey Jack Cheese",
+                "displayName": "Monterey Jack Cheese",
+                "info": "$0.60 extra, 60 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              }
+            ]
+          },
+          {
+            "id": "CustomizationGroup-258",
+            "name": "Popular Add-Ons (Add $):",
+            "type": "checkbox",
+            "options": [
+              {
+                "name": "Bacon Slices",
+                "displayName": "Bacon Slices",
+                "info": "No extra charge, 45 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Grilled Jalapenos",
+                "displayName": "Grilled Jalapenos",
+                "info": "$0.65 extra, 10 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Jalapenos",
+                "displayName": "Jalapenos",
+                "info": "$0.65 extra, 0 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Avocado",
+                "displayName": "Avocado",
+                "info": "$1.30 extra, 90 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Grilled Peppers & Onions",
+                "displayName": "Grilled Peppers & Onions",
+                "info": "$1.29 extra, 25 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              }
+            ]
+          },
+          {
+            "id": "CustomizationGroup-57",
+            "name": "Ranchero (Add $):",
+            "type": "checkbox",
+            "options": [
+              {
+                "name": "Picante Style - Jalape\u00f1os Mixed in Egg and Sauce",
+                "displayName": "Picante Style - Jalape\u00f1os Mixed in Egg and Sauce",
+                "info": "$0.50 extra, 5 Cal"
+              }
+            ]
+          },
+          {
+            "id": "CustomizationGroup-256",
+            "name": "Signature Sauces (Currently Available):",
+            "type": "checkbox",
+            "options": [
+              {
+                "name": "Creamy Pepper",
+                "displayName": "Creamy Pepper",
+                "info": "No extra charge, 60 Cal"
+              },
+              {
+                "name": "Ketchup",
+                "displayName": "Ketchup",
+                "info": "No extra charge, 15 Cal"
+              },
+              {
+                "name": "Mayonnaise",
+                "displayName": "Mayonnaise",
+                "info": "No extra charge, 50 Cal"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Breakfast Bowl",
+        "url": "/locations/447/menu/categories/breakfast-4/recipes/Breakfast-Bowl-Parent-6388/customization/1",
+        "customizationGroups": [
+          {
+            "id": "CustomizationGroup-72",
+            "name": "Bread (Choose One):",
+            "type": "radio",
+            "options": [
+              {
+                "name": "Buttermilk Biscuit",
+                "displayName": "Buttermilk Biscuit",
+                "info": "No extra charge, 330 Cal"
+              },
+              {
+                "name": "Jalapeno Cheddar Biscuit",
+                "displayName": "Jalapeno Cheddar Biscuit",
+                "info": "No extra charge, 330 Cal"
+              }
+            ]
+          },
+          {
+            "id": "CustomizationGroup-369",
+            "name": "Protein:",
+            "type": "radio",
+            "options": [
+              {
+                "name": "Sausage",
+                "displayName": "Sausage",
+                "info": "$5.79, 240 Cal"
+              },
+              {
+                "name": "Bacon",
+                "displayName": "Bacon",
+                "info": "$5.79 , 75 Cal"
+              }
+            ]
+          },
+          {
+            "id": "CustomizationGroup-360",
+            "name": "Eggs:",
+            "type": "radio",
+            "options": [
+              {
+                "name": "Scrambled Eggs",
+                "displayName": "Scrambled Eggs",
+                "info": "No extra charge, 150 Cal"
+              }
+            ]
+          },
+          {
+            "id": "CustomizationGroup-362",
+            "name": "Hash Brown Sticks:",
+            "type": "radio",
+            "options": [
+              {
+                "name": "Hash Brown Sticks",
+                "displayName": "Hash Brown Sticks",
+                "info": "No extra charge, 90 Cal"
+              }
+            ]
+          },
+          {
+            "id": "CustomizationGroup-363",
+            "name": "Included Cheese (Choose One):",
+            "type": "radio",
+            "options": [
+              {
+                "name": "Shredded Cheese",
+                "displayName": "Shredded Cheese",
+                "info": "No extra charge, 110 Cal"
+              },
+              {
+                "name": "No Cheese",
+                "displayName": "No Cheese",
+                "info": null
+              }
+            ]
+          },
+          {
+            "id": "CustomizationGroup-364",
+            "name": "Popular Add-Ons (Add $):",
+            "type": "checkbox",
+            "options": [
+              {
+                "name": "Bacon Slices",
+                "displayName": "Bacon Slices",
+                "info": "$0.55 extra, 25 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Sausage Patty",
+                "displayName": "Sausage Patty",
+                "info": "$1.00 extra, 210 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Grilled Jalapenos",
+                "displayName": "Grilled Jalapenos",
+                "info": "$0.65 extra, 10 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Jalapenos",
+                "displayName": "Jalapenos",
+                "info": "$0.65 extra, 0 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              }
+            ]
+          },
+          {
+            "id": "CustomizationGroup-361",
+            "name": "Signature Sauces (Currently Available):",
+            "type": "radio",
+            "options": [
+              {
+                "name": "Gravy",
+                "displayName": "Gravy",
+                "info": "No extra charge, 60 Cal"
+              },
+              {
+                "name": "No Gravy",
+                "displayName": "No Gravy",
+                "info": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Egg Sandwich",
+        "url": "/locations/447/menu/categories/breakfast-4/recipes/egg-sandwich-162/customization/1",
+        "customizationGroups": [
+          {
+            "id": "CustomizationGroup-55",
+            "name": "Bread:",
+            "type": "radio",
+            "options": [
+              {
+                "name": "Small Bun (4inches)",
+                "displayName": "Small Bun (4\")",
+                "info": "No extra charge, 170 Cal"
+              },
+              {
+                "name": "Toast Both Sides",
+                "displayName": "Toast Both Sides",
+                "info": null
+              },
+              {
+                "name": "Brioche Bun (4inches)",
+                "displayName": "Brioche Bun (4\")",
+                "info": "No extra charge, 230 Cal"
+              }
+            ]
+          },
+          {
+            "id": "CustomizationGroup-218",
+            "name": "Included Cheese (Choose One):",
+            "type": "radio",
+            "options": [
+              {
+                "name": "American Cheese",
+                "displayName": "American Cheese",
+                "info": "No extra charge, 45 Cal"
+              },
+              {
+                "name": "Monterey Jack Cheese",
+                "displayName": "Monterey Jack Cheese",
+                "info": "No extra charge, 60 Cal"
+              },
+              {
+                "name": "No Cheese",
+                "displayName": "No Cheese",
+                "info": null
+              }
+            ]
+          },
+          {
+            "id": "CustomizationGroup-154",
+            "name": "Popular Add-Ons (Add $):",
+            "type": "checkbox",
+            "options": [
+              {
+                "name": "American Cheese",
+                "displayName": "American Cheese",
+                "info": "$0.50 extra, 45 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Monterey Jack Cheese",
+                "displayName": "Monterey Jack Cheese",
+                "info": "$0.60 extra, 60 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Extra Egg",
+                "displayName": "Extra Egg",
+                "info": "$0.90 extra, 90 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Grilled Jalapenos",
+                "displayName": "Grilled Jalapenos",
+                "info": "$0.65 extra, 10 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Jalapenos",
+                "displayName": "Jalapenos",
+                "info": "$0.65 extra, 0 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Avocado",
+                "displayName": "Avocado",
+                "info": "$1.30 extra, 90 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Grilled Peppers & Onions",
+                "displayName": "Grilled Peppers & Onions",
+                "info": "$1.29 extra, 25 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Cream Gravy with Sausage",
+                "displayName": "Cream Gravy with Sausage",
+                "info": "$1.35 extra, 180 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              }
+            ]
+          },
+          {
+            "id": "CustomizationGroup-57",
+            "name": "Ranchero (Add $):",
+            "type": "checkbox",
+            "options": [
+              {
+                "name": "Picante Style - Jalape\u00f1os Mixed in Egg and Sauce",
+                "displayName": "Picante Style - Jalape\u00f1os Mixed in Egg and Sauce",
+                "info": "$0.50 extra, 5 Cal"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Egg and Cheese Biscuit",
+        "url": "/locations/447/menu/categories/breakfast-4/recipes/egg-and-cheese-biscuit-1-444/customization/1",
+        "customizationGroups": [
+          {
+            "id": "CustomizationGroup-72",
+            "name": "Bread (Choose One):",
+            "type": "radio",
+            "options": [
+              {
+                "name": "Buttermilk Biscuit",
+                "displayName": "Buttermilk Biscuit",
+                "info": "No extra charge, 330 Cal"
+              },
+              {
+                "name": "Jalapeno Cheddar Biscuit",
+                "displayName": "Jalapeno Cheddar Biscuit",
+                "info": "No extra charge, 330 Cal"
+              }
+            ]
+          },
+          {
+            "id": "CustomizationGroup-218",
+            "name": "Included Cheese (Choose One):",
+            "type": "radio",
+            "options": [
+              {
+                "name": "American Cheese",
+                "displayName": "American Cheese",
+                "info": "No extra charge, 45 Cal"
+              },
+              {
+                "name": "Monterey Jack Cheese",
+                "displayName": "Monterey Jack Cheese",
+                "info": "No extra charge, 60 Cal"
+              },
+              {
+                "name": "No Cheese",
+                "displayName": "No Cheese",
+                "info": null
+              }
+            ]
+          },
+          {
+            "id": "CustomizationGroup-154",
+            "name": "Popular Add-Ons (Add $):",
+            "type": "checkbox",
+            "options": [
+              {
+                "name": "American Cheese",
+                "displayName": "American Cheese",
+                "info": "$0.50 extra, 45 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Monterey Jack Cheese",
+                "displayName": "Monterey Jack Cheese",
+                "info": "$0.60 extra, 60 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Extra Egg",
+                "displayName": "Extra Egg",
+                "info": "$0.90 extra, 90 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Grilled Jalapenos",
+                "displayName": "Grilled Jalapenos",
+                "info": "$0.65 extra, 10 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Jalapenos",
+                "displayName": "Jalapenos",
+                "info": "$0.65 extra, 0 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Avocado",
+                "displayName": "Avocado",
+                "info": "$1.30 extra, 90 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Grilled Peppers & Onions",
+                "displayName": "Grilled Peppers & Onions",
+                "info": "$1.29 extra, 25 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              },
+              {
+                "name": "Cream Gravy with Sausage",
+                "displayName": "Cream Gravy with Sausage",
+                "info": "$1.35 extra, 180 Cal"
+              },
+              {
+                "name": "quantity",
+                "displayName": "quantity",
+                "info": null
+              }
+            ]
+          },
+          {
+            "id": "CustomizationGroup-57",
+            "name": "Ranchero (Add $):",
+            "type": "checkbox",
+            "options": [
+              {
+                "name": "Picante Style - Jalape\u00f1os Mixed in Egg and Sauce",
+                "displayName": "Picante Style - Jalape\u00f1os Mixed in Egg and Sauce",
+                "info": "$0.50 extra, 5 Cal"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "name": "Breakfast 11pm-11am"
   },
   {
     "category": "burgers",
     "items": [
       {
-        "name": "Whataburger®",
+        "name": "Whataburger\u00ae",
         "url": "/locations/447/menu/categories/burgers-1/recipes/whataburger-9/customization/1",
         "customizationGroups": [
           {
@@ -2567,8 +4919,8 @@
                 "info": "No extra charge, 0 Cal"
               },
               {
-                "name": "WhataSauce®",
-                "displayName": "WhataSauce®",
+                "name": "WhataSauce\u00ae",
+                "displayName": "WhataSauce\u00ae",
                 "info": "No extra charge, 30 Cal"
               },
               {
@@ -2586,7 +4938,7 @@
         ]
       },
       {
-        "name": "Double Meat Whataburger®",
+        "name": "Double Meat Whataburger\u00ae",
         "url": "/locations/447/menu/categories/burgers-1/recipes/double-meat-whataburger-2/customization/1",
         "customizationGroups": [
           {
@@ -2800,8 +5152,8 @@
                 "info": "No extra charge, 0 Cal"
               },
               {
-                "name": "WhataSauce®",
-                "displayName": "WhataSauce®",
+                "name": "WhataSauce\u00ae",
+                "displayName": "WhataSauce\u00ae",
                 "info": "No extra charge, 30 Cal"
               },
               {
@@ -2819,7 +5171,7 @@
         ]
       },
       {
-        "name": "Triple Meat Whataburger®",
+        "name": "Triple Meat Whataburger\u00ae",
         "url": "/locations/447/menu/categories/burgers-1/recipes/triple-meat-whataburger-269/customization/1",
         "customizationGroups": [
           {
@@ -3033,8 +5385,8 @@
                 "info": "No extra charge, 0 Cal"
               },
               {
-                "name": "WhataSauce®",
-                "displayName": "WhataSauce®",
+                "name": "WhataSauce\u00ae",
+                "displayName": "WhataSauce\u00ae",
                 "info": "No extra charge, 30 Cal"
               },
               {
@@ -3052,7 +5404,7 @@
         ]
       },
       {
-        "name": "Jalapeño & Cheese Whataburger®",
+        "name": "Jalape\u00f1o & Cheese Whataburger\u00ae",
         "url": "/locations/447/menu/categories/burgers-1/recipes/jalapeno-and-cheese-whataburger-308/customization/1",
         "customizationGroups": [
           {
@@ -3298,8 +5650,8 @@
                 "info": "No extra charge, 0 Cal"
               },
               {
-                "name": "WhataSauce®",
-                "displayName": "WhataSauce®",
+                "name": "WhataSauce\u00ae",
+                "displayName": "WhataSauce\u00ae",
                 "info": "No extra charge, 30 Cal"
               },
               {
@@ -3317,7 +5669,7 @@
         ]
       },
       {
-        "name": "Bacon & Cheese Whataburger®",
+        "name": "Bacon & Cheese Whataburger\u00ae",
         "url": "/locations/447/menu/categories/burgers-1/recipes/bacon-cheese-whataburger-24/customization/1",
         "customizationGroups": [
           {
@@ -3546,8 +5898,8 @@
                 "info": "No extra charge, 0 Cal"
               },
               {
-                "name": "WhataSauce®",
-                "displayName": "WhataSauce®",
+                "name": "WhataSauce\u00ae",
+                "displayName": "WhataSauce\u00ae",
                 "info": "No extra charge, 30 Cal"
               },
               {
@@ -3788,7 +6140,7 @@
         ]
       },
       {
-        "name": "Whataburger Jr.®",
+        "name": "Whataburger Jr.\u00ae",
         "url": "/locations/447/menu/categories/burgers-1/recipes/whataburger-jr-6/customization/1",
         "customizationGroups": [
           {
@@ -4001,7 +6353,7 @@
         ]
       },
       {
-        "name": "Double Meat Whataburger Jr.®",
+        "name": "Double Meat Whataburger Jr.\u00ae",
         "url": "/locations/447/menu/categories/burgers-1/recipes/double-meat-whataburger-jr-274/customization/1",
         "customizationGroups": [
           {
@@ -4213,7 +6565,8 @@
           }
         ]
       }
-    ]
+    ],
+    "name": "Burgers"
   },
   {
     "category": "chicken",
@@ -4608,7 +6961,7 @@
             "options": [
               {
                 "name": "Whatachickn Bites 5 pieces",
-                "displayName": "Whatachick’n Bites 5 pcs",
+                "displayName": "Whatachick\u2019n Bites 5 pcs",
                 "info": "No extra charge, 300 Cal"
               }
             ]
@@ -4673,7 +7026,7 @@
         ]
       },
       {
-        "name": "18 WhataWings® Bundle",
+        "name": "18 WhataWings\u00ae Bundle",
         "url": "/locations/447/menu/categories/chicken-2/recipes/18-WhataWings-Bundle-Parent-6449/customization/1",
         "customizationGroups": [
           {
@@ -4820,7 +7173,7 @@
         ]
       },
       {
-        "name": "36 WhataWings® Bundle",
+        "name": "36 WhataWings\u00ae Bundle",
         "url": "/locations/447/menu/categories/chicken-2/recipes/36-WhataWings-Bundle-Parent-6447/customization/1",
         "customizationGroups": [
           {
@@ -4967,7 +7320,7 @@
         ]
       },
       {
-        "name": "Whatachick'n® Sandwich",
+        "name": "Whatachick'n\u00ae Sandwich",
         "url": "/locations/447/menu/categories/chicken-2/recipes/Whatachickn-Sandwich--589/customization/1",
         "customizationGroups": [
           {
@@ -5009,7 +7362,7 @@
             "options": [
               {
                 "name": "Whatachickn Filet",
-                "displayName": "Whatachick’n Filet",
+                "displayName": "Whatachick\u2019n Filet",
                 "info": "No extra charge, 240 Cal"
               },
               {
@@ -5141,8 +7494,8 @@
             "type": "checkbox",
             "options": [
               {
-                "name": "WhataSauce®",
-                "displayName": "WhataSauce®",
+                "name": "WhataSauce\u00ae",
+                "displayName": "WhataSauce\u00ae",
                 "info": "No extra charge, 60 Cal"
               },
               {
@@ -5359,8 +7712,8 @@
             "type": "checkbox",
             "options": [
               {
-                "name": "WhataSauce®",
-                "displayName": "WhataSauce®",
+                "name": "WhataSauce\u00ae",
+                "displayName": "WhataSauce\u00ae",
                 "info": "No extra charge, 60 Cal"
               },
               {
@@ -5582,8 +7935,8 @@
                 "info": "No extra charge, 50 Cal"
               },
               {
-                "name": "WhataSauce®",
-                "displayName": "WhataSauce®",
+                "name": "WhataSauce\u00ae",
+                "displayName": "WhataSauce\u00ae",
                 "info": "No extra charge, 60 Cal"
               },
               {
@@ -5621,7 +7974,7 @@
         ]
       },
       {
-        "name": "Whatachick'n® Strips 3 pcs",
+        "name": "Whatachick'n\u00ae Strips 3 pcs",
         "url": "/locations/447/menu/categories/chicken-2/recipes/chicken-strips-21/customization/1",
         "customizationGroups": [
           {
@@ -5718,7 +8071,7 @@
         ]
       },
       {
-        "name": "WhataWings® 9 Piece",
+        "name": "WhataWings\u00ae 9 Piece",
         "url": "/locations/447/menu/categories/chicken-2/recipes/Whatawings-9-Piece-6415/customization/1",
         "customizationGroups": [
           {
@@ -5813,7 +8166,7 @@
         ]
       },
       {
-        "name": "Whatachick'n® Bites 6 pcs",
+        "name": "Whatachick'n\u00ae Bites 6 pcs",
         "url": "/locations/447/menu/categories/chicken-2/recipes/whatachickn-bites-6-piece-1/customization/1",
         "customizationGroups": [
           {
@@ -5893,7 +8246,7 @@
         ]
       },
       {
-        "name": "Whatachick'n® Bites 9 pcs",
+        "name": "Whatachick'n\u00ae Bites 9 pcs",
         "url": "/locations/447/menu/categories/chicken-2/recipes/whatachickn-bites-22/customization/1",
         "customizationGroups": [
           {
@@ -5967,7 +8320,8 @@
           }
         ]
       }
-    ]
+    ],
+    "name": "Chicken"
   },
   {
     "category": "desserts-snacks",
@@ -6085,7 +8439,8 @@
           }
         ]
       }
-    ]
+    ],
+    "name": "Desserts Snacks"
   },
   {
     "category": "drinks-shakes",
@@ -6742,37 +9097,37 @@
             "options": [
               {
                 "name": "Coca-Cola Classic",
-                "displayName": "Coca-Cola® Classic",
+                "displayName": "Coca-Cola\u00ae Classic",
                 "info": "$2.69 , 390 Cal"
               },
               {
                 "name": "Diet Coke",
-                "displayName": "Diet Coke®",
+                "displayName": "Diet Coke\u00ae",
                 "info": "$2.69 , 0 Cal"
               },
               {
                 "name": "Coke Zero Sugar",
-                "displayName": "Coke® Zero Sugar",
+                "displayName": "Coke\u00ae Zero Sugar",
                 "info": "$2.69 , 0 Cal"
               },
               {
                 "name": "Sprite",
-                "displayName": "Sprite®",
+                "displayName": "Sprite\u00ae",
                 "info": "$2.69 , 370 Cal"
               },
               {
                 "name": "Minute Maid Zero Sugar Lemonade",
-                "displayName": "Minute Maid® Zero Sugar Lemonade",
+                "displayName": "Minute Maid\u00ae Zero Sugar Lemonade",
                 "info": "$2.69 , 15 Cal"
               },
               {
                 "name": "Doctor Pepper",
-                "displayName": "Dr Pepper®",
+                "displayName": "Dr Pepper\u00ae",
                 "info": "$2.69 , 380 Cal"
               },
               {
                 "name": "Diet Doctor Pepper",
-                "displayName": "Diet Dr Pepper®",
+                "displayName": "Diet Dr Pepper\u00ae",
                 "info": "$2.69 , 0 Cal"
               },
               {
@@ -6782,22 +9137,22 @@
               },
               {
                 "name": "Fanta Orange ",
-                "displayName": "Fanta® Orange",
+                "displayName": "Fanta\u00ae Orange",
                 "info": "$2.69 , 390 Cal"
               },
               {
                 "name": "Fanta Strawberry",
-                "displayName": "Fanta® Strawberry",
+                "displayName": "Fanta\u00ae Strawberry",
                 "info": "$2.69 , 430 Cal"
               },
               {
                 "name": "Powerade Fruit Punch",
-                "displayName": "Powerade® Fruit Punch",
+                "displayName": "Powerade\u00ae Fruit Punch",
                 "info": "$2.69 , 220 Cal"
               },
               {
                 "name": "FUZE Raspberry",
-                "displayName": "FUZE® Raspberry",
+                "displayName": "FUZE\u00ae Raspberry",
                 "info": "$2.69 , 220 Cal"
               },
               {
@@ -6884,7 +9239,7 @@
               },
               {
                 "name": "Powerade Fruit Punch Gallon",
-                "displayName": "Powerade® Fruit Punch Gallon",
+                "displayName": "Powerade\u00ae Fruit Punch Gallon",
                 "info": "$9.99 , 220 Calories (Per Serving) 880 Cal (Total)"
               }
             ]
@@ -7044,12 +9399,12 @@
         ]
       },
       {
-        "name": "Simply Orange® Juice",
+        "name": "Simply Orange\u00ae Juice",
         "url": "/locations/447/menu/categories/drinks-and-shakes-8/recipes/juice-398/customization/1",
         "customizationGroups": [
           {
             "id": "CustomizationGroup-188",
-            "name": "Simply Orange® Juice:",
+            "name": "Simply Orange\u00ae Juice:",
             "type": "radio",
             "options": [
               {
@@ -7084,13 +9439,14 @@
           }
         ]
       }
-    ]
+    ],
+    "name": "Drinks Shakes"
   },
   {
     "category": "fish",
     "items": [
       {
-        "name": "Whatacatch®",
+        "name": "Whatacatch\u00ae",
         "url": "/locations/447/menu/categories/fish-19/recipes/whatacatch-94/customization/1",
         "customizationGroups": [
           {
@@ -7308,7 +9664,7 @@
         ]
       },
       {
-        "name": "Whatacatch® Dinner",
+        "name": "Whatacatch\u00ae Dinner",
         "url": "/locations/447/menu/categories/fish-19/recipes/Whatacatch-Dinner-6211/customization/1",
         "customizationGroups": [
           {
@@ -7377,13 +9733,14 @@
           }
         ]
       }
-    ]
+    ],
+    "name": "Fish"
   },
   {
     "category": "group-ordering",
     "items": [
       {
-        "name": "18 WhataWings® Bundle",
+        "name": "18 WhataWings\u00ae Bundle",
         "url": "/locations/447/menu/categories/group-ordering-box-of-10-items-20/recipes/18-WhataWings-Bundle-Parent-6449/customization/1",
         "customizationGroups": [
           {
@@ -7530,7 +9887,7 @@
         ]
       },
       {
-        "name": "36 WhataWings® Bundle",
+        "name": "36 WhataWings\u00ae Bundle",
         "url": "/locations/447/menu/categories/group-ordering-box-of-10-items-20/recipes/36-WhataWings-Bundle-Parent-6447/customization/1",
         "customizationGroups": [
           {
@@ -7677,7 +10034,7 @@
         ]
       },
       {
-        "name": "10 Whataburger® Box",
+        "name": "10 Whataburger\u00ae Box",
         "url": "/locations/447/menu/categories/group-ordering-box-of-10-items-20/recipes/10-Whataburger-Box-6265/customization/1",
         "customizationGroups": [
           {
@@ -7687,7 +10044,7 @@
             "options": [
               {
                 "name": "Whataburger (10)",
-                "displayName": "Whataburger® (10)",
+                "displayName": "Whataburger\u00ae (10)",
                 "info": "No extra charge, 560 Calories (Per Serving) 5550 Cal (Total)"
               }
             ]
@@ -7788,7 +10145,7 @@
         ]
       },
       {
-        "name": "10 Double Meat Whataburger® Box",
+        "name": "10 Double Meat Whataburger\u00ae Box",
         "url": "/locations/447/menu/categories/group-ordering-box-of-10-items-20/recipes/10-Double-Meat-Whataburger-Box-6267/customization/1",
         "customizationGroups": [
           {
@@ -7798,7 +10155,7 @@
             "options": [
               {
                 "name": "Double Meat Whataburger (10)",
-                "displayName": "Double Meat Whataburger® (10)",
+                "displayName": "Double Meat Whataburger\u00ae (10)",
                 "info": "No extra charge, 800 Calories (Per Serving) 8000 Cal (Total)"
               }
             ]
@@ -7899,7 +10256,7 @@
         ]
       },
       {
-        "name": "72 WhataWings® Party Pack",
+        "name": "72 WhataWings\u00ae Party Pack",
         "url": "/locations/447/menu/categories/group-ordering-box-of-10-items-20/recipes/72-WhataWings-Party-Pack-Parent-6420/customization/1",
         "customizationGroups": [
           {
@@ -8030,7 +10387,8 @@
           }
         ]
       }
-    ]
+    ],
+    "name": "Group Ordering"
   },
   {
     "category": "jr-meals",
@@ -8254,7 +10612,7 @@
         ]
       },
       {
-        "name": "Whataburger Jr.®",
+        "name": "Whataburger Jr.\u00ae",
         "url": "/locations/447/menu/categories/jr-meals-21/recipes/whataburger-jr-6/customization/1",
         "customizationGroups": [
           {
@@ -8467,7 +10825,7 @@
         ]
       },
       {
-        "name": "Double Meat Whataburger Jr.®",
+        "name": "Double Meat Whataburger Jr.\u00ae",
         "url": "/locations/447/menu/categories/jr-meals-21/recipes/double-meat-whataburger-jr-274/customization/1",
         "customizationGroups": [
           {
@@ -8680,15 +11038,15 @@
         ]
       },
       {
-        "name": "Whataburger Jr.® with Bacon & Cheese",
+        "name": "Whataburger Jr.\u00ae with Bacon & Cheese",
         "url": "/locations/447/menu/categories/jr-meals-21/recipes/bacon-cheese-whataburger-jr-325/customization/1"
       },
       {
-        "name": "Double Meat Whataburger Jr.® with Cheese",
+        "name": "Double Meat Whataburger Jr.\u00ae with Cheese",
         "url": "/locations/447/menu/categories/jr-meals-21/recipes/double-meat-whataburger-with-cheese-1-435/customization/1"
       },
       {
-        "name": "Whataburger® Patty Melt Jr.",
+        "name": "Whataburger\u00ae Patty Melt Jr.",
         "url": "/locations/447/menu/categories/jr-meals-21/recipes/Whataburger-Patty-Melt-Jr-Parent-6474/customization/1"
       },
       {
@@ -8699,13 +11057,14 @@
         "name": "Sweet & Spicy Bacon Burger Jr.",
         "url": "/locations/447/menu/categories/jr-meals-21/recipes/Sweet-Spicy-Bacon-Burger-Jr-Parent-6475/customization/1"
       }
-    ]
+    ],
+    "name": "Jr. Meals"
   },
   {
     "category": "kids",
     "items": [
       {
-        "name": "Justaburger®",
+        "name": "Justaburger\u00ae",
         "url": "/locations/447/menu/categories/kids-5/recipes/Justaburger--580/customization/1",
         "customizationGroups": [
           {
@@ -8873,7 +11232,7 @@
         ]
       },
       {
-        "name": "Whatachick'n® Strips 2 Piece",
+        "name": "Whatachick'n\u00ae Strips 2 Piece",
         "url": "/locations/447/menu/categories/kids-5/recipes/kids-meal-chicken-strips-meal-28/customization/1",
         "customizationGroups": [
           {
@@ -8953,7 +11312,7 @@
         ]
       },
       {
-        "name": "Whatachick'n® Bites 4 Piece",
+        "name": "Whatachick'n\u00ae Bites 4 Piece",
         "url": "/locations/447/menu/categories/kids-5/recipes/kids-meal-whatachickn-bites-5/customization/1",
         "customizationGroups": [
           {
@@ -9181,8 +11540,8 @@
                 "info": "No extra charge, 0 Cal"
               },
               {
-                "name": "WhataSauce®",
-                "displayName": "WhataSauce®",
+                "name": "WhataSauce\u00ae",
+                "displayName": "WhataSauce\u00ae",
                 "info": "No extra charge, 30 Cal"
               },
               {
@@ -9199,7 +11558,8 @@
           }
         ]
       }
-    ]
+    ],
+    "name": "Kids"
   },
   {
     "category": "limited-all-time-favorites",
@@ -9609,7 +11969,7 @@
         ]
       },
       {
-        "name": "Whataburger® Patty Melt",
+        "name": "Whataburger\u00ae Patty Melt",
         "url": "/locations/447/menu/categories/all-time-favorites-3/recipes/patty-melt-single-145/customization/1",
         "customizationGroups": [
           {
@@ -10044,7 +12404,8 @@
           }
         ]
       }
-    ]
+    ],
+    "name": "Limited All Time Favorites"
   },
   {
     "category": "salads",
@@ -10130,8 +12491,8 @@
                 "info": null
               },
               {
-                "name": "Whatachick’n Filet",
-                "displayName": "Whatachick’n Filet",
+                "name": "Whatachick\u2019n Filet",
+                "displayName": "Whatachick\u2019n Filet",
                 "info": "$3.00 extra, 240 Cal"
               },
               {
@@ -10326,8 +12687,8 @@
                 "info": null
               },
               {
-                "name": "Whatachick’n Filet",
-                "displayName": "Whatachick’n Filet",
+                "name": "Whatachick\u2019n Filet",
+                "displayName": "Whatachick\u2019n Filet",
                 "info": "$3.00 extra, 240 Cal"
               },
               {
@@ -10458,7 +12819,8 @@
           }
         ]
       }
-    ]
+    ],
+    "name": "Salads"
   },
   {
     "category": "sides",
@@ -10485,8 +12847,8 @@
             "type": "checkbox",
             "options": [
               {
-                "name": "Whole Jalapeño",
-                "displayName": "Whole Jalapeño",
+                "name": "Whole Jalape\u00f1o",
+                "displayName": "Whole Jalape\u00f1o",
                 "info": "$0.65 extra, 0 Cal"
               },
               {
@@ -10655,8 +13017,8 @@
             "type": "checkbox",
             "options": [
               {
-                "name": "Whole Jalapeño",
-                "displayName": "Whole Jalapeño",
+                "name": "Whole Jalape\u00f1o",
+                "displayName": "Whole Jalape\u00f1o",
                 "info": "$0.65 extra, 0 Cal"
               },
               {
@@ -10884,8 +13246,8 @@
             "type": "checkbox",
             "options": [
               {
-                "name": "Whole Jalapeño",
-                "displayName": "Whole Jalapeño",
+                "name": "Whole Jalape\u00f1o",
+                "displayName": "Whole Jalape\u00f1o",
                 "info": "$0.65 extra, 0 Cal"
               },
               {
@@ -11083,8 +13445,8 @@
             "type": "checkbox",
             "options": [
               {
-                "name": "Whole Jalapeño",
-                "displayName": "Whole Jalapeño",
+                "name": "Whole Jalape\u00f1o",
+                "displayName": "Whole Jalape\u00f1o",
                 "info": "$0.65 extra, 0 Cal"
               },
               {
@@ -11282,8 +13644,8 @@
             "type": "checkbox",
             "options": [
               {
-                "name": "Whole Jalapeño",
-                "displayName": "Whole Jalapeño",
+                "name": "Whole Jalape\u00f1o",
+                "displayName": "Whole Jalape\u00f1o",
                 "info": "$0.65 extra, 0 Cal"
               },
               {
@@ -11335,7 +13697,8 @@
           }
         ]
       }
-    ]
+    ],
+    "name": "Sides"
   },
   {
     "category": "three-big-deals",
@@ -11554,7 +13917,7 @@
             "options": [
               {
                 "name": "Whatachickn Bites 5 pieces",
-                "displayName": "Whatachick’n Bites 5 pcs",
+                "displayName": "Whatachick\u2019n Bites 5 pcs",
                 "info": "No extra charge, 300 Cal"
               }
             ]
@@ -11619,7 +13982,7 @@
         ]
       },
       {
-        "name": "Whataburger Jr.® with Bacon & Cheese",
+        "name": "Whataburger Jr.\u00ae with Bacon & Cheese",
         "url": "/locations/447/menu/categories/testcategory-10/recipes/bacon-cheese-whataburger-jr-325/customization/1",
         "customizationGroups": [
           {
@@ -11846,6 +14209,7 @@
           }
         ]
       }
-    ]
+    ],
+    "name": "Three Big Deals"
   }
 ]

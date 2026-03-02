@@ -1,0 +1,139 @@
+html,
+body {
+  margin: 0;
+  width: 100%;
+  min-height: 100%;
+  background: #3d3d3d;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.page {
+  min-height: 100vh;
+  background: #3d3d3d;
+}
+
+header {
+  background: #f47920;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  height: 48px;
+}
+
+.back {
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  min-width: 60px;
+}
+
+.brand {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+}
+
+.spacer {
+  min-width: 60px;
+}
+
+.content {
+  padding: 0 20px 60px;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin: 24px 0 20px;
+  color: #e8e8e8;
+}
+
+.section-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 24px;
+  max-width: 900px;
+  margin-inline: auto;
+}
+
+.divider-line {
+  flex: 1;
+  height: 1px;
+  background: #888;
+}
+
+.divider-text {
+  color: #aaa;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  white-space: nowrap;
+}
+
+.category-grid {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 900px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.cat-card {
+  display: block;
+  background: #e8e8e8;
+  border-radius: 8px;
+  overflow: hidden;
+  text-decoration: none;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.cat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+}
+
+.card-img-wrap {
+  background: #ddd;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.caption {
+  padding: 10px 12px 12px;
+}
+
+.caption h4 {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #f47920;
+}
+
+@media (max-width: 640px) {
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 380px) {
+  .category-grid {
+    grid-template-columns: 1fr;
+  }
+}
