@@ -1,0 +1,197 @@
+{
+  "category": "breakfast-11pm-11am",
+  "item": "breakfast-burger",
+  "customizationGroups": [
+    {
+      "id": "CustomizationGroup-254",
+      "name": "Bread:",
+      "type": "radio",
+      "options": [
+        {
+          "name": "Small Bun (4inches)",
+          "displayName": "Small Bun (4\")",
+          "info": "No extra charge, 170 Cal"
+        },
+        {
+          "name": "Toast Both Sides",
+          "displayName": "Toast Both Sides",
+          "info": null
+        },
+        {
+          "name": "Brioche Bun (4inches)",
+          "displayName": "Brioche Bun (4\")",
+          "info": "No extra charge, 230 Cal"
+        },
+        {
+          "name": "No Bun",
+          "displayName": "No Bun",
+          "info": "No extra charge, 0 Cal"
+        }
+      ]
+    },
+    {
+      "id": "CustomizationGroup-19",
+      "name": "Beef (Extra Items Add $):",
+      "type": "radio",
+      "options": [
+        {
+          "name": "Small Beef Patty (4inches)",
+          "displayName": "Small Beef Patty (4\")",
+          "info": "No extra charge, 120 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        }
+      ]
+    },
+    {
+      "id": "CustomizationGroup-255",
+      "name": "Egg (Extra Items Add $):",
+      "type": "radio",
+      "options": [
+        {
+          "name": "Egg",
+          "displayName": "Egg",
+          "info": "No extra charge, 90 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        }
+      ]
+    },
+    {
+      "id": "CustomizationGroup-257",
+      "name": "Hash Brown Sticks:",
+      "type": "radio",
+      "options": [
+        {
+          "name": "Hash Brown Sticks",
+          "displayName": "Hash Brown Sticks",
+          "info": "No extra charge, 140 Cal"
+        }
+      ]
+    },
+    {
+      "id": "CustomizationGroup-120",
+      "name": "Cheese (Add $):",
+      "type": "checkbox",
+      "options": [
+        {
+          "name": "American Cheese",
+          "displayName": "American Cheese",
+          "info": "No extra charge, 45 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        },
+        {
+          "name": "Monterey Jack Cheese",
+          "displayName": "Monterey Jack Cheese",
+          "info": "$0.60 extra, 60 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        }
+      ]
+    },
+    {
+      "id": "CustomizationGroup-258",
+      "name": "Popular Add-Ons (Add $):",
+      "type": "checkbox",
+      "options": [
+        {
+          "name": "Bacon Slices",
+          "displayName": "Bacon Slices",
+          "info": "No extra charge, 45 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        },
+        {
+          "name": "Grilled Jalapenos",
+          "displayName": "Grilled Jalapenos",
+          "info": "$0.65 extra, 10 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        },
+        {
+          "name": "Jalapenos",
+          "displayName": "Jalapenos",
+          "info": "$0.65 extra, 0 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        },
+        {
+          "name": "Avocado",
+          "displayName": "Avocado",
+          "info": "$1.30 extra, 90 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        },
+        {
+          "name": "Grilled Peppers & Onions",
+          "displayName": "Grilled Peppers & Onions",
+          "info": "$1.29 extra, 25 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        }
+      ]
+    },
+    {
+      "id": "CustomizationGroup-57",
+      "name": "Ranchero (Add $):",
+      "type": "checkbox",
+      "options": [
+        {
+          "name": "Picante Style - Jalapeños Mixed in Egg and Sauce",
+          "displayName": "Picante Style - Jalapeños Mixed in Egg and Sauce",
+          "info": "$0.50 extra, 5 Cal"
+        }
+      ]
+    },
+    {
+      "id": "CustomizationGroup-256",
+      "name": "Signature Sauces (Currently Available):",
+      "type": "checkbox",
+      "options": [
+        {
+          "name": "Creamy Pepper",
+          "displayName": "Creamy Pepper",
+          "info": "No extra charge, 60 Cal"
+        },
+        {
+          "name": "Ketchup",
+          "displayName": "Ketchup",
+          "info": "No extra charge, 15 Cal"
+        },
+        {
+          "name": "Mayonnaise",
+          "displayName": "Mayonnaise",
+          "info": "No extra charge, 50 Cal"
+        }
+      ]
+    }
+  ]
+}

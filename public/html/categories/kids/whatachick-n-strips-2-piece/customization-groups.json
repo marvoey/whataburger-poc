@@ -1,0 +1,80 @@
+{
+  "category": "kids",
+  "item": "whatachick-n-strips-2-piece",
+  "customizationGroups": [
+    {
+      "id": "CustomizationGroup-71",
+      "name": "Popular Add-Ons (Add $):",
+      "type": "checkbox",
+      "options": [
+        {
+          "name": "Extra Chicken Strip",
+          "displayName": "Extra Chicken Strip",
+          "info": "$2.00 extra, 160 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        }
+      ]
+    },
+    {
+      "id": "CustomizationGroup-207",
+      "name": "Included Dipping Sauce (Extras on Next Screen):",
+      "type": "radio",
+      "options": [
+        {
+          "name": "Gravy ",
+          "displayName": "Gravy",
+          "info": "No extra charge, 60 Cal"
+        },
+        {
+          "name": "Honey BBQ",
+          "displayName": "Honey BBQ",
+          "info": "No extra charge, 90 Cal"
+        },
+        {
+          "name": "Creamy Pepper",
+          "displayName": "Creamy Pepper",
+          "info": "No extra charge, 240 Cal"
+        },
+        {
+          "name": "Honey Butter",
+          "displayName": "Honey Butter",
+          "info": "No extra charge, 220 Cal"
+        },
+        {
+          "name": "Jalapeno Ranch",
+          "displayName": "Jalapeno Ranch",
+          "info": "No extra charge, 280 Cal"
+        },
+        {
+          "name": "Buffalo Sauce",
+          "displayName": "Buffalo Sauce",
+          "info": "No extra charge, 30 Cal"
+        },
+        {
+          "name": "Ranch Dressing",
+          "displayName": "Ranch Dressing",
+          "info": "No extra charge, 240 Cal"
+        },
+        {
+          "name": "Honey Mustard Dressing",
+          "displayName": "Honey Mustard Dressing",
+          "info": "No extra charge, 200 Cal"
+        },
+        {
+          "name": "1000 Island Dressing",
+          "displayName": "1000 Island Dressing",
+          "info": "No extra charge, 260 Cal"
+        },
+        {
+          "name": "No Dipping Sauce",
+          "displayName": "No Dipping Sauce",
+          "info": "No extra charge, 260 Cal"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "category": "breakfast-11pm-11am",
+  "item": "pancakes",
+  "customizationGroups": [
+    {
+      "id": "CustomizationGroup-99",
+      "name": "Pancakes (Comes with 3):",
+      "type": "radio",
+      "options": [
+        {
+          "name": "Pancakes",
+          "displayName": "Pancakes",
+          "info": "$3.49, 630 Cal"
+        }
+      ]
+    }
+  ]
+}

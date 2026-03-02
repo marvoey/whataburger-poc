@@ -1,0 +1,18 @@
+{
+  "category": "desserts-snacks",
+  "item": "graham-crackers",
+  "customizationGroups": [
+    {
+      "id": "CustomizationGroup-368",
+      "name": "Graham Crackers:",
+      "type": "radio",
+      "options": [
+        {
+          "name": "Graham Crackers",
+          "displayName": "Graham Crackers",
+          "info": "$1.49, 120 Cal"
+        }
+      ]
+    }
+  ]
+}

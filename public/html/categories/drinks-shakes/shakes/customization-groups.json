@@ -1,0 +1,43 @@
+{
+  "category": "drinks-shakes",
+  "item": "shakes",
+  "customizationGroups": [
+    {
+      "id": "CustomizationGroup-143",
+      "name": "Choose One:",
+      "type": "radio",
+      "options": [
+        {
+          "name": "Vanilla Shake",
+          "displayName": "Vanilla Shake",
+          "info": "$4.49 , 500 Cal"
+        },
+        {
+          "name": "Chocolate Shake",
+          "displayName": "Chocolate Shake",
+          "info": "$3.99 , 430 Cal"
+        },
+        {
+          "name": "Strawberry Shake",
+          "displayName": "Strawberry Shake",
+          "info": "$3.99 , 430 Cal"
+        },
+        {
+          "name": "Vanilla Malt",
+          "displayName": "Vanilla Malt",
+          "info": "$3.99 , 415 Cal"
+        },
+        {
+          "name": "Chocolate Malt",
+          "displayName": "Chocolate Malt",
+          "info": "$3.99 , 455 Cal"
+        },
+        {
+          "name": "Strawberry Malt",
+          "displayName": "Strawberry Malt",
+          "info": "$3.99 , 455 Cal"
+        }
+      ]
+    }
+  ]
+}

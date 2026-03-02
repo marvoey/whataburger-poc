@@ -1,0 +1,33 @@
+{
+  "category": "drinks-shakes",
+  "item": "family-size-drink",
+  "customizationGroups": [
+    {
+      "id": "CustomizationGroup-345",
+      "name": "Family-Size Drinks (Serves 10):",
+      "type": "radio",
+      "options": [
+        {
+          "name": "Sweet Tea Gallon",
+          "displayName": "Sweet Tea Gallon",
+          "info": "$4.99, 450 Calories (Per Serving) 1780 Cal (Total)"
+        },
+        {
+          "name": "Unsweet Tea Gallon",
+          "displayName": "Unsweet Tea Gallon",
+          "info": "$4.99 , 10 Calories (Per Serving) 40 Cal (Total)"
+        },
+        {
+          "name": "Lemonade Gallon",
+          "displayName": "Lemonade Gallon",
+          "info": "$9.99 , 15 Calories (Per Serving) 60 Cal (Total)"
+        },
+        {
+          "name": "Powerade Fruit Punch Gallon",
+          "displayName": "Powerade® Fruit Punch Gallon",
+          "info": "$9.99 , 220 Calories (Per Serving) 880 Cal (Total)"
+        }
+      ]
+    }
+  ]
+}

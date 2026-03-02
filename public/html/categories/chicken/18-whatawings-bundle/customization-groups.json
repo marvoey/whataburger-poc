@@ -1,0 +1,147 @@
+{
+  "category": "chicken",
+  "item": "18-whatawings-bundle",
+  "customizationGroups": [
+    {
+      "id": "CustomizationGroup-418",
+      "name": "Flavor (0 of 18 wings selected):",
+      "type": "checkbox",
+      "options": [
+        {
+          "name": "Buffalo",
+          "displayName": "Buffalo",
+          "info": "No extra charge, 1140 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        },
+        {
+          "name": "Honey BBQ",
+          "displayName": "Honey BBQ",
+          "info": "No extra charge, 1260 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        },
+        {
+          "name": "Honey Butter",
+          "displayName": "Honey Butter",
+          "info": "No extra charge, 1520 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        },
+        {
+          "name": "Sweet & Spicy",
+          "displayName": "Sweet & Spicy",
+          "info": "No extra charge, 1280 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        },
+        {
+          "name": "Plain",
+          "displayName": "Plain",
+          "info": "No extra charge, 1080 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        }
+      ]
+    },
+    {
+      "id": "CustomizationGroup-417",
+      "name": "Included Dipping Sauces (Select up to 2):",
+      "type": "checkbox",
+      "options": [
+        {
+          "name": "Buttermilk Ranch",
+          "displayName": "Buttermilk Ranch",
+          "info": "No extra charge, 490 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        },
+        {
+          "name": "Buffalo Sauce",
+          "displayName": "Buffalo Sauce",
+          "info": "No extra charge, 60 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        },
+        {
+          "name": "Honey Butter Sauce",
+          "displayName": "Honey Butter Sauce",
+          "info": "No extra charge, 440 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        },
+        {
+          "name": "Jalapeno Ranch",
+          "displayName": "Jalapeno Ranch",
+          "info": "No extra charge, 560 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        },
+        {
+          "name": "Honey BBQ Sauce",
+          "displayName": "Honey BBQ Sauce",
+          "info": "No extra charge, 180 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        }
+      ]
+    },
+    {
+      "id": "CustomizationGroup-416",
+      "name": "Sides (Select up to 2):",
+      "type": "checkbox",
+      "options": [
+        {
+          "name": "Medium Fries",
+          "displayName": "Medium Fries",
+          "info": "No extra charge, 840 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        },
+        {
+          "name": "Medium Onion Rings",
+          "displayName": "Medium Onion Rings",
+          "info": "$2.60 extra, 590 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        }
+      ]
+    }
+  ]
+}

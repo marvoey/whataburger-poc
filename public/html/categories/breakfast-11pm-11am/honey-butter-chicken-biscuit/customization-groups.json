@@ -1,0 +1,101 @@
+{
+  "category": "breakfast-11pm-11am",
+  "item": "honey-butter-chicken-biscuit",
+  "customizationGroups": [
+    {
+      "id": "CustomizationGroup-72",
+      "name": "Bread (Choose One):",
+      "type": "radio",
+      "options": [
+        {
+          "name": "Buttermilk Biscuit",
+          "displayName": "Buttermilk Biscuit",
+          "info": "No extra charge, 330 Cal"
+        },
+        {
+          "name": "Jalapeno Cheddar Biscuit",
+          "displayName": "Jalapeno Cheddar Biscuit",
+          "info": "No extra charge, 330 Cal"
+        }
+      ]
+    },
+    {
+      "id": "CustomizationGroup-85",
+      "name": "Chicken (Comes with 1 Strip):",
+      "type": "radio",
+      "options": [
+        {
+          "name": "Chicken Strip",
+          "displayName": "Chicken Strip",
+          "info": "No extra charge, 160 Cal"
+        }
+      ]
+    },
+    {
+      "id": "CustomizationGroup-120",
+      "name": "Cheese (Add $):",
+      "type": "checkbox",
+      "options": [
+        {
+          "name": "American Cheese",
+          "displayName": "American Cheese",
+          "info": "$0.50 extra, 45 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        },
+        {
+          "name": "Monterey Jack Cheese",
+          "displayName": "Monterey Jack Cheese",
+          "info": "$0.60 extra, 60 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        }
+      ]
+    },
+    {
+      "id": "CustomizationGroup-150",
+      "name": "Popular Add-Ons (Add $):",
+      "type": "checkbox",
+      "options": [
+        {
+          "name": "Bacon Slices",
+          "displayName": "Bacon Slices",
+          "info": "$1.10 extra, 45 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        },
+        {
+          "name": "Egg",
+          "displayName": "Egg",
+          "info": "$0.90 extra, 90 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        }
+      ]
+    },
+    {
+      "id": "CustomizationGroup-84",
+      "name": "Signature Sauces (Currently available):",
+      "type": "checkbox",
+      "options": [
+        {
+          "name": "Honey Butter",
+          "displayName": "Honey Butter",
+          "info": "No extra charge, 80 Cal"
+        }
+      ]
+    }
+  ]
+}

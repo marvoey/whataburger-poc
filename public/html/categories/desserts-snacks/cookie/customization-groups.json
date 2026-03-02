@@ -1,0 +1,18 @@
+{
+  "category": "desserts-snacks",
+  "item": "cookie",
+  "customizationGroups": [
+    {
+      "id": "CustomizationGroup-171",
+      "name": "Cookie:",
+      "type": "radio",
+      "options": [
+        {
+          "name": "Chocolate Chip Cookie",
+          "displayName": "Chocolate Chip Cookie",
+          "info": "$1.99, 330 Cal"
+        }
+      ]
+    }
+  ]
+}

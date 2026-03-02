@@ -1,0 +1,143 @@
+{
+  "category": "drinks-shakes",
+  "item": "flavored-hot-coffee",
+  "customizationGroups": [
+    {
+      "id": "CustomizationGroup-440",
+      "name": "Coffee (Choose):",
+      "type": "radio",
+      "options": [
+        {
+          "name": "Hot Coffee with Vanilla and Sweet Cream",
+          "displayName": "Hot Coffee with Vanilla and Sweet Cream",
+          "info": "$2.69 , 60 Cal"
+        },
+        {
+          "name": "Hot Coffee with Caramel and Sweet Cream",
+          "displayName": "Hot Coffee with Caramel and Sweet Cream",
+          "info": "$2.69 , 60 Cal"
+        }
+      ]
+    },
+    {
+      "id": "CustomizationGroup-379",
+      "name": "Sweet Cream (Add $):",
+      "type": "checkbox",
+      "options": [
+        {
+          "name": "Sweet Cream",
+          "displayName": "Sweet Cream",
+          "info": "No extra charge, 90 Cal"
+        }
+      ]
+    },
+    {
+      "id": "CustomizationGroup-383",
+      "name": "Extra Flavoring:",
+      "type": "checkbox",
+      "options": [
+        {
+          "name": "Vanilla",
+          "displayName": "Vanilla",
+          "info": "No extra charge, 30 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        },
+        {
+          "name": "Caramel",
+          "displayName": "Caramel",
+          "info": "No extra charge, 30 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        }
+      ]
+    },
+    {
+      "id": "CustomizationGroup-14",
+      "name": "Popular Desserts (Add $)",
+      "type": "checkbox",
+      "options": [
+        {
+          "name": "Hot Apple Pie",
+          "displayName": "Hot Apple Pie",
+          "info": "$1.99 extra, 270 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        },
+        {
+          "name": "Brownie",
+          "displayName": "Brownie",
+          "info": "$3.19 extra, 390 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        }
+      ]
+    },
+    {
+      "id": "CustomizationGroup-402",
+      "name": "Extra Sweetener:",
+      "type": "checkbox",
+      "options": [
+        {
+          "name": "Yellow Sugar Free Sweetener",
+          "displayName": "Yellow Sugar Free Sweetener",
+          "info": "No extra charge, 0 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        },
+        {
+          "name": "Pink Sugar Free Sweetener",
+          "displayName": "Pink Sugar Free Sweetener",
+          "info": "No extra charge, 0 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        },
+        {
+          "name": "Sugar Packet",
+          "displayName": "Sugar Packet",
+          "info": "No extra charge, 10 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        }
+      ]
+    },
+    {
+      "id": "CustomizationGroup-403",
+      "name": "Extra Creamer:",
+      "type": "checkbox",
+      "options": [
+        {
+          "name": "Half & Half Creamer",
+          "displayName": "Half & Half Creamer",
+          "info": "No extra charge, 10 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        }
+      ]
+    }
+  ]
+}

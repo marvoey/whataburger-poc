@@ -1,0 +1,59 @@
+{
+  "category": "drinks-shakes",
+  "item": "prickly-pear-raspberry",
+  "customizationGroups": [
+    {
+      "id": "CustomizationGroup-437",
+      "name": "Drinks (Choose One):",
+      "type": "radio",
+      "options": [
+        {
+          "name": "Prickly Pear",
+          "displayName": "Prickly Pear",
+          "info": "$3.69 , 235 Cal"
+        }
+      ]
+    },
+    {
+      "id": "CustomizationGroup-436",
+      "name": "Add-In:",
+      "type": "checkbox",
+      "options": [
+        {
+          "name": "Raspberry",
+          "displayName": "Raspberry",
+          "info": "No extra charge, 15 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        }
+      ]
+    },
+    {
+      "id": "CustomizationGroup-447",
+      "name": "Toppings (Choose One):",
+      "type": "checkbox",
+      "options": [
+        {
+          "name": "Soft Whip",
+          "displayName": "Soft Whip",
+          "info": "No extra charge, 120 Cal"
+        }
+      ]
+    },
+    {
+      "id": "CustomizationGroup-11",
+      "name": "Drink Options:",
+      "type": "checkbox",
+      "options": [
+        {
+          "name": "Ice",
+          "displayName": "Ice",
+          "info": "No extra charge, 0 Cal"
+        }
+      ]
+    }
+  ]
+}

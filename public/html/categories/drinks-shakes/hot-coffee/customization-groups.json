@@ -1,0 +1,158 @@
+{
+  "category": "drinks-shakes",
+  "item": "hot-coffee",
+  "customizationGroups": [
+    {
+      "id": "CustomizationGroup-382",
+      "name": "Coffee (Choose):",
+      "type": "radio",
+      "options": [
+        {
+          "name": "Regular",
+          "displayName": "Regular",
+          "info": "$2.39 , 0 Cal"
+        }
+      ]
+    },
+    {
+      "id": "CustomizationGroup-379",
+      "name": "Sweet Cream (Add $):",
+      "type": "checkbox",
+      "options": [
+        {
+          "name": "Sweet Cream",
+          "displayName": "Sweet Cream",
+          "info": "$0.30 extra, 90 Cal"
+        }
+      ]
+    },
+    {
+      "id": "CustomizationGroup-383",
+      "name": "Extra Flavoring:",
+      "type": "checkbox",
+      "options": [
+        {
+          "name": "Vanilla",
+          "displayName": "Vanilla",
+          "info": "No extra charge, 30 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        },
+        {
+          "name": "Caramel",
+          "displayName": "Caramel",
+          "info": "No extra charge, 30 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        }
+      ]
+    },
+    {
+      "id": "CustomizationGroup-63",
+      "name": "Popular Desserts (Add $):",
+      "type": "checkbox",
+      "options": [
+        {
+          "name": "Hot Apple Pie",
+          "displayName": "Hot Apple Pie",
+          "info": "$1.99 extra, 270 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        },
+        {
+          "name": "Cinnamon Roll",
+          "displayName": "Cinnamon Roll",
+          "info": "$3.19 extra, 570 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        },
+        {
+          "name": "Chocolate Chip Cookie",
+          "displayName": "Chocolate Chip Cookie",
+          "info": "$1.99 extra, 330 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        },
+        {
+          "name": "Brownie",
+          "displayName": "Brownie",
+          "info": "$3.19 extra, 390 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        }
+      ]
+    },
+    {
+      "id": "CustomizationGroup-402",
+      "name": "Extra Sweetener:",
+      "type": "checkbox",
+      "options": [
+        {
+          "name": "Yellow Sugar Free Sweetener",
+          "displayName": "Yellow Sugar Free Sweetener",
+          "info": "No extra charge, 0 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        },
+        {
+          "name": "Pink Sugar Free Sweetener",
+          "displayName": "Pink Sugar Free Sweetener",
+          "info": "No extra charge, 0 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        },
+        {
+          "name": "Sugar Packet",
+          "displayName": "Sugar Packet",
+          "info": "No extra charge, 10 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        }
+      ]
+    },
+    {
+      "id": "CustomizationGroup-403",
+      "name": "Extra Creamer:",
+      "type": "checkbox",
+      "options": [
+        {
+          "name": "Half & Half Creamer",
+          "displayName": "Half & Half Creamer",
+          "info": "No extra charge, 10 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "category": "breakfast-11pm-11am",
+  "item": "pancake-platter",
+  "customizationGroups": [
+    {
+      "id": "CustomizationGroup-99",
+      "name": "Pancakes (Comes with 3):",
+      "type": "radio",
+      "options": [
+        {
+          "name": "Pancakes",
+          "displayName": "Pancakes",
+          "info": "No extra charge, 630 Cal"
+        }
+      ]
+    },
+    {
+      "id": "CustomizationGroup-201",
+      "name": "Protein (Choose One):",
+      "type": "radio",
+      "options": [
+        {
+          "name": "Bacon",
+          "displayName": "Bacon",
+          "info": "$4.89, 315 Cal"
+        },
+        {
+          "name": "Sausage",
+          "displayName": "Sausage",
+          "info": "$4.89 , 480 Cal"
+        }
+      ]
+    },
+    {
+      "id": "CustomizationGroup-102",
+      "name": "Eggs (Add $):",
+      "type": "checkbox",
+      "options": [
+        {
+          "name": "Scrambled Eggs",
+          "displayName": "Scrambled Eggs",
+          "info": "$1.80 extra, 60 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        }
+      ]
+    },
+    {
+      "id": "CustomizationGroup-77",
+      "name": "Popular Add-Ons (Add $):",
+      "type": "checkbox",
+      "options": [
+        {
+          "name": "Bacon Slices",
+          "displayName": "Bacon Slices",
+          "info": "$1.10 extra, 45 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        },
+        {
+          "name": "Sausage Patty",
+          "displayName": "Sausage Patty",
+          "info": "$1.00 extra, 210 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        },
+        {
+          "name": "Grilled Jalapenos",
+          "displayName": "Grilled Jalapenos",
+          "info": "$0.65 extra, 10 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        },
+        {
+          "name": "Jalapenos",
+          "displayName": "Jalapenos",
+          "info": "$0.65 extra, 0 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        },
+        {
+          "name": "Avocado",
+          "displayName": "Avocado",
+          "info": "$1.30 extra, 90 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        },
+        {
+          "name": "Grilled Peppers & Onions",
+          "displayName": "Grilled Peppers & Onions",
+          "info": "$1.29 extra, 25 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        },
+        {
+          "name": "Cream Gravy with Sausage",
+          "displayName": "Cream Gravy with Sausage",
+          "info": "$1.35 extra, 180 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "category": "drinks-shakes",
+  "item": "soft-drink",
+  "customizationGroups": [
+    {
+      "id": "CustomizationGroup-145",
+      "name": "Drinks:",
+      "type": "radio",
+      "options": [
+        {
+          "name": "Coca-Cola Classic",
+          "displayName": "Coca-Cola® Classic",
+          "info": "$2.69 , 390 Cal"
+        },
+        {
+          "name": "Diet Coke",
+          "displayName": "Diet Coke®",
+          "info": "$2.69 , 0 Cal"
+        },
+        {
+          "name": "Coke Zero Sugar",
+          "displayName": "Coke® Zero Sugar",
+          "info": "$2.69 , 0 Cal"
+        },
+        {
+          "name": "Sprite",
+          "displayName": "Sprite®",
+          "info": "$2.69 , 370 Cal"
+        },
+        {
+          "name": "Minute Maid Zero Sugar Lemonade",
+          "displayName": "Minute Maid® Zero Sugar Lemonade",
+          "info": "$2.69 , 15 Cal"
+        },
+        {
+          "name": "Doctor Pepper",
+          "displayName": "Dr Pepper®",
+          "info": "$2.69 , 380 Cal"
+        },
+        {
+          "name": "Diet Doctor Pepper",
+          "displayName": "Diet Dr Pepper®",
+          "info": "$2.69 , 0 Cal"
+        },
+        {
+          "name": "Barq's Root Beer",
+          "displayName": "Barq's Root Beer",
+          "info": "$2.69 , 430 Cal"
+        },
+        {
+          "name": "Fanta Orange ",
+          "displayName": "Fanta® Orange",
+          "info": "$2.69 , 390 Cal"
+        },
+        {
+          "name": "Fanta Strawberry",
+          "displayName": "Fanta® Strawberry",
+          "info": "$2.69 , 430 Cal"
+        },
+        {
+          "name": "Powerade Fruit Punch",
+          "displayName": "Powerade® Fruit Punch",
+          "info": "$2.69 , 220 Cal"
+        },
+        {
+          "name": "FUZE Raspberry",
+          "displayName": "FUZE® Raspberry",
+          "info": "$2.69 , 220 Cal"
+        },
+        {
+          "name": "Unsweet Tea",
+          "displayName": "Unsweet Tea",
+          "info": "$2.69 , 10 Cal"
+        },
+        {
+          "name": "Sweet Tea",
+          "displayName": "Sweet Tea",
+          "info": "$2.69 , 440 Cal"
+        },
+        {
+          "name": "Half Sweet Tea and Half Unsweet Tea",
+          "displayName": "Half Sweet Tea & Half Unsweet Tea",
+          "info": "$2.69 , 220 Cal"
+        },
+        {
+          "name": "Half Unsweet Tea and Half Minute Maid Zero Sugar Lemonade",
+          "displayName": "Half Unsweet Tea & Half Minute Maid Zero Sugar Lemonade",
+          "info": "$2.69 , 10 Cal"
+        },
+        {
+          "name": "Half Sweet Tea and Half Minute Maid Zero Sugar Lemonade",
+          "displayName": "Half Sweet Tea & Half Minute Maid Zero Sugar Lemonade",
+          "info": "$2.69 , 230 Cal"
+        },
+        {
+          "name": "Water",
+          "displayName": "Water",
+          "info": null
+        }
+      ]
+    },
+    {
+      "id": "CustomizationGroup-445",
+      "name": "Toppings (Choose One):",
+      "type": "checkbox",
+      "options": [
+        {
+          "name": "Soft Whip",
+          "displayName": "Soft Whip",
+          "info": "$1.00 extra, 120 Cal"
+        }
+      ]
+    },
+    {
+      "id": "CustomizationGroup-11",
+      "name": "Drink Options:",
+      "type": "checkbox",
+      "options": [
+        {
+          "name": "Ice",
+          "displayName": "Ice",
+          "info": "No extra charge, 0 Cal"
+        }
+      ]
+    }
+  ]
+}

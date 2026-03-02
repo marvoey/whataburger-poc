@@ -1,0 +1,18 @@
+{
+  "category": "desserts-snacks",
+  "item": "fruit-chews",
+  "customizationGroups": [
+    {
+      "id": "CustomizationGroup-170",
+      "name": "Fruit Chews:",
+      "type": "radio",
+      "options": [
+        {
+          "name": "Fruit Chews",
+          "displayName": "Fruit Chews",
+          "info": "$0.89, 80 Cal"
+        }
+      ]
+    }
+  ]
+}

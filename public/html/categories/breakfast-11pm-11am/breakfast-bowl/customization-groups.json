@@ -1,0 +1,145 @@
+{
+  "category": "breakfast-11pm-11am",
+  "item": "breakfast-bowl",
+  "customizationGroups": [
+    {
+      "id": "CustomizationGroup-72",
+      "name": "Bread (Choose One):",
+      "type": "radio",
+      "options": [
+        {
+          "name": "Buttermilk Biscuit",
+          "displayName": "Buttermilk Biscuit",
+          "info": "No extra charge, 330 Cal"
+        },
+        {
+          "name": "Jalapeno Cheddar Biscuit",
+          "displayName": "Jalapeno Cheddar Biscuit",
+          "info": "No extra charge, 330 Cal"
+        }
+      ]
+    },
+    {
+      "id": "CustomizationGroup-369",
+      "name": "Protein:",
+      "type": "radio",
+      "options": [
+        {
+          "name": "Sausage",
+          "displayName": "Sausage",
+          "info": "$5.79, 240 Cal"
+        },
+        {
+          "name": "Bacon",
+          "displayName": "Bacon",
+          "info": "$5.79 , 75 Cal"
+        }
+      ]
+    },
+    {
+      "id": "CustomizationGroup-360",
+      "name": "Eggs:",
+      "type": "radio",
+      "options": [
+        {
+          "name": "Scrambled Eggs",
+          "displayName": "Scrambled Eggs",
+          "info": "No extra charge, 150 Cal"
+        }
+      ]
+    },
+    {
+      "id": "CustomizationGroup-362",
+      "name": "Hash Brown Sticks:",
+      "type": "radio",
+      "options": [
+        {
+          "name": "Hash Brown Sticks",
+          "displayName": "Hash Brown Sticks",
+          "info": "No extra charge, 90 Cal"
+        }
+      ]
+    },
+    {
+      "id": "CustomizationGroup-363",
+      "name": "Included Cheese (Choose One):",
+      "type": "radio",
+      "options": [
+        {
+          "name": "Shredded Cheese",
+          "displayName": "Shredded Cheese",
+          "info": "No extra charge, 110 Cal"
+        },
+        {
+          "name": "No Cheese",
+          "displayName": "No Cheese",
+          "info": null
+        }
+      ]
+    },
+    {
+      "id": "CustomizationGroup-364",
+      "name": "Popular Add-Ons (Add $):",
+      "type": "checkbox",
+      "options": [
+        {
+          "name": "Bacon Slices",
+          "displayName": "Bacon Slices",
+          "info": "$0.55 extra, 25 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        },
+        {
+          "name": "Sausage Patty",
+          "displayName": "Sausage Patty",
+          "info": "$1.00 extra, 210 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        },
+        {
+          "name": "Grilled Jalapenos",
+          "displayName": "Grilled Jalapenos",
+          "info": "$0.65 extra, 10 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        },
+        {
+          "name": "Jalapenos",
+          "displayName": "Jalapenos",
+          "info": "$0.65 extra, 0 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        }
+      ]
+    },
+    {
+      "id": "CustomizationGroup-361",
+      "name": "Signature Sauces (Currently Available):",
+      "type": "radio",
+      "options": [
+        {
+          "name": "Gravy",
+          "displayName": "Gravy",
+          "info": "No extra charge, 60 Cal"
+        },
+        {
+          "name": "No Gravy",
+          "displayName": "No Gravy",
+          "info": null
+        }
+      ]
+    }
+  ]
+}

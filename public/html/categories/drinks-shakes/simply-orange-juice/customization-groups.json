@@ -1,0 +1,18 @@
+{
+  "category": "drinks-shakes",
+  "item": "simply-orange-juice",
+  "customizationGroups": [
+    {
+      "id": "CustomizationGroup-188",
+      "name": "Simply Orange® Juice:",
+      "type": "radio",
+      "options": [
+        {
+          "name": "Simply Orange Juice",
+          "displayName": "Simply Orange Juice",
+          "info": "$2.99, 160 Cal"
+        }
+      ]
+    }
+  ]
+}

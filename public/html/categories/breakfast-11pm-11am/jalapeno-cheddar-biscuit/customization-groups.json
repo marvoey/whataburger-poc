@@ -1,0 +1,18 @@
+{
+  "category": "breakfast-11pm-11am",
+  "item": "jalapeno-cheddar-biscuit",
+  "customizationGroups": [
+    {
+      "id": "CustomizationGroup-82",
+      "name": "Biscuits:",
+      "type": "radio",
+      "options": [
+        {
+          "name": "Jalapeno Cheddar Biscuit",
+          "displayName": "Jalapeno Cheddar Biscuit",
+          "info": "No extra charge, 330 Cal"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,213 @@
+{
+  "category": "salads",
+  "item": "cobb-salad",
+  "customizationGroups": [
+    {
+      "id": "CustomizationGroup-293",
+      "name": "Chicken (Choose One):",
+      "type": "radio",
+      "options": [
+        {
+          "name": "Whatachick'n Filet",
+          "displayName": "Whatachick'n Filet",
+          "info": "$10.29, 240 Cal"
+        },
+        {
+          "name": " Grilled Chicken Filet",
+          "displayName": "Grilled Chicken Filet",
+          "info": "$10.29 , 130 Cal"
+        },
+        {
+          "name": "Spicy Chicken Filet",
+          "displayName": "Spicy Chicken Filet",
+          "info": "$10.29 , 250 Cal"
+        },
+        {
+          "name": "No Chicken",
+          "displayName": "No Chicken",
+          "info": "$6.99 , 250 Cal"
+        }
+      ]
+    },
+    {
+      "id": "CustomizationGroup-294",
+      "name": "Egg (Extra Add $):",
+      "type": "checkbox",
+      "options": [
+        {
+          "name": "Hard Boiled Egg",
+          "displayName": "Hard Boiled Egg",
+          "info": "No extra charge, 80 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        }
+      ]
+    },
+    {
+      "id": "CustomizationGroup-151",
+      "name": "Cheese (Extra Add $):",
+      "type": "checkbox",
+      "options": [
+        {
+          "name": "Shredded Cheese",
+          "displayName": "Shredded Cheese",
+          "info": "No extra charge, 110 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        }
+      ]
+    },
+    {
+      "id": "CustomizationGroup-208",
+      "name": "Popular Add-Ons (Add $):",
+      "type": "checkbox",
+      "options": [
+        {
+          "name": "Grilled Chicken Filet",
+          "displayName": "Grilled Chicken Filet",
+          "info": "$3.20 extra, 130 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        },
+        {
+          "name": "Whatachick’n Filet",
+          "displayName": "Whatachick’n Filet",
+          "info": "$3.00 extra, 240 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        },
+        {
+          "name": "Spicy Chicken Filet",
+          "displayName": "Spicy Chicken Filet",
+          "info": "$3.10 extra, 250 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        },
+        {
+          "name": "Bacon Slices",
+          "displayName": "Bacon Slices",
+          "info": "No extra charge, 70 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        },
+        {
+          "name": "Grilled Jalapenos",
+          "displayName": "Grilled Jalapenos",
+          "info": "$0.65 extra, 10 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        },
+        {
+          "name": "Jalapenos",
+          "displayName": "Jalapenos",
+          "info": "$0.65 extra, 0 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        },
+        {
+          "name": "Avocado",
+          "displayName": "Avocado",
+          "info": "$1.30 extra, 90 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        },
+        {
+          "name": "Grilled Peppers & Onions",
+          "displayName": "Grilled Peppers & Onions",
+          "info": "$1.29 extra, 25 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        }
+      ]
+    },
+    {
+      "id": "CustomizationGroup-291",
+      "name": "Toppings:",
+      "type": "checkbox",
+      "options": [
+        {
+          "name": "Grape Tomatoes",
+          "displayName": "Grape Tomatoes",
+          "info": "No extra charge, 10 Cal"
+        },
+        {
+          "name": "Grated Carrots",
+          "displayName": "Grated Carrots",
+          "info": "No extra charge, 5 Cal"
+        }
+      ]
+    },
+    {
+      "id": "CustomizationGroup-215",
+      "name": "Signature Dressings (Extras on Next Screen):",
+      "type": "radio",
+      "options": [
+        {
+          "name": "Creamy Pepper",
+          "displayName": "Creamy Pepper",
+          "info": "No extra charge, 240 Cal"
+        },
+        {
+          "name": "Jalapeno Ranch",
+          "displayName": "Jalapeno Ranch",
+          "info": "No extra charge, 280 Cal"
+        },
+        {
+          "name": "Ranch Dressing",
+          "displayName": "Ranch Dressing",
+          "info": "No extra charge, 240 Cal"
+        },
+        {
+          "name": "1000 Island Dressing",
+          "displayName": "1000 Island Dressing",
+          "info": "No extra charge, 260 Cal"
+        },
+        {
+          "name": "Honey Mustard Dressing",
+          "displayName": "Honey Mustard Dressing",
+          "info": "No extra charge, 200 Cal"
+        },
+        {
+          "name": "Balsamic Vinaigrette",
+          "displayName": "Balsamic Vinaigrette",
+          "info": "No extra charge, 180 Cal"
+        },
+        {
+          "name": "No Salad Dressing",
+          "displayName": "No Salad Dressing",
+          "info": null
+        }
+      ]
+    }
+  ]
+}

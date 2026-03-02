@@ -1,0 +1,199 @@
+{
+  "category": "sides",
+  "item": "french-fries",
+  "customizationGroups": [
+    {
+      "id": "CustomizationGroup-142",
+      "name": "French Fries",
+      "type": "radio",
+      "options": [
+        {
+          "name": "French Fries",
+          "displayName": "French Fries",
+          "info": "$2.99 , 420 Cal"
+        }
+      ]
+    },
+    {
+      "id": "CustomizationGroup-118",
+      "name": "Dipping Sauces (Add $):",
+      "type": "checkbox",
+      "options": [
+        {
+          "name": "Honey Mustard",
+          "displayName": "Honey Mustard",
+          "info": "$0.50 extra, 200 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        },
+        {
+          "name": "Creamy Pepper",
+          "displayName": "Creamy Pepper",
+          "info": "$0.50 extra, 240 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        },
+        {
+          "name": "Honey BBQ",
+          "displayName": "Honey BBQ",
+          "info": "$0.50 extra, 90 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        },
+        {
+          "name": "Buttermilk Ranch",
+          "displayName": "Buttermilk Ranch",
+          "info": "$0.50 extra, 240 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        },
+        {
+          "name": "Buffalo Sauce",
+          "displayName": "Buffalo Sauce",
+          "info": "$0.50 extra, 30 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        },
+        {
+          "name": "Jalapeno Ranch",
+          "displayName": "Jalapeno Ranch",
+          "info": "$0.50 extra, 280 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        },
+        {
+          "name": "Gravy",
+          "displayName": "Gravy",
+          "info": "$0.75 extra, 60 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        }
+      ]
+    },
+    {
+      "id": "CustomizationGroup-98",
+      "name": "Extras:",
+      "type": "checkbox",
+      "options": [
+        {
+          "name": "Whole Jalapeño",
+          "displayName": "Whole Jalapeño",
+          "info": "$0.65 extra, 0 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        },
+        {
+          "name": "Fancy Ketchup",
+          "displayName": "Fancy Ketchup",
+          "info": "No extra charge, 35 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        },
+        {
+          "name": "Spicy Ketchup",
+          "displayName": "Spicy Ketchup",
+          "info": "No extra charge, 30 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        },
+        {
+          "name": "Salsa Verde",
+          "displayName": "Salsa Verde",
+          "info": "No extra charge, 5 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        },
+        {
+          "name": "Picante",
+          "displayName": "Picante",
+          "info": "No extra charge, 5 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        }
+      ]
+    },
+    {
+      "id": "CustomizationGroup-63",
+      "name": "Popular Desserts (Add $):",
+      "type": "checkbox",
+      "options": [
+        {
+          "name": "Hot Apple Pie",
+          "displayName": "Hot Apple Pie",
+          "info": "$1.99 extra, 270 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        },
+        {
+          "name": "Cinnamon Roll",
+          "displayName": "Cinnamon Roll",
+          "info": "$3.19 extra, 570 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        },
+        {
+          "name": "Chocolate Chip Cookie",
+          "displayName": "Chocolate Chip Cookie",
+          "info": "$1.99 extra, 330 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        },
+        {
+          "name": "Brownie",
+          "displayName": "Brownie",
+          "info": "$3.19 extra, 390 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        }
+      ]
+    }
+  ]
+}

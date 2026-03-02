@@ -1,0 +1,59 @@
+{
+  "category": "drinks-shakes",
+  "item": "craft-lemonade",
+  "customizationGroups": [
+    {
+      "id": "CustomizationGroup-420",
+      "name": "Lemonade:",
+      "type": "radio",
+      "options": [
+        {
+          "name": "Craft Lemonade",
+          "displayName": "Craft Lemonade",
+          "info": "$2.29 , 160 Cal"
+        }
+      ]
+    },
+    {
+      "id": "CustomizationGroup-436",
+      "name": "Add-In:",
+      "type": "checkbox",
+      "options": [
+        {
+          "name": "Raspberry",
+          "displayName": "Raspberry",
+          "info": "$1.00 extra, 15 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        }
+      ]
+    },
+    {
+      "id": "CustomizationGroup-445",
+      "name": "Toppings (Choose One):",
+      "type": "checkbox",
+      "options": [
+        {
+          "name": "Soft Whip",
+          "displayName": "Soft Whip",
+          "info": "$1.00 extra, 120 Cal"
+        }
+      ]
+    },
+    {
+      "id": "CustomizationGroup-11",
+      "name": "Drink Options:",
+      "type": "checkbox",
+      "options": [
+        {
+          "name": "Ice",
+          "displayName": "Ice",
+          "info": "No extra charge, 0 Cal"
+        }
+      ]
+    }
+  ]
+}

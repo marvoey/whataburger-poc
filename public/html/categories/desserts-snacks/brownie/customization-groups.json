@@ -1,0 +1,18 @@
+{
+  "category": "desserts-snacks",
+  "item": "brownie",
+  "customizationGroups": [
+    {
+      "id": "CustomizationGroup-342",
+      "name": "Brownie:",
+      "type": "radio",
+      "options": [
+        {
+          "name": "Brownie",
+          "displayName": "Brownie",
+          "info": "$3.19, 390 Cal"
+        }
+      ]
+    }
+  ]
+}

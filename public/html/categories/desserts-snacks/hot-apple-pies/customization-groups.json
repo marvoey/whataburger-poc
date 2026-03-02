@@ -1,0 +1,18 @@
+{
+  "category": "desserts-snacks",
+  "item": "hot-apple-pies",
+  "customizationGroups": [
+    {
+      "id": "CustomizationGroup-169",
+      "name": "Hot Apple:",
+      "type": "radio",
+      "options": [
+        {
+          "name": "Hot Apple Pie",
+          "displayName": "Hot Apple Pie",
+          "info": "$1.99, 270 Cal"
+        }
+      ]
+    }
+  ]
+}

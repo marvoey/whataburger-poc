@@ -1,0 +1,18 @@
+{
+  "category": "sides",
+  "item": "applesauce",
+  "customizationGroups": [
+    {
+      "id": "CustomizationGroup-448",
+      "name": "Included:",
+      "type": "radio",
+      "options": [
+        {
+          "name": "Applesauce",
+          "displayName": "Applesauce",
+          "info": "$1.89, 40 Cal"
+        }
+      ]
+    }
+  ]
+}

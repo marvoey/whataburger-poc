@@ -1,0 +1,91 @@
+{
+  "category": "drinks-shakes",
+  "item": "tea",
+  "customizationGroups": [
+    {
+      "id": "CustomizationGroup-173",
+      "name": "Tea:",
+      "type": "radio",
+      "options": [
+        {
+          "name": "Unsweet Tea",
+          "displayName": "Unsweet Tea",
+          "info": "$2.69 , 10 Cal"
+        },
+        {
+          "name": "Sweet Tea",
+          "displayName": "Sweet Tea",
+          "info": "$2.69 , 440 Cal"
+        },
+        {
+          "name": "Half Sweet Tea and Half Unsweet Tea",
+          "displayName": "Half Sweet Tea & Half Unsweet Tea",
+          "info": "$2.69 , 220 Cal"
+        },
+        {
+          "name": "Half Unsweet Tea and Half Minute Maid Zero Sugar Lemonade",
+          "displayName": "Half Unsweet Tea & Half Minute Maid Zero Sugar Lemonade",
+          "info": "$2.69 , 10 Cal"
+        },
+        {
+          "name": "Half Sweet Tea and Half Minute Maid Zero Sugar Lemonade",
+          "displayName": "Half Sweet Tea & Half Minute Maid Zero Sugar Lemonade",
+          "info": "$2.69 , 230 Cal"
+        }
+      ]
+    },
+    {
+      "id": "CustomizationGroup-438",
+      "name": "Split with Lemonade:",
+      "type": "checkbox",
+      "options": [
+        {
+          "name": "Craft Lemonade",
+          "displayName": "Craft Lemonade",
+          "info": "$1.00 extra, 80 Cal"
+        }
+      ]
+    },
+    {
+      "id": "CustomizationGroup-436",
+      "name": "Add-In:",
+      "type": "checkbox",
+      "options": [
+        {
+          "name": "Raspberry",
+          "displayName": "Raspberry",
+          "info": "$1.00 extra, 15 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        }
+      ]
+    },
+    {
+      "id": "CustomizationGroup-445",
+      "name": "Toppings (Choose One):",
+      "type": "checkbox",
+      "options": [
+        {
+          "name": "Soft Whip",
+          "displayName": "Soft Whip",
+          "info": "$1.00 extra, 120 Cal"
+        }
+      ]
+    },
+    {
+      "id": "CustomizationGroup-11",
+      "name": "Drink Options:",
+      "type": "checkbox",
+      "options": [
+        {
+          "name": "Ice",
+          "displayName": "Ice",
+          "info": "No extra charge, 0 Cal"
+        }
+      ]
+    }
+  ]
+}

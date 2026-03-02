@@ -1,0 +1,111 @@
+{
+  "category": "group-ordering",
+  "item": "10-double-meat-whataburger-box",
+  "customizationGroups": [
+    {
+      "id": "CustomizationGroup-305",
+      "name": "Burgers:",
+      "type": "radio",
+      "options": [
+        {
+          "name": "Double Meat Whataburger (10)",
+          "displayName": "Double Meat Whataburger® (10)",
+          "info": "No extra charge, 800 Calories (Per Serving) 8000 Cal (Total)"
+        }
+      ]
+    },
+    {
+      "id": "CustomizationGroup-335",
+      "name": "Add Cheese:",
+      "type": "checkbox",
+      "options": [
+        {
+          "name": "American Cheese",
+          "displayName": "American Cheese",
+          "info": "$11.00 extra, 800 Calories (Per Serving) 1800 Cal (Total)"
+        }
+      ]
+    },
+    {
+      "id": "CustomizationGroup-300",
+      "name": "Choose Popular Add-Ons (On the Side):",
+      "type": "checkbox",
+      "options": [
+        {
+          "name": "Bacon Slices",
+          "displayName": "Bacon Slices",
+          "info": "$7.50 extra, 70 Calories (Per Serving) 340 Cal (Total)"
+        },
+        {
+          "name": "Grilled Jalapenos",
+          "displayName": "Grilled Jalapenos",
+          "info": "$2.75 extra, 5 Calories (Per Serving) 50 Cal (Total)"
+        },
+        {
+          "name": "Jalapenos",
+          "displayName": "Jalapenos",
+          "info": "$3.25 extra, 0 Calories (Per Serving) 10 Cal (Total)"
+        },
+        {
+          "name": "Avocado",
+          "displayName": "Avocado",
+          "info": "$6.10 extra, 90 Calories (Per Serving) 430 Cal (Total)"
+        },
+        {
+          "name": "Grilled Onions",
+          "displayName": "Grilled Onions",
+          "info": "$2.75 extra, 10 Calories (Per Serving) 85 Cal (Total)"
+        }
+      ]
+    },
+    {
+      "id": "CustomizationGroup-301",
+      "name": "Included Toppings (On the side):",
+      "type": "checkbox",
+      "options": [
+        {
+          "name": "Tomato",
+          "displayName": "Tomato",
+          "info": "No extra charge, 0 Calories (Per Serving) 30 Cal (Total)"
+        },
+        {
+          "name": "Lettuce",
+          "displayName": "Lettuce",
+          "info": "No extra charge, 0 Calories (Per Serving) 40 Cal (Total)"
+        },
+        {
+          "name": "Pickles",
+          "displayName": "Pickles",
+          "info": "No extra charge, 0 Calories (Per Serving) 25 Cal (Total)"
+        },
+        {
+          "name": "Diced Onions",
+          "displayName": "Diced Onions",
+          "info": "No extra charge, 10 Calories (Per Serving) 90 Cal (Total)"
+        }
+      ]
+    },
+    {
+      "id": "CustomizationGroup-302",
+      "name": "Included Signature Sauces (On the Side):",
+      "type": "checkbox",
+      "options": [
+        {
+          "name": "Mustard (4oz)",
+          "displayName": "Mustard (4oz)",
+          "info": "No extra charge, 15 Calories (Per Serving) 120 Cal (Total)"
+        },
+        {
+          "name": "Mayonnaise (4oz)",
+          "displayName": "Mayonnaise (4oz)",
+          "info": "No extra charge, 60 Calories (Per Serving) 440 Cal (Total)"
+        },
+        {
+          "name": "Ketchup (4oz)",
+          "displayName": "Ketchup (4oz)",
+          "info": "No extra charge, 15 Calories (Per Serving) 130 Cal (Total)"
+        }
+      ]
+    }
+  ]
+}

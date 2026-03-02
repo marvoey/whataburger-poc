@@ -1,0 +1,142 @@
+{
+  "category": "breakfast-11pm-11am",
+  "item": "taquito-with-cheese",
+  "customizationGroups": [
+    {
+      "id": "CustomizationGroup-197",
+      "name": "Proteins (Choose One Free):",
+      "type": "radio",
+      "options": [
+        {
+          "name": "Sausage",
+          "displayName": "Sausage",
+          "info": "$0.00, 390 Cal"
+        },
+        {
+          "name": "Bacon",
+          "displayName": "Bacon",
+          "info": "$0.00, 355 Cal"
+        },
+        {
+          "name": "Potato",
+          "displayName": "Potato",
+          "info": "$0.00, 400 Cal"
+        },
+        {
+          "name": "Chorizo",
+          "displayName": "Chorizo",
+          "info": "$0.00, 400 Cal"
+        }
+      ]
+    },
+    {
+      "id": "CustomizationGroup-218",
+      "name": "Included Cheese (Choose One):",
+      "type": "radio",
+      "options": [
+        {
+          "name": "American Cheese",
+          "displayName": "American Cheese",
+          "info": "No extra charge, 45 Cal"
+        },
+        {
+          "name": "Monterey Jack Cheese",
+          "displayName": "Monterey Jack Cheese",
+          "info": "No extra charge, 60 Cal"
+        },
+        {
+          "name": "No Cheese",
+          "displayName": "No Cheese",
+          "info": null
+        }
+      ]
+    },
+    {
+      "id": "CustomizationGroup-131",
+      "name": "Popular Add-Ons (Add $):",
+      "type": "checkbox",
+      "options": [
+        {
+          "name": "American Cheese",
+          "displayName": "American Cheese",
+          "info": "$0.50 extra, 45 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        },
+        {
+          "name": "Monterey Jack Cheese",
+          "displayName": "Monterey Jack Cheese",
+          "info": "$0.60 extra, 60 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        },
+        {
+          "name": "Bacon Slices",
+          "displayName": "Bacon Slices",
+          "info": "$1.10 extra, 45 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        },
+        {
+          "name": "Potato",
+          "displayName": "Potato",
+          "info": "$1.29 extra, 90 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        },
+        {
+          "name": "Grilled Jalapenos",
+          "displayName": "Grilled Jalapenos",
+          "info": "$0.65 extra, 10 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        },
+        {
+          "name": "Jalapenos",
+          "displayName": "Jalapenos",
+          "info": "$0.65 extra, 0 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        },
+        {
+          "name": "Avocado",
+          "displayName": "Avocado",
+          "info": "$1.30 extra, 90 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        },
+        {
+          "name": "Grilled Peppers & Onions",
+          "displayName": "Grilled Peppers & Onions",
+          "info": "$1.29 extra, 25 Cal"
+        },
+        {
+          "name": "quantity",
+          "displayName": "quantity",
+          "info": null
+        }
+      ]
+    }
+  ]
+}

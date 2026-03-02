@@ -1,0 +1,18 @@
+{
+  "category": "drinks-shakes",
+  "item": "honest-apple-juice",
+  "customizationGroups": [
+    {
+      "id": "CustomizationGroup-313",
+      "name": "Honest Apple Juice:",
+      "type": "radio",
+      "options": [
+        {
+          "name": "Honest Apple Juice",
+          "displayName": "Honest Apple Juice",
+          "info": "$2.39, 35 Cal"
+        }
+      ]
+    }
+  ]
+}

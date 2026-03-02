@@ -1,0 +1,23 @@
+{
+  "category": "desserts-snacks",
+  "item": "cinnamon-roll",
+  "customizationGroups": [
+    {
+      "id": "CustomizationGroup-157",
+      "name": "Buns:",
+      "type": "radio",
+      "options": [
+        {
+          "name": "Cinnamon Roll",
+          "displayName": "Cinnamon Roll",
+          "info": "$3.19, 570 Cal"
+        },
+        {
+          "name": "Tray of 6 Cinnamon Rolls",
+          "displayName": "Tray of 6 Cinnamon Rolls",
+          "info": "$12.19 , 3420 Cal"
+        }
+      ]
+    }
+  ]
+}

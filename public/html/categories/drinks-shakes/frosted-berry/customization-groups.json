@@ -1,0 +1,54 @@
+{
+  "category": "drinks-shakes",
+  "item": "frosted-berry",
+  "customizationGroups": [
+    {
+      "id": "CustomizationGroup-443",
+      "name": "Drinks (Choose One):",
+      "type": "radio",
+      "options": [
+        {
+          "name": "Frosted Berry",
+          "displayName": "Frosted Berry",
+          "info": "$3.69 , 550 Cal"
+        }
+      ]
+    },
+    {
+      "id": "CustomizationGroup-444",
+      "name": "Add-In:",
+      "type": "checkbox",
+      "options": [
+        {
+          "name": "Blueberry Bubble Burst",
+          "displayName": "Blueberry Bubble Burst",
+          "info": "No extra charge, 210 Cal"
+        }
+      ]
+    },
+    {
+      "id": "CustomizationGroup-445",
+      "name": "Toppings (Choose One):",
+      "type": "checkbox",
+      "options": [
+        {
+          "name": "Soft Whip",
+          "displayName": "Soft Whip",
+          "info": "No extra charge, 120 Cal"
+        }
+      ]
+    },
+    {
+      "id": "CustomizationGroup-11",
+      "name": "Drink Options:",
+      "type": "checkbox",
+      "options": [
+        {
+          "name": "Ice",
+          "displayName": "Ice",
+          "info": "No extra charge, 0 Cal"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "category": "drinks-shakes",
+  "item": "milk",
+  "customizationGroups": [
+    {
+      "id": "CustomizationGroup-190",
+      "name": "Milk:",
+      "type": "radio",
+      "options": [
+        {
+          "name": "1% Regular Milk",
+          "displayName": "1% Regular Milk",
+          "info": "$1.99, 110 Cal"
+        },
+        {
+          "name": "1% Chocolate Milk",
+          "displayName": "1% Chocolate Milk",
+          "info": "$1.99 , 160 Cal"
+        }
+      ]
+    }
+  ]
+}
