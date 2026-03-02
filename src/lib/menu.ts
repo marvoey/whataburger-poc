@@ -12,9 +12,17 @@ export type MenuItem = { name: string; url: string; customizationGroups: Customi
 export type RawCategory = { category: string; items: MenuItem[] };
 
 export function loadCategories(): RawCategory[] {
-  return JSON.parse(
+  const raw = JSON.parse(
     readFileSync(join(process.cwd(), 'public/html/categories-full.json'), 'utf-8')
   ) as RawCategory[];
+
+  return raw.map((cat) => ({
+    ...cat,
+    items: cat.items.map((item) => ({
+      ...item,
+      customizationGroups: item.customizationGroups ?? [],
+    })),
+  }));
 }
 
 export function visibleOptions(options: Option[]): Option[] {
