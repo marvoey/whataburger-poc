@@ -92,6 +92,11 @@ const childrenResult = (pageType === 'WhataMenuPage' || pageType === 'WhataCateg
             }
           }
         }
+        orderBy: {                                                                                              
+          _metadata: {
+            sortOrder: ASC
+          }
+        }
         limit: 100
       ) {
         total

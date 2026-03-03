@@ -51,6 +51,11 @@ const childrenResult = await cmsClient.request(`
           }
         }
       }
+      orderBy: {                                                                                              
+        _metadata: {
+          sortOrder: ASC
+        }
+      }
     ) {
       items {
         _metadata {
