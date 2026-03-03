@@ -1,0 +1,40 @@
+---
+import Layout from '@layouts/Layout.astro';
+import { loadCategories } from '@lib/menu';
+import { slugify, label } from '@lib/utils';
+
+const { menu } = Astro.params;
+const raw = loadCategories();
+const found = raw.find((c) => c.category === menu);
+if (!found) return Astro.redirect('/404');
+const { category, items } = found;
+---
+
+<Layout>
+  <div class="page">
+    <header>
+      <a class="back" href="/">&lsaquo; BACK</a>
+      <span class="brand">WHATABURGER</span>
+      <span class="spacer" />
+    </header>
+
+    <div class="content">
+      <h1 class="page-title">{label(category)}</h1>
+
+      <ul class="category-grid">
+        {items.map((item) => (
+          <li>
+            <a class="cat-card" href={`/${menu}/${slugify(item.name)}`}>
+              <div class="card-img-wrap">
+                <img src="/images/Whataburger30.png" alt={item.name} class="card-img" />
+              </div>
+              <div class="caption">
+                <h4>{item.name}</h4>
+              </div>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</Layout>

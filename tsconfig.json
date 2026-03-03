@@ -4,6 +4,14 @@
   "exclude": ["dist"],
   "compilerOptions": {
     "target": "ES6", // Requires ES6 and above
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@lib/*": ["src/lib/*"],
+      "@layouts/*": ["src/layouts/*"],
+      "@cms/*": ["src/cms/*"],
+      "@pages/*": ["src/pages/*"]
+    },
     "plugins": [
       {
         "name": "@0no-co/graphqlsp",
