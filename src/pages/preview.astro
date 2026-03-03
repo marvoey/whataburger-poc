@@ -162,3 +162,21 @@ const title = page?._metadata?.displayName ?? '';
   </pre>
   <PreviewParams key={key} ver={ver} loc={loc} ctx={ctx} preview_token={preview_token} />
 </Layout>
+
+<script is:inline src="https://app-epsamoeydevva227p001.cms.optimizely.com/util/javascript/communicationinjector.js"></script>
+
+<script>
+  window.addEventListener('optimizely:cms:contentSaved', (event: Event) => {
+    const message = (event as CustomEvent).detail as {
+      previewToken?: string;
+      contentLink?: string;
+    };
+
+    const newToken = message?.previewToken;
+    if (!newToken) return;
+
+    const url = new URL(window.location.href);
+    url.searchParams.set('preview_token', newToken);
+    window.location.href = url.toString();
+  });
+</script>
