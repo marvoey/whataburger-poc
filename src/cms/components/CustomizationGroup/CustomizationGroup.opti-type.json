@@ -1,0 +1,46 @@
+{
+  "key": "WhataCustomizationGroup",
+  "displayName": "Whataburger: Customization Group",
+  "description": "A named group of options for a menu item (e.g. 'Bread (Choose One):' with radio/checkbox behavior)",
+  "baseType": "Component",
+  "sortOrder": 200,
+  "compositionBehaviors": ["elementEnabled"],
+  "properties": {
+    "name": {
+      "type": "string",
+      "displayName": "Group Name",
+      "description": "Label displayed above the options (e.g. 'Bread (Choose One):')",
+      "required": true,
+      "localized": true,
+      "maxLength": 255,
+      "sortOrder": 10,
+      "group": "Content",
+      "indexingType": "searchable"
+    },
+    "selectionType": {
+      "type": "string",
+      "displayName": "Selection Type",
+      "description": "Whether the customer can pick one option (radio) or multiple (checkbox)",
+      "required": true,
+      "localized": false,
+      "sortOrder": 20,
+      "group": "Settings",
+      "enum": [
+        { "value": "radio", "displayName": "Single select (radio)" },
+        { "value": "checkbox", "displayName": "Multi-select (checkbox)" }
+      ]
+    },
+    "options": {
+      "type": "array",
+      "displayName": "Options",
+      "description": "The selectable options within this group",
+      "sortOrder": 30,
+      "group": "Content",
+      "minItems": 1,
+      "items": {
+        "type": "component",
+        "contentType": "WhataCustomizationOption"
+      }
+    }
+  }
+}

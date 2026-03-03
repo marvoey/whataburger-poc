@@ -1,0 +1,61 @@
+{
+  "key": "WhataMenuCategoryPage",
+  "displayName": "Whataburger: Menu Category Page",
+  "description": "A category listing page showing a grid of menu items (e.g. Breakfast, Burgers)",
+  "baseType": "Page",
+  "sortOrder": 100,
+  "mayContainTypes": ["WhataMenuItemPage"],
+  "properties": {
+    "categoryName": {
+      "type": "string",
+      "displayName": "Category Name",
+      "description": "Display name shown as the page heading (e.g. 'Marvins Breakfast')",
+      "required": true,
+      "localized": true,
+      "maxLength": 255,
+      "sortOrder": 10,
+      "group": "Content",
+      "indexingType": "searchable"
+    },
+    "slug": {
+      "type": "string",
+      "displayName": "URL Slug",
+      "description": "URL-safe identifier used in the route (e.g. 'marvins-breakfast')",
+      "required": true,
+      "localized": false,
+      "maxLength": 255,
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "sortOrder": 20,
+      "group": "Settings",
+      "indexingType": "queryable"
+    },
+    "heroImage": {
+      "type": "contentReference",
+      "displayName": "Hero Image",
+      "description": "Optional banner image for the category page",
+      "required": false,
+      "localized": false,
+      "sortOrder": 30,
+      "group": "Content",
+      "allowedTypes": ["ImageMedia"]
+    },
+    "metaTitle": {
+      "type": "string",
+      "displayName": "Meta Title",
+      "required": false,
+      "localized": true,
+      "maxLength": 60,
+      "sortOrder": 10,
+      "group": "SEO"
+    },
+    "metaDescription": {
+      "type": "string",
+      "displayName": "Meta Description",
+      "required": false,
+      "localized": true,
+      "maxLength": 160,
+      "sortOrder": 20,
+      "group": "SEO"
+    }
+  }
+}

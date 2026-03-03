@@ -1,21 +1,15 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import { loadCategories, visibleOptions } from '../../lib/menu';
-import { slugify } from '../../lib/utils';
+import Layout from '../../../layouts/Layout.astro';
+import { loadCategories, visibleOptions } from '../../../lib/menu';
+import { slugify } from '../../../lib/utils';
 
-export function getStaticPaths() {
-  const raw = loadCategories();
-
-  return raw.flatMap(({ category, items }) =>
-    items.map((item) => ({
-      params: { category, item: slugify(item.name) },
-      props: { item },
-    }))
-  );
-}
-
-const { category } = Astro.params;
-const { item } = Astro.props;
+const { menu, item: itemSlug } = Astro.params;
+const raw = loadCategories();
+const cat = raw.find((c) => c.category === menu);
+if (!cat) return Astro.redirect('/404');
+const item = cat.items.find((i) => slugify(i.name) === itemSlug);
+if (!item) return Astro.redirect('/404');
+const { category } = cat;
 ---
 
 <Layout>

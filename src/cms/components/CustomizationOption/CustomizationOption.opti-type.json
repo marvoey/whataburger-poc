@@ -1,0 +1,31 @@
+{
+  "key": "WhataCustomizationOption",
+  "displayName": "Whataburger: Customization Option",
+  "description": "A single selectable option within a customization group (e.g. Buttermilk Biscuit, American Cheese)",
+  "baseType": "Component",
+  "sortOrder": 100,
+  "compositionBehaviors": ["elementEnabled"],
+  "properties": {
+    "displayName": {
+      "type": "string",
+      "displayName": "Display Name",
+      "description": "Label shown to the customer",
+      "required": true,
+      "localized": true,
+      "maxLength": 255,
+      "sortOrder": 10,
+      "group": "Content",
+      "indexingType": "searchable"
+    },
+    "info": {
+      "type": "string",
+      "displayName": "Info",
+      "description": "Price and calorie info shown alongside the option (e.g. '$0.50 extra, 45 Cal')",
+      "required": false,
+      "localized": true,
+      "maxLength": 255,
+      "sortOrder": 20,
+      "group": "Content"
+    }
+  }
+}

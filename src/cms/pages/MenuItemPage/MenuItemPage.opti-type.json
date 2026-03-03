@@ -1,0 +1,60 @@
+{
+  "key": "WhataMenuItemPage",
+  "displayName": "Whataburger: Menu Item Page",
+  "description": "A single menu item with its name, image, and customization options",
+  "baseType": "Page",
+  "sortOrder": 200,
+  "properties": {
+    "name": {
+      "type": "string",
+      "displayName": "Item Name",
+      "description": "Full display name of the menu item (e.g. 'Honey Butter Chicken Biscuit')",
+      "required": true,
+      "localized": true,
+      "maxLength": 255,
+      "sortOrder": 10,
+      "group": "Content",
+      "indexingType": "searchable"
+    },
+    "image": {
+      "type": "contentReference",
+      "displayName": "Item Image",
+      "description": "Hero image shown on the item detail page",
+      "required": false,
+      "localized": false,
+      "sortOrder": 20,
+      "group": "Content",
+      "allowedTypes": ["ImageMedia"]
+    },
+    "customizationGroups": {
+      "type": "array",
+      "displayName": "Customization Groups",
+      "description": "Ordered list of customization groups (bread, cheese, add-ons, etc.)",
+      "sortOrder": 30,
+      "group": "Content",
+      "minItems": 0,
+      "items": {
+        "type": "component",
+        "contentType": "WhataCustomizationGroup"
+      }
+    },
+    "metaTitle": {
+      "type": "string",
+      "displayName": "Meta Title",
+      "required": false,
+      "localized": true,
+      "maxLength": 60,
+      "sortOrder": 10,
+      "group": "SEO"
+    },
+    "metaDescription": {
+      "type": "string",
+      "displayName": "Meta Description",
+      "required": false,
+      "localized": true,
+      "maxLength": 160,
+      "sortOrder": 20,
+      "group": "SEO"
+    }
+  }
+}

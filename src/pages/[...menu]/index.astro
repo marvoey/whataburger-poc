@@ -1,11 +1,11 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import { loadCategories } from '../lib/menu';
-import { slugify, label } from '../lib/utils';
+import Layout from '../../layouts/Layout.astro';
+import { loadCategories } from '../../lib/menu';
+import { slugify, label } from '../../lib/utils';
 
-const { category: categoryParam } = Astro.params;
+const { menu } = Astro.params;
 const raw = loadCategories();
-const found = raw.find((c) => c.category === categoryParam);
+const found = raw.find((c) => c.category === menu);
 if (!found) return Astro.redirect('/404');
 const { category, items } = found;
 ---
