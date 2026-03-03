@@ -11,7 +11,8 @@
       "@layouts/*": ["src/layouts/*"],
       "@cms/*": ["src/cms/*"],
       "@pages/*": ["src/pages/*"],
-      "@styles/*": ["src/styles/*"]
+      "@styles/*": ["src/styles/*"],
+      "@components/*": ["src/components/*"]
     },
     "plugins": [
       {

@@ -1,0 +1,133 @@
+---
+import Layout from '@layouts/Layout.astro';
+import { GraphClient } from '@optimizely/cms-sdk';
+import { OptiAuth } from '@lib/opti-token-mgmt.js';
+import PreviewParams from '@components/PreviewParams.astro';
+
+const { searchParams } = Astro.url;
+const key = searchParams.get('key');
+const ver = searchParams.get('ver');
+const loc = searchParams.get('loc');
+const ctx = searchParams.get('ctx');
+
+if (!key || !ver || !loc || !ctx) {
+  return new Response('Missing required preview parameters: key, ver, loc, ctx', { status: 400 });
+}
+
+const auth = new OptiAuth({
+  clientId: import.meta.env.OPTIMIZELY_CLIENT_ID,
+  clientSecret: import.meta.env.OPTIMIZELY_CLIENT_SECRET,
+});
+
+const cmsClient = new GraphClient(import.meta.env.OPTIMIZELY_GRAPH_SINGLE_KEY, {
+  graphUrl: `${import.meta.env.OPTIMIZELY_GRAPH_GATEWAY}/content/v2`,
+});
+
+let content: any = null;
+let error: string | null = null;
+let preview_token = '';
+
+try {
+  preview_token = await auth.getAccessToken();
+  content = await cmsClient.getPreviewContent({
+    key,
+    ver,
+    loc,
+    ctx,
+    preview_token,
+  });
+} catch (e: any) {
+  error = e?.message ?? 'Failed to load preview content';
+}
+
+const typeName: string = content?.__typename ?? '';
+
+type CmsOption = {
+  _metadata?: { displayName?: string | null } | null;
+  Calories?: number | null;
+  addedCost?: number | null;
+  Quantity?: number | null;
+};
+
+type CmsGroup = {
+  _metadata?: { displayName?: string | null } | null;
+  chooseOne?: boolean | null;
+  Options?: (CmsOption | null)[] | null;
+};
+
+function optionInfo(opt: CmsOption): string {
+  const parts: string[] = [];
+  if (opt.Calories) parts.push(`${opt.Calories} cal`);
+  if (opt.addedCost) parts.push(`+$${opt.addedCost.toFixed(2)}`);
+  return parts.join(' · ');
+}
+---
+
+<Layout>
+  <PreviewParams key={key} ver={ver} loc={loc} ctx={ctx} preview_token={preview_token ?? ''} />
+
+  {error ? (
+    <div class="page">
+      <header>
+        <span class="back">&lsaquo; BACK</span>
+        <span class="brand">WHATABURGER</span>
+        <span class="spacer" />
+      </header>
+      <div class="content">
+        <h1 class="page-title">Preview Error</h1>
+        <p style="color: red;">{error}</p>
+      </div>
+    </div>
+  ) : typeName === 'WhataItemPage' ? (
+    <div class="page">
+      <header>
+        <span class="back">&lsaquo; BACK</span>
+        <span class="brand">WHATABURGER</span>
+        <span class="spacer" />
+      </header>
+      <div class="content">
+        <h1 class="page-title">{content?._metadata?.displayName}</h1>
+
+        <div class="item-hero">
+          <div class="hero-img-wrap">
+            <img src="/images/Whataburger30.png" alt={content?._metadata?.displayName} class="hero-img" />
+          </div>
+        </div>
+
+        {(content?.CustomOptions ?? []).map((group: CmsGroup) => (
+          <div class="group">
+            <div class="group-header">
+              <span class="group-name">{group._metadata?.displayName}</span>
+              <span class="group-type">{group.chooseOne ? 'radio' : 'checkbox'}</span>
+            </div>
+            <ul class="options-list">
+              {(group.Options ?? []).map((opt: CmsOption | null) => {
+                if (!opt) return null;
+                const info = optionInfo(opt);
+                return (
+                  <li class="option-row">
+                    <div class={`option-control ${group.chooseOne ? 'radio' : 'checkbox'}`} />
+                    <span class="option-name">{opt._metadata?.displayName}</span>
+                    {info && <span class="option-info">{info}</span>}
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  ) : (
+    <div class="page">
+      <header>
+        <span class="back">&lsaquo; BACK</span>
+        <span class="brand">WHATABURGER</span>
+        <span class="spacer" />
+      </header>
+      <div class="content">
+        <h1 class="page-title">{content?._metadata?.displayName}</h1>
+        <p style="opacity: 0.5; font-size: 0.8rem;">Type: {typeName || 'unknown'}</p>
+      </div>
+    </div>
+  )}
+</Layout>

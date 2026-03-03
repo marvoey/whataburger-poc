@@ -1,0 +1,104 @@
+---
+interface Props {
+  key: string;
+  ver: string;
+  loc: string;
+  ctx: string;
+  preview_token: string;
+}
+
+const { key, ver, loc, ctx, preview_token } = Astro.props;
+
+const params = [
+  { label: 'key', value: key },
+  { label: 'ver', value: ver },
+  { label: 'loc', value: loc },
+  { label: 'ctx', value: ctx },
+  { label: 'preview_token', value: preview_token },
+];
+---
+
+<div class="preview-params">
+  <details>
+    <summary>Preview Parameters</summary>
+    <table>
+      {params.map(({ label, value }) => (
+        <tr>
+          <td class="param-label">{label}</td>
+          <td class="param-value"><span class="param-text">{value}</span></td>
+          <td><button class="copy-btn" data-value={value}>Copy</button></td>
+        </tr>
+      ))}
+    </table>
+  </details>
+</div>
+
+<script>
+  document.querySelectorAll<HTMLButtonElement>('.copy-btn').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const value = btn.dataset.value ?? '';
+      navigator.clipboard.writeText(value).then(() => {
+        const original = btn.textContent;
+        btn.textContent = 'Copied!';
+        setTimeout(() => { btn.textContent = original; }, 1500);
+      });
+    });
+  });
+</script>
+
+<style>
+  .preview-params {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 999;
+    background: #1a1a1a;
+    border: 1px solid #444;
+    border-radius: 8px;
+    font-family: monospace;
+    font-size: 0.75rem;
+    color: #eee;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+    max-width: 90vw;
+  }
+  summary {
+    padding: 0.5rem 0.75rem;
+    cursor: pointer;
+    font-weight: bold;
+    list-style: none;
+    user-select: none;
+  }
+  summary::before {
+    content: '⚙ ';
+  }
+  table {
+    border-collapse: collapse;
+    padding: 0.5rem 0.75rem 0.75rem;
+    display: block;
+  }
+  td {
+    padding: 0.2rem 0.4rem;
+    vertical-align: middle;
+  }
+  .param-label {
+    color: #aaa;
+    white-space: nowrap;
+  }
+  .param-value {
+    max-width: 260px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .copy-btn {
+    background: #333;
+    border: 1px solid #555;
+    color: #eee;
+    border-radius: 4px;
+    padding: 0.15rem 0.5rem;
+    cursor: pointer;
+    font-size: 0.7rem;
+    white-space: nowrap;
+  }
+  .copy-btn:hover { background: #444; }
+</style>
