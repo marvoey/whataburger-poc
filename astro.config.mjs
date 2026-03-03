@@ -14,5 +14,10 @@ export default defineConfig({
         '@styles': fileURLToPath(new URL('./src/styles', import.meta.url)),
       },
     },
+    server: {
+      headers: {
+        'Content-Security-Policy': "script-src 'self' 'unsafe-inline' https://app-epsamoeydevva227p001.cms.optimizely.com;",
+      },
+    },
   },
 });
