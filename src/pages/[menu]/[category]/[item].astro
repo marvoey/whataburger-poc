@@ -1,5 +1,7 @@
 ---
 import Layout from "@layouts/Layout.astro";
+import Page from "@components/Page.astro";
+import CustomizationGroups from "@components/CustomizationGroups.astro";
 import { GraphClient } from "@optimizely/cms-sdk";
 import "@styles/item.css";
 
@@ -63,75 +65,17 @@ const result = await cmsClient.request(
 const page = result?.WhataItemPage?.items?.[0];
 const itemName = page?._metadata?.displayName ?? itemSlug;
 
-type CmsOption = {
-  _metadata?: { displayName?: string | null } | null;
-  Calories?: number | null;
-  addedCost?: number | null;
-  Quantity?: number | null;
-};
-
-type CmsGroup = {
-  _metadata?: { displayName?: string | null } | null;
-  chooseOne?: boolean | null;
-  Options?: (CmsOption | null)[] | null;
-};
-
-function optionInfo(opt: CmsOption): string {
-  const parts: string[] = [];
-  if (opt.Calories) parts.push(`${opt.Calories} cal`);
-  if (opt.addedCost) parts.push(`+$${opt.addedCost.toFixed(2)}`);
-  return parts.join(" · ");
-}
-
-const groups = (page?.CustomOptions ?? []) as CmsGroup[];
+const groups = page?.CustomOptions ?? [];
 ---
 
 <Layout>
-  <div class="page">
-    <header>
-      <a class="back" href={`/${menu}/${category}`}>&lsaquo; BACK</a>
-      <span class="brand">WHATABURGER</span>
-      <span class="spacer"></span>
-    </header>
-
-    <div class="content">
-      <h1 class="page-title">{itemName}</h1>
-
-      <div class="section-divider">
-        <span class="divider-line" />
-        <span class="divider-text">{category}</span>
-        <span class="divider-line" />
+  <Page title={itemName} dividerLabel={category ?? ''} backHref={`/${menu}/${category}`}>
+    <div class="item-hero">
+      <div class="hero-img-wrap">
+        <img src="/images/Whataburger30.png" alt={itemName} class="hero-img" />
       </div>
-
-      <div class="item-hero">
-        <div class="hero-img-wrap">
-          <img src="/images/Whataburger30.png" alt={itemName} class="hero-img" />
-        </div>
-      </div>
-
-      {
-        groups.map((group) => (
-          <div class="group">
-            <div class="group-header">
-              <span class="group-name">{group._metadata?.displayName}</span>
-              <span class="group-type">{group.chooseOne ? "radio" : "checkbox"}</span>
-            </div>
-            <ul class="options-list">
-              {(group.Options ?? []).map((opt) => {
-                if (!opt) return null;
-                const info = optionInfo(opt);
-                return (
-                  <li class="option-row">
-                    <div class={`option-control ${group.chooseOne ? "radio" : "checkbox"}`} />
-                    <span class="option-name">{opt._metadata?.displayName}</span>
-                    {info && <span class="option-info">{info}</span>}
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
-        ))
-      }
     </div>
-  </div>
+
+    <CustomizationGroups groups={groups} />
+  </Page>
 </Layout>

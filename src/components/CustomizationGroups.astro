@@ -1,0 +1,49 @@
+---
+type CmsOption = {
+  _metadata?: { displayName?: string | null } | null;
+  Calories?: number | null;
+  addedCost?: number | null;
+  Quantity?: number | null;
+};
+
+type CmsGroup = {
+  _metadata?: { displayName?: string | null } | null;
+  chooseOne?: boolean | null;
+  Options?: (CmsOption | null)[] | null;
+};
+
+interface Props {
+  groups: CmsGroup[];
+}
+
+const { groups } = Astro.props;
+
+function optionInfo(opt: CmsOption): string {
+  const parts: string[] = [];
+  if (opt.Calories) parts.push(`${opt.Calories} cal`);
+  if (opt.addedCost) parts.push(`+$${opt.addedCost.toFixed(2)}`);
+  return parts.join(" · ");
+}
+---
+
+{groups.map((group) => (
+  <div class="group">
+    <div class="group-header">
+      <span class="group-name">{group._metadata?.displayName}</span>
+      <span class="group-type">{group.chooseOne ? "radio" : "checkbox"}</span>
+    </div>
+    <ul class="options-list">
+      {(group.Options ?? []).map((opt) => {
+        if (!opt) return null;
+        const info = optionInfo(opt);
+        return (
+          <li class="option-row">
+            <div class={`option-control ${group.chooseOne ? "radio" : "checkbox"}`} />
+            <span class="option-name">{opt._metadata?.displayName}</span>
+            {info && <span class="option-info">{info}</span>}
+          </li>
+        );
+      })}
+    </ul>
+  </div>
+))}

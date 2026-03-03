@@ -1,0 +1,33 @@
+---
+interface Props {
+  title: string;
+  dividerLabel: string;
+  backHref?: string;
+}
+
+const { title, dividerLabel, backHref } = Astro.props;
+---
+
+<div class="page">
+  <header>
+    {backHref ? (
+      <a class="back" href={backHref}>&lsaquo; BACK</a>
+    ) : (
+      <span class="back">&lsaquo; BACK</span>
+    )}
+    <span class="brand">WHATABURGER</span>
+    <span class="spacer" />
+  </header>
+
+  <div class="content">
+    <h1 class="page-title">{title}</h1>
+
+    <div class="section-divider">
+      <span class="divider-line" />
+      <span class="divider-text">{dividerLabel}</span>
+      <span class="divider-line" />
+    </div>
+
+    <slot />
+  </div>
+</div>

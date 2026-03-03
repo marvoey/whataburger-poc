@@ -1,0 +1,22 @@
+---
+interface Props {
+  items: { name: string; slug?: string | null }[];
+}
+
+const { items } = Astro.props;
+---
+
+<ul class="category-grid">
+  {items.map((item) => (
+    <li>
+      <a class="cat-card" href={item.slug}>
+        <div class="card-img-wrap">
+          <img src="/images/Whataburger30.png" alt={item.name} class="card-img" />
+        </div>
+        <div class="caption">
+          <h4>{item.name}</h4>
+        </div>
+      </a>
+    </li>
+  ))}
+</ul>

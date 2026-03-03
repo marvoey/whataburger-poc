@@ -1,5 +1,7 @@
 ---
 import Layout from '@layouts/Layout.astro';
+import Page from '@components/Page.astro';
+import CategoryGrid from '@components/CategoryGrid.astro';
 import { GraphClient } from '@optimizely/cms-sdk';
 
 const cmsClient = new GraphClient(import.meta.env.OPTIMIZELY_GRAPH_SINGLE_KEY, {
@@ -75,36 +77,7 @@ const menus = children.map((item) => {
 ---
 
 <Layout>
-  <div class="page">
-    <header>
-      <span class="back">&lsaquo; BACK</span>
-      <span class="brand">WHATABURGER</span>
-      <span class="spacer" />
-    </header>
-
-    <div class="content">
-      <h1 class="page-title">Menus</h1>
-
-      <div class="section-divider">
-        <span class="divider-line" />
-        <span class="divider-text">Menus</span>
-        <span class="divider-line" />
-      </div>
-
-      <ul class="category-grid">
-        {menus.map((menu) => (
-          <li>
-            <a class="cat-card" href={menu.slug}>
-              <div class="card-img-wrap">
-                <img src="/images/Whataburger30.png" alt={menu.name} class="card-img" />
-              </div>
-              <div class="caption">
-                <h4>{menu.name}</h4>
-              </div>
-            </a>
-          </li>
-        ))}
-      </ul>
-    </div>
-  </div>
+  <Page title="Menus" dividerLabel="Menus">
+    <CategoryGrid items={menus} />
+  </Page>
 </Layout>
