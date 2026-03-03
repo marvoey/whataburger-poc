@@ -1,6 +1,11 @@
 ---
 import Layout from '@layouts/Layout.astro';
 import PreviewParams from '@components/PreviewParams.astro';
+import Page from '@components/Page.astro';
+import CategoryGrid from '@components/CategoryGrid.astro';
+import CustomizationGroups from '@components/CustomizationGroups.astro';
+import { GraphClient } from '@optimizely/cms-sdk';
+import type { PreviewParams } from 'node_modules/@optimizely/cms-sdk/dist/cjs';
 
 const { searchParams } = Astro.url;
 const key = searchParams.get('key') ?? '';
@@ -8,8 +13,152 @@ const ver = searchParams.get('ver') ?? '';
 const loc = searchParams.get('loc') ?? '';
 const ctx = searchParams.get('ctx') ?? '';
 const preview_token = searchParams.get('preview_token') ?? '';
+
+// --- Domain resolution ---
+const CMS_ORIGIN = import.meta.env.CMS_ORIGIN as string | undefined;
+const DOMAIN_ALIASES = import.meta.env.DOMAIN_ALIASES as string | undefined;
+const aliases = new Set((DOMAIN_ALIASES ?? '').split(',').map((s) => s.trim()).filter(Boolean));
+const base = CMS_ORIGIN && aliases.has(Astro.url.host) ? CMS_ORIGIN : Astro.url.origin;
+
+const cmsClient = new GraphClient(import.meta.env.OPTIMIZELY_GRAPH_SINGLE_KEY, {
+  graphUrl: `${import.meta.env.OPTIMIZELY_GRAPH_GATEWAY}/content/v2`,
+});
+
+const token = preview_token || undefined;
+
+// const previewData = await cmsClient.getPreviewContent({ key, ver,loc, ctx, preview_token});
+
+const result = key ? await cmsClient.request(`
+  query PreviewByKey($key: String!, $ver: String, $loc: [Locales]) {
+    _Content(
+      where: {
+        _metadata: {
+          key: { eq: $key }
+          version: { eq: $ver }
+        }
+      }
+      locale: $loc
+      limit: 1
+    ) {
+      items {
+        _metadata {
+          key
+          displayName
+          url { default base hierarchical }
+          version
+          locale
+          types
+        }
+        ... on WhataItemPage {
+          CustomOptions {
+            ... on WhataCustomOptionsGroup {
+              _metadata { displayName }
+              chooseOne
+              Options {
+                ... on WhataOption {
+                  _metadata { displayName }
+                  Calories
+                  addedCost
+                  Quantity
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`, { key, ver: ver || null, loc: loc ? [loc] : null }, preview_token) : null;
+
+const page = result?._Content?.items?.[0];
+const types: string[] = page?._metadata?.types ?? [];
+const pageType = ['WhataMenuPage', 'WhataCategoryPage', 'WhataItemPage', 'BlankExperience']
+  .find((t) => types.includes(t));
+
+const pageHierarchical = page?._metadata?.url?.hierarchical;
+
+type PageItem = { _metadata?: { displayName?: string; url?: { default?: string; hierarchical?: string } } };
+
+const childrenResult = (pageType === 'WhataMenuPage' || pageType === 'WhataCategoryPage' || pageType === 'BlankExperience') && pageHierarchical
+  ? await cmsClient.request(`
+    query PreviewChildren($base: String!, $hierarchical: String!) {
+      _Page(
+        where: {
+          _metadata: {
+            url: {
+              base: { eq: $base }
+              hierarchical: {
+                startsWith: $hierarchical,
+                notEq: $hierarchical
+              }
+            }
+          }
+        }
+        limit: 100
+      ) {
+        total
+        items {
+          _metadata {
+            displayName
+            url { default hierarchical }
+          }
+        }
+      }
+    }
+  `, { base: base, hierarchical: pageHierarchical }, preview_token)
+  : null;
+
+const parentDepth = (pageHierarchical?.match(/\//g) ?? []).length;
+const children = ((childrenResult?._Page?.items ?? []) as PageItem[]).filter((item) => {
+  const path = item._metadata?.url?.hierarchical ?? '';
+  return (path.match(/\//g) ?? []).length === parentDepth + 1;
+});
+
+const childItems = children.map((item) => ({
+  name: item._metadata?.displayName ?? '',
+  slug: item._metadata?.url?.default,
+}));
+
+const title = page?._metadata?.displayName ?? '';
 ---
 
 <Layout>
+  {pageType === 'WhataMenuPage' && (
+    <Page title={title} dividerLabel="Categories" backHref="/">
+      <CategoryGrid items={childItems} />
+    </Page>
+  )}
+
+  {pageType === 'WhataCategoryPage' && (
+    <Page title={title} dividerLabel="Items" backHref="/">
+      <CategoryGrid items={childItems} />
+    </Page>
+  )}
+
+  {pageType === 'WhataItemPage' && (
+    <Page title={title} dividerLabel="Customize" backHref="/">
+      <CustomizationGroups groups={page?.CustomOptions ?? []} />
+    </Page>
+  )}
+
+  {pageType === 'BlankExperience' && (
+    <Page title={title} dividerLabel="Experience" backHref="/">
+      <CategoryGrid items={childItems} />
+    </Page>
+  )}
+
+  {!pageType && page && (
+    <pre>{JSON.stringify(page, null, 2)}</pre>
+  )}
+
+  <pre style="padding:1rem;background:#111;color:#eee;font-size:0.75rem;overflow:auto">
+    token: {token ? token : 'none'}
+    pageType: {pageType ?? 'unknown'}
+    types: {JSON.stringify(types)}
+    hierarchical: {pageHierarchical ?? 'none'}
+    {JSON.stringify({result}, null, 2)}
+    {JSON.stringify({ childrenResult: childrenResult ?? null }, null, 2)}
+    {JSON.stringify({ children }, null, 2)}
+  </pre>
   <PreviewParams key={key} ver={ver} loc={loc} ctx={ctx} preview_token={preview_token} />
 </Layout>
