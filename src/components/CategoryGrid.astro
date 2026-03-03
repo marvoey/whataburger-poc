@@ -6,9 +6,6 @@ interface Props {
 const { items } = Astro.props;
 ---
 
-<pre style="padding:1rem;background:#111;color:#eee;font-size:0.75rem;overflow:auto">
-  {JSON.stringify({ items }, null, 2)}
-</pre>
 <ul class="category-grid">
   {items.map((item) => (
     <li>

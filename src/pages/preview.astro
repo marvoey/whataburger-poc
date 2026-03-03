@@ -1,11 +1,9 @@
 ---
 import Layout from '@layouts/Layout.astro';
-import PreviewParams from '@components/PreviewParams.astro';
 import Page from '@components/Page.astro';
 import CategoryGrid from '@components/CategoryGrid.astro';
 import CustomizationGroups from '@components/CustomizationGroups.astro';
 import { GraphClient } from '@optimizely/cms-sdk';
-import type { PreviewParams } from 'node_modules/@optimizely/cms-sdk/dist/cjs';
 
 const { searchParams } = Astro.url;
 const key = searchParams.get('key') ?? '';
@@ -151,16 +149,6 @@ const title = page?._metadata?.displayName ?? '';
     <pre>{JSON.stringify(page, null, 2)}</pre>
   )}
 
-  <pre style="padding:1rem;background:#111;color:#eee;font-size:0.75rem;overflow:auto">
-    token: {token ? token : 'none'}
-    pageType: {pageType ?? 'unknown'}
-    types: {JSON.stringify(types)}
-    hierarchical: {pageHierarchical ?? 'none'}
-    {JSON.stringify({result}, null, 2)}
-    {JSON.stringify({ childrenResult: childrenResult ?? null }, null, 2)}
-    {JSON.stringify({ children }, null, 2)}
-  </pre>
-  <PreviewParams key={key} ver={ver} loc={loc} ctx={ctx} preview_token={preview_token} />
 </Layout>
 
 <script is:inline src="https://app-epsamoeydevva227p001.cms.optimizely.com/util/javascript/communicationinjector.js"></script>
