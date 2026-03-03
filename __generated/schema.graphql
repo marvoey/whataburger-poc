@@ -1369,6 +1369,49 @@ enum FactorModifier {
   SQUARE
 }
 
+input FloatFilterInput {
+  """
+  `boost` influences the weight of a field by boosting a match with a number (default: 1) — counts more towards the eventual relevance score which can be projected with `_score` — at query time. Note that `boost` cannot be a negative number.
+  """
+  boost: Float
+  """`eq` matches on an exact value, but the value is case-insensitive."""
+  eq: Float
+  """`exist` matches results that have this field."""
+  exist: Boolean
+  """
+  `Factor` allows you to use a number value in a field to influence the `_score` directly. If used on a multi-valued field, then only the lowest value of the field is used in calculations. Default for `value` is `1`. Default for `modifier` is `NONE`.
+  """
+  factor: NumberFactor
+  """
+  `gt` retrieves results with matches that have a value which is `greater than` it.
+  """
+  gt: Float
+  """
+  `gte` retrieves results with matches that have a value which is `greater than or equal to` it.
+  """
+  gte: Float
+  """
+  `in` matches with 1 or more exact values in a list. Example: `in: ["word1", "word2", "this is a phrase"]`
+  """
+  in: [Float]
+  """
+  `lt` retrieves results with matches that have a value which is `lower than` it.
+  """
+  lt: Float
+  """
+  `lte` retrieves results with matches that have a value which is `lower than or equal to` it.
+  """
+  lte: Float
+  """
+  `not_eq` retrieves results not matching with an exact (but case-insensitive) value.
+  """
+  notEq: Float
+  """
+  `not_in` returns results that do not match with 1 or more exact values in a list. Example: `not_in: ["word1", "word2", "this is a phrase"]`
+  """
+  notIn: [Float]
+}
+
 type FolderPage implements IData & _IContent & _IItem & _IPage {
   FolderDescription: String
   _children: QueryRef @deprecated(reason: "Use `_link` field instead")
@@ -2394,6 +2437,7 @@ enum Locales {
   en
   en_GB
   en_NZ
+  fr
   nl_BE
   sv
 }
@@ -3725,22 +3769,6 @@ type ParagraphOutput {
   total(all: Boolean): Int
 }
 
-type ParagraphProperty {
-  Text: SearchableRichText
-}
-
-type ParagraphPropertyFacet {
-  Text: SearchableRichTextFacet
-}
-
-input ParagraphPropertyOrderByInput {
-  Text: SearchableRichTextOrderByInput
-}
-
-input ParagraphPropertyWhereInput {
-  Text: SearchableRichTextWhereInput
-}
-
 input ParagraphWhereInput {
   Text: SearchableRichTextWhereInput
   _and: [ParagraphWhereInput]
@@ -4421,6 +4449,12 @@ type Query {
   Video(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: VideoOrderByInput, pinned: PinnedInput, skip: Int! = 0, track: String, variation: VariationInput, where: VideoWhereInput): VideoOutput
   VideoExternal(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: VideoExternalOrderByInput, pinned: PinnedInput, skip: Int! = 0, track: String, variation: VariationInput, where: VideoExternalWhereInput): VideoExternalOutput
   VideoMedia(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: VideoMediaOrderByInput, pinned: PinnedInput, skip: Int! = 0, track: String, variation: VariationInput, where: VideoMediaWhereInput): VideoMediaOutput
+  WhataCategoryPage(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: WhataCategoryPageOrderByInput, pinned: PinnedInput, skip: Int! = 0, track: String, variation: VariationInput, where: WhataCategoryPageWhereInput): WhataCategoryPageOutput
+  WhataCustomOptionsGroup(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: WhataCustomOptionsGroupOrderByInput, pinned: PinnedInput, skip: Int! = 0, track: String, variation: VariationInput, where: WhataCustomOptionsGroupWhereInput): WhataCustomOptionsGroupOutput
+  WhataItemPage(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: WhataItemPageOrderByInput, pinned: PinnedInput, skip: Int! = 0, track: String, variation: VariationInput, where: WhataItemPageWhereInput): WhataItemPageOutput
+  WhataMenuPage(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: WhataMenuPageOrderByInput, pinned: PinnedInput, skip: Int! = 0, track: String, variation: VariationInput, where: WhataMenuPageWhereInput): WhataMenuPageOutput
+  WhataOption(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: WhataOptionOrderByInput, pinned: PinnedInput, skip: Int! = 0, track: String, variation: VariationInput, where: WhataOptionWhereInput): WhataOptionOutput
+  WhataRoot(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: WhataRootOrderByInput, pinned: PinnedInput, skip: Int! = 0, track: String, variation: VariationInput, where: WhataRootWhereInput): WhataRootOutput
   _AssetItem(cursor: String, ids: [String], limit: Int! = 20, locale: [cmp_Locales], orderBy: _AssetItemOrderByInput, pinned: PinnedInput, skip: Int! = 0, track: String, variation: VariationInput, where: _AssetItemWhereInput): _AssetItemOutput
   _Component(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: _ComponentOrderByInput, pinned: PinnedInput, skip: Int! = 0, track: String, variation: VariationInput, where: _ComponentWhereInput): _ComponentOutput
   _Content(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: _ContentOrderByInput, pinned: PinnedInput, skip: Int! = 0, track: String, variation: VariationInput, where: _ContentWhereInput): _ContentOutput
@@ -4521,6 +4555,12 @@ type QueryRef {
   Video(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: VideoOrderByInput, pinned: PinnedInput, skip: Int! = 0, track: String, variation: VariationInput, where: VideoWhereInput): VideoOutput
   VideoExternal(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: VideoExternalOrderByInput, pinned: PinnedInput, skip: Int! = 0, track: String, variation: VariationInput, where: VideoExternalWhereInput): VideoExternalOutput
   VideoMedia(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: VideoMediaOrderByInput, pinned: PinnedInput, skip: Int! = 0, track: String, variation: VariationInput, where: VideoMediaWhereInput): VideoMediaOutput
+  WhataCategoryPage(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: WhataCategoryPageOrderByInput, pinned: PinnedInput, skip: Int! = 0, track: String, variation: VariationInput, where: WhataCategoryPageWhereInput): WhataCategoryPageOutput
+  WhataCustomOptionsGroup(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: WhataCustomOptionsGroupOrderByInput, pinned: PinnedInput, skip: Int! = 0, track: String, variation: VariationInput, where: WhataCustomOptionsGroupWhereInput): WhataCustomOptionsGroupOutput
+  WhataItemPage(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: WhataItemPageOrderByInput, pinned: PinnedInput, skip: Int! = 0, track: String, variation: VariationInput, where: WhataItemPageWhereInput): WhataItemPageOutput
+  WhataMenuPage(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: WhataMenuPageOrderByInput, pinned: PinnedInput, skip: Int! = 0, track: String, variation: VariationInput, where: WhataMenuPageWhereInput): WhataMenuPageOutput
+  WhataOption(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: WhataOptionOrderByInput, pinned: PinnedInput, skip: Int! = 0, track: String, variation: VariationInput, where: WhataOptionWhereInput): WhataOptionOutput
+  WhataRoot(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: WhataRootOrderByInput, pinned: PinnedInput, skip: Int! = 0, track: String, variation: VariationInput, where: WhataRootWhereInput): WhataRootOutput
   _AssetItem(cursor: String, ids: [String], limit: Int! = 20, locale: [cmp_Locales], orderBy: _AssetItemOrderByInput, pinned: PinnedInput, skip: Int! = 0, track: String, variation: VariationInput, where: _AssetItemWhereInput): _AssetItemOutput
   _Component(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: _ComponentOrderByInput, pinned: PinnedInput, skip: Int! = 0, track: String, variation: VariationInput, where: _ComponentWhereInput): _ComponentOutput
   _Content(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: _ContentOrderByInput, pinned: PinnedInput, skip: Int! = 0, track: String, variation: VariationInput, where: _ContentWhereInput): _ContentOutput
@@ -5379,6 +5419,350 @@ input VideoWhereInput {
   _or: [VideoWhereInput]
 }
 
+type WhataCategoryPage implements IData & _IContent & _IItem & _IPage {
+  _children: QueryRef @deprecated(reason: "Use `_link` field instead")
+  _deleted: Bool
+  _fulltext(highlight: HighlightOptions): [String]
+  _id: String
+  _itemMetadata: _Metadata
+  _json: JSON
+  _link(type: LinkTypes): QueryRef
+  _metadata: IContentMetadata
+  _modified: Date
+  _score: Float
+  _track: String
+}
+
+type WhataCategoryPageAutocomplete {
+  _itemMetadata: _MetadataAutocomplete
+  _metadata: IContentMetadataAutocomplete
+}
+
+type WhataCategoryPageFacet {
+  _itemMetadata: _MetadataFacet
+  _metadata: IContentMetadataFacet
+}
+
+input WhataCategoryPageOrderByInput {
+  _itemMetadata: _MetadataOrderByInput
+  _metadata: IContentMetadataOrderByInput
+  _minimumScore: Float
+  _modified: OrderBy
+  _ranking: Ranking
+  """
+  The value needs to be a positive value, but cannot exceed the maximum value of an integer. In case it is exceeded, the maximum of an integer is used. In case of a negative value, semantic search will be disabled.
+  """
+  _semanticWeight: Float
+}
+
+type WhataCategoryPageOutput {
+  autocomplete: WhataCategoryPageAutocomplete
+  cursor: String
+  facets: WhataCategoryPageFacet
+  item: WhataCategoryPage
+  items: [WhataCategoryPage]
+  total(all: Boolean): Int
+}
+
+input WhataCategoryPageWhereInput {
+  _and: [WhataCategoryPageWhereInput]
+  _fulltext: SearchableStringFilterInput
+  _itemMetadata: _MetadataWhereInput
+  _metadata: IContentMetadataWhereInput
+  _modified: DateFilterInput
+  _not: [WhataCategoryPageWhereInput]
+  _or: [WhataCategoryPageWhereInput]
+}
+
+type WhataCustomOptionsGroup implements IData & _IComponent & _IContent & _IItem {
+  Options: [_IContent]
+  _children: QueryRef @deprecated(reason: "Use `_link` field instead")
+  _deleted: Bool
+  _fulltext(highlight: HighlightOptions): [String]
+  _id: String
+  _itemMetadata: _Metadata
+  _json: JSON
+  _link(type: LinkTypes): QueryRef
+  _metadata: IContentMetadata
+  _modified: Date
+  _score: Float
+  _track: String
+  chooseOne: Boolean
+}
+
+type WhataCustomOptionsGroupAutocomplete {
+  Options: _IContentAutocomplete
+  _itemMetadata: _MetadataAutocomplete
+  _metadata: IContentMetadataAutocomplete
+}
+
+type WhataCustomOptionsGroupFacet {
+  Options: _IContentFacet
+  _itemMetadata: _MetadataFacet
+  _metadata: IContentMetadataFacet
+}
+
+input WhataCustomOptionsGroupOrderByInput {
+  Options: _IContentOrderByInput
+  _itemMetadata: _MetadataOrderByInput
+  _metadata: IContentMetadataOrderByInput
+  _minimumScore: Float
+  _modified: OrderBy
+  _ranking: Ranking
+  """
+  The value needs to be a positive value, but cannot exceed the maximum value of an integer. In case it is exceeded, the maximum of an integer is used. In case of a negative value, semantic search will be disabled.
+  """
+  _semanticWeight: Float
+}
+
+type WhataCustomOptionsGroupOutput {
+  autocomplete: WhataCustomOptionsGroupAutocomplete
+  cursor: String
+  facets: WhataCustomOptionsGroupFacet
+  item: WhataCustomOptionsGroup
+  items: [WhataCustomOptionsGroup]
+  total(all: Boolean): Int
+}
+
+input WhataCustomOptionsGroupWhereInput {
+  Options: _IContentWhereInput
+  _and: [WhataCustomOptionsGroupWhereInput]
+  _fulltext: SearchableStringFilterInput
+  _itemMetadata: _MetadataWhereInput
+  _metadata: IContentMetadataWhereInput
+  _modified: DateFilterInput
+  _not: [WhataCustomOptionsGroupWhereInput]
+  _or: [WhataCustomOptionsGroupWhereInput]
+}
+
+type WhataItemPage implements IData & _IContent & _IItem & _IPage {
+  CustomOptions: [_IContent]
+  _children: QueryRef @deprecated(reason: "Use `_link` field instead")
+  _deleted: Bool
+  _fulltext(highlight: HighlightOptions): [String]
+  _id: String
+  _itemMetadata: _Metadata
+  _json: JSON
+  _link(type: LinkTypes): QueryRef
+  _metadata: IContentMetadata
+  _modified: Date
+  _score: Float
+  _track: String
+}
+
+type WhataItemPageAutocomplete {
+  CustomOptions: _IContentAutocomplete
+  _itemMetadata: _MetadataAutocomplete
+  _metadata: IContentMetadataAutocomplete
+}
+
+type WhataItemPageFacet {
+  CustomOptions: _IContentFacet
+  _itemMetadata: _MetadataFacet
+  _metadata: IContentMetadataFacet
+}
+
+input WhataItemPageOrderByInput {
+  CustomOptions: _IContentOrderByInput
+  _itemMetadata: _MetadataOrderByInput
+  _metadata: IContentMetadataOrderByInput
+  _minimumScore: Float
+  _modified: OrderBy
+  _ranking: Ranking
+  """
+  The value needs to be a positive value, but cannot exceed the maximum value of an integer. In case it is exceeded, the maximum of an integer is used. In case of a negative value, semantic search will be disabled.
+  """
+  _semanticWeight: Float
+}
+
+type WhataItemPageOutput {
+  autocomplete: WhataItemPageAutocomplete
+  cursor: String
+  facets: WhataItemPageFacet
+  item: WhataItemPage
+  items: [WhataItemPage]
+  total(all: Boolean): Int
+}
+
+input WhataItemPageWhereInput {
+  CustomOptions: _IContentWhereInput
+  _and: [WhataItemPageWhereInput]
+  _fulltext: SearchableStringFilterInput
+  _itemMetadata: _MetadataWhereInput
+  _metadata: IContentMetadataWhereInput
+  _modified: DateFilterInput
+  _not: [WhataItemPageWhereInput]
+  _or: [WhataItemPageWhereInput]
+}
+
+type WhataMenuPage implements IData & _IContent & _IItem & _IPage {
+  _children: QueryRef @deprecated(reason: "Use `_link` field instead")
+  _deleted: Bool
+  _fulltext(highlight: HighlightOptions): [String]
+  _id: String
+  _itemMetadata: _Metadata
+  _json: JSON
+  _link(type: LinkTypes): QueryRef
+  _metadata: IContentMetadata
+  _modified: Date
+  _score: Float
+  _track: String
+}
+
+type WhataMenuPageAutocomplete {
+  _itemMetadata: _MetadataAutocomplete
+  _metadata: IContentMetadataAutocomplete
+}
+
+type WhataMenuPageFacet {
+  _itemMetadata: _MetadataFacet
+  _metadata: IContentMetadataFacet
+}
+
+input WhataMenuPageOrderByInput {
+  _itemMetadata: _MetadataOrderByInput
+  _metadata: IContentMetadataOrderByInput
+  _minimumScore: Float
+  _modified: OrderBy
+  _ranking: Ranking
+  """
+  The value needs to be a positive value, but cannot exceed the maximum value of an integer. In case it is exceeded, the maximum of an integer is used. In case of a negative value, semantic search will be disabled.
+  """
+  _semanticWeight: Float
+}
+
+type WhataMenuPageOutput {
+  autocomplete: WhataMenuPageAutocomplete
+  cursor: String
+  facets: WhataMenuPageFacet
+  item: WhataMenuPage
+  items: [WhataMenuPage]
+  total(all: Boolean): Int
+}
+
+input WhataMenuPageWhereInput {
+  _and: [WhataMenuPageWhereInput]
+  _fulltext: SearchableStringFilterInput
+  _itemMetadata: _MetadataWhereInput
+  _metadata: IContentMetadataWhereInput
+  _modified: DateFilterInput
+  _not: [WhataMenuPageWhereInput]
+  _or: [WhataMenuPageWhereInput]
+}
+
+type WhataOption implements IData & _IComponent & _IContent & _IItem {
+  Calories: Int
+  Quantity: Boolean
+  _children: QueryRef @deprecated(reason: "Use `_link` field instead")
+  _deleted: Bool
+  _fulltext(highlight: HighlightOptions): [String]
+  _id: String
+  _itemMetadata: _Metadata
+  _json: JSON
+  _link(type: LinkTypes): QueryRef
+  _metadata: IContentMetadata
+  _modified: Date
+  _score: Float
+  _track: String
+  addedCost: Float
+}
+
+type WhataOptionAutocomplete {
+  _itemMetadata: _MetadataAutocomplete
+  _metadata: IContentMetadataAutocomplete
+}
+
+type WhataOptionFacet {
+  _itemMetadata: _MetadataFacet
+  _metadata: IContentMetadataFacet
+}
+
+input WhataOptionOrderByInput {
+  _itemMetadata: _MetadataOrderByInput
+  _metadata: IContentMetadataOrderByInput
+  _minimumScore: Float
+  _modified: OrderBy
+  _ranking: Ranking
+  """
+  The value needs to be a positive value, but cannot exceed the maximum value of an integer. In case it is exceeded, the maximum of an integer is used. In case of a negative value, semantic search will be disabled.
+  """
+  _semanticWeight: Float
+}
+
+type WhataOptionOutput {
+  autocomplete: WhataOptionAutocomplete
+  cursor: String
+  facets: WhataOptionFacet
+  item: WhataOption
+  items: [WhataOption]
+  total(all: Boolean): Int
+}
+
+input WhataOptionWhereInput {
+  _and: [WhataOptionWhereInput]
+  _fulltext: SearchableStringFilterInput
+  _itemMetadata: _MetadataWhereInput
+  _metadata: IContentMetadataWhereInput
+  _modified: DateFilterInput
+  _not: [WhataOptionWhereInput]
+  _or: [WhataOptionWhereInput]
+}
+
+type WhataRoot implements IData & _IContent & _IItem & _IPage {
+  _children: QueryRef @deprecated(reason: "Use `_link` field instead")
+  _deleted: Bool
+  _fulltext(highlight: HighlightOptions): [String]
+  _id: String
+  _itemMetadata: _Metadata
+  _json: JSON
+  _link(type: LinkTypes): QueryRef
+  _metadata: IContentMetadata
+  _modified: Date
+  _score: Float
+  _track: String
+}
+
+type WhataRootAutocomplete {
+  _itemMetadata: _MetadataAutocomplete
+  _metadata: IContentMetadataAutocomplete
+}
+
+type WhataRootFacet {
+  _itemMetadata: _MetadataFacet
+  _metadata: IContentMetadataFacet
+}
+
+input WhataRootOrderByInput {
+  _itemMetadata: _MetadataOrderByInput
+  _metadata: IContentMetadataOrderByInput
+  _minimumScore: Float
+  _modified: OrderBy
+  _ranking: Ranking
+  """
+  The value needs to be a positive value, but cannot exceed the maximum value of an integer. In case it is exceeded, the maximum of an integer is used. In case of a negative value, semantic search will be disabled.
+  """
+  _semanticWeight: Float
+}
+
+type WhataRootOutput {
+  autocomplete: WhataRootAutocomplete
+  cursor: String
+  facets: WhataRootFacet
+  item: WhataRoot
+  items: [WhataRoot]
+  total(all: Boolean): Int
+}
+
+input WhataRootWhereInput {
+  _and: [WhataRootWhereInput]
+  _fulltext: SearchableStringFilterInput
+  _itemMetadata: _MetadataWhereInput
+  _metadata: IContentMetadataWhereInput
+  _modified: DateFilterInput
+  _not: [WhataRootWhereInput]
+  _or: [WhataRootWhereInput]
+}
+
 type _AssetItem implements IData & _IAssetItem & _IItem {
   _assetMetadata: _AssetMetadata
   _children: QueryRef @deprecated(reason: "Use `_link` field instead")
@@ -5435,7 +5819,7 @@ input _AssetItemWhereInput {
 }
 
 type _AssetMetadata {
-  fileSize: Int
+  fileSize: Float
   mimeType: String
   url: String
 }
@@ -5458,7 +5842,7 @@ input _AssetMetadataOrderByInput {
 }
 
 input _AssetMetadataWhereInput {
-  fileSize: IntFilterInput
+  fileSize: FloatFilterInput
   mimeType: StringFilterInput
   url: StringFilterInput
 }
@@ -7303,7 +7687,7 @@ input cmp_PercentFieldWhereInput {
   _or: [cmp_PercentFieldWhereInput]
 }
 
-type cmp_PublicImageAsset implements IData & Icmp_Asset {
+type cmp_PublicImageAsset implements IData & Icmp_Asset & _IAssetItem & _IImageItem & _IItem {
   AltText: String
   DateCreated: Date
   DateModified: Date
@@ -7323,10 +7707,13 @@ type cmp_PublicImageAsset implements IData & Icmp_Asset {
   Title(highlight: HighlightOptions): String
   Url: String
   Width: Int
+  _assetMetadata: _AssetMetadata
   _children: QueryRef @deprecated(reason: "Use `_link` field instead")
   _deleted: Bool
   _fulltext(highlight: HighlightOptions): [String]
   _id: String
+  _imageMetadata: _ImageMetadata
+  _itemMetadata: _Metadata
   _json: JSON
   _link(type: LinkTypes): QueryRef
   _modified: Date
@@ -7345,6 +7732,8 @@ type cmp_PublicImageAssetAutocomplete {
   Renditions: cmp_RenditionPropertyAutocomplete
   Tags: cmp_TagAutocomplete
   Url(limit: Int! = 10, value: String!): [String]
+  _assetMetadata: _AssetMetadataAutocomplete
+  _itemMetadata: _MetadataAutocomplete
 }
 
 type cmp_PublicImageAssetFacet {
@@ -7367,6 +7756,9 @@ type cmp_PublicImageAssetFacet {
   Title(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
   Url(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
   Width(filters: [String!], limit: Int, orderBy: OrderBy, orderType: OrderByFacetType, ranges: [RangeFacetsInput]): [NumberFacet]
+  _assetMetadata: _AssetMetadataFacet
+  _imageMetadata: _ImageMetadataFacet
+  _itemMetadata: _MetadataFacet
 }
 
 input cmp_PublicImageAssetOrderByInput {
@@ -7389,6 +7781,9 @@ input cmp_PublicImageAssetOrderByInput {
   Title: OrderBy
   Url: OrderBy
   Width: OrderBy
+  _assetMetadata: _AssetMetadataOrderByInput
+  _imageMetadata: _ImageMetadataOrderByInput
+  _itemMetadata: _MetadataOrderByInput
   _minimumScore: Float
   _modified: OrderBy
   _ranking: Ranking
@@ -7428,13 +7823,16 @@ input cmp_PublicImageAssetWhereInput {
   Url: StringFilterInput
   Width: IntFilterInput
   _and: [cmp_PublicImageAssetWhereInput]
+  _assetMetadata: _AssetMetadataWhereInput
   _fulltext: SearchableStringFilterInput
+  _imageMetadata: _ImageMetadataWhereInput
+  _itemMetadata: _MetadataWhereInput
   _modified: DateFilterInput
   _not: [cmp_PublicImageAssetWhereInput]
   _or: [cmp_PublicImageAssetWhereInput]
 }
 
-type cmp_PublicRawFileAsset implements IData & Icmp_Asset {
+type cmp_PublicRawFileAsset implements IData & Icmp_Asset & _IAssetItem & _IItem {
   DateCreated: Date
   DateModified: Date
   Description(highlight: HighlightOptions): String
@@ -7449,10 +7847,12 @@ type cmp_PublicRawFileAsset implements IData & Icmp_Asset {
   Tags: [cmp_Tag]
   Title(highlight: HighlightOptions): String
   Url: String
+  _assetMetadata: _AssetMetadata
   _children: QueryRef @deprecated(reason: "Use `_link` field instead")
   _deleted: Bool
   _fulltext(highlight: HighlightOptions): [String]
   _id: String
+  _itemMetadata: _Metadata
   _json: JSON
   _link(type: LinkTypes): QueryRef
   _modified: Date
@@ -7469,6 +7869,8 @@ type cmp_PublicRawFileAssetAutocomplete {
   ParentFolderGuid(limit: Int! = 10, value: String!): [String]
   Tags: cmp_TagAutocomplete
   Url(limit: Int! = 10, value: String!): [String]
+  _assetMetadata: _AssetMetadataAutocomplete
+  _itemMetadata: _MetadataAutocomplete
 }
 
 type cmp_PublicRawFileAssetFacet {
@@ -7486,6 +7888,8 @@ type cmp_PublicRawFileAssetFacet {
   Tags: cmp_TagFacet
   Title(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
   Url(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  _assetMetadata: _AssetMetadataFacet
+  _itemMetadata: _MetadataFacet
 }
 
 input cmp_PublicRawFileAssetOrderByInput {
@@ -7503,6 +7907,8 @@ input cmp_PublicRawFileAssetOrderByInput {
   Tags: cmp_TagOrderByInput
   Title: OrderBy
   Url: OrderBy
+  _assetMetadata: _AssetMetadataOrderByInput
+  _itemMetadata: _MetadataOrderByInput
   _minimumScore: Float
   _modified: OrderBy
   _ranking: Ranking
@@ -7537,13 +7943,15 @@ input cmp_PublicRawFileAssetWhereInput {
   Title: SearchableStringFilterInput
   Url: StringFilterInput
   _and: [cmp_PublicRawFileAssetWhereInput]
+  _assetMetadata: _AssetMetadataWhereInput
   _fulltext: SearchableStringFilterInput
+  _itemMetadata: _MetadataWhereInput
   _modified: DateFilterInput
   _not: [cmp_PublicRawFileAssetWhereInput]
   _or: [cmp_PublicRawFileAssetWhereInput]
 }
 
-type cmp_PublicVideoAsset implements IData & Icmp_Asset {
+type cmp_PublicVideoAsset implements IData & Icmp_Asset & _IAssetItem & _IItem {
   AltText: String
   DateCreated: Date
   DateModified: Date
@@ -7560,10 +7968,12 @@ type cmp_PublicVideoAsset implements IData & Icmp_Asset {
   Tags: [cmp_Tag]
   Title(highlight: HighlightOptions): String
   Url: String
+  _assetMetadata: _AssetMetadata
   _children: QueryRef @deprecated(reason: "Use `_link` field instead")
   _deleted: Bool
   _fulltext(highlight: HighlightOptions): [String]
   _id: String
+  _itemMetadata: _Metadata
   _json: JSON
   _link(type: LinkTypes): QueryRef
   _modified: Date
@@ -7582,6 +7992,8 @@ type cmp_PublicVideoAssetAutocomplete {
   Renditions: cmp_RenditionPropertyAutocomplete
   Tags: cmp_TagAutocomplete
   Url(limit: Int! = 10, value: String!): [String]
+  _assetMetadata: _AssetMetadataAutocomplete
+  _itemMetadata: _MetadataAutocomplete
 }
 
 type cmp_PublicVideoAssetFacet {
@@ -7601,6 +8013,8 @@ type cmp_PublicVideoAssetFacet {
   Tags: cmp_TagFacet
   Title(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
   Url(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  _assetMetadata: _AssetMetadataFacet
+  _itemMetadata: _MetadataFacet
 }
 
 input cmp_PublicVideoAssetOrderByInput {
@@ -7620,6 +8034,8 @@ input cmp_PublicVideoAssetOrderByInput {
   Tags: cmp_TagOrderByInput
   Title: OrderBy
   Url: OrderBy
+  _assetMetadata: _AssetMetadataOrderByInput
+  _itemMetadata: _MetadataOrderByInput
   _minimumScore: Float
   _modified: OrderBy
   _ranking: Ranking
@@ -7656,7 +8072,9 @@ input cmp_PublicVideoAssetWhereInput {
   Title: SearchableStringFilterInput
   Url: StringFilterInput
   _and: [cmp_PublicVideoAssetWhereInput]
+  _assetMetadata: _AssetMetadataWhereInput
   _fulltext: SearchableStringFilterInput
+  _itemMetadata: _MetadataWhereInput
   _modified: DateFilterInput
   _not: [cmp_PublicVideoAssetWhereInput]
   _or: [cmp_PublicVideoAssetWhereInput]
@@ -7838,7 +8256,7 @@ input cmp_RichTextFieldWhereInput {
   name: SearchableStringFilterInput
 }
 
-type cmp_StructuredContentAsset implements IData & Icmp_Asset {
+type cmp_StructuredContentAsset implements IData & Icmp_Asset & _IAssetItem & _IItem {
   DateCreated: Date
   DateModified: Date
   ExpiryDate: Date
@@ -7851,10 +8269,12 @@ type cmp_StructuredContentAsset implements IData & Icmp_Asset {
   ParentFolderGuid: String
   Tags: [cmp_Tag]
   Title(highlight: HighlightOptions): String
+  _assetMetadata: _AssetMetadata
   _children: QueryRef @deprecated(reason: "Use `_link` field instead")
   _deleted: Bool
   _fulltext(highlight: HighlightOptions): [String]
   _id: String
+  _itemMetadata: _Metadata
   _json: JSON
   _link(type: LinkTypes): QueryRef
   _modified: Date
@@ -7871,6 +8291,8 @@ type cmp_StructuredContentAssetAutocomplete {
   MimeType(limit: Int! = 10, value: String!): [String]
   ParentFolderGuid(limit: Int! = 10, value: String!): [String]
   Tags: cmp_TagAutocomplete
+  _assetMetadata: _AssetMetadataAutocomplete
+  _itemMetadata: _MetadataAutocomplete
 }
 
 type cmp_StructuredContentAssetFacet {
@@ -7886,6 +8308,8 @@ type cmp_StructuredContentAssetFacet {
   ParentFolderGuid(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
   Tags: cmp_TagFacet
   Title(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  _assetMetadata: _AssetMetadataFacet
+  _itemMetadata: _MetadataFacet
   name(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
 }
 
@@ -7902,6 +8326,8 @@ input cmp_StructuredContentAssetOrderByInput {
   ParentFolderGuid: OrderBy
   Tags: cmp_TagOrderByInput
   Title: OrderBy
+  _assetMetadata: _AssetMetadataOrderByInput
+  _itemMetadata: _MetadataOrderByInput
   _minimumScore: Float
   _modified: OrderBy
   _ranking: Ranking
@@ -7935,7 +8361,9 @@ input cmp_StructuredContentAssetWhereInput {
   Tags: cmp_TagWhereInput
   Title: SearchableStringFilterInput
   _and: [cmp_StructuredContentAssetWhereInput]
+  _assetMetadata: _AssetMetadataWhereInput
   _fulltext: SearchableStringFilterInput
+  _itemMetadata: _MetadataWhereInput
   _modified: DateFilterInput
   _not: [cmp_StructuredContentAssetWhereInput]
   _or: [cmp_StructuredContentAssetWhereInput]
@@ -8231,7 +8659,6 @@ input marvinBlockWhereInput {
 }
 
 type shared_block_prototype implements IData & _IComponent & _IContent & _IItem {
-  Block: [ParagraphProperty]
   Shared_block: [ContentReference]
   _children: QueryRef @deprecated(reason: "Use `_link` field instead")
   _deleted: Bool
@@ -8253,14 +8680,12 @@ type shared_block_prototypeAutocomplete {
 }
 
 type shared_block_prototypeFacet {
-  Block: ParagraphPropertyFacet
   Shared_block: ContentReferenceFacet
   _itemMetadata: _MetadataFacet
   _metadata: IContentMetadataFacet
 }
 
 input shared_block_prototypeOrderByInput {
-  Block: ParagraphPropertyOrderByInput
   Shared_block: ContentReferenceOrderByInput
   _itemMetadata: _MetadataOrderByInput
   _metadata: IContentMetadataOrderByInput
@@ -8283,7 +8708,6 @@ type shared_block_prototypeOutput {
 }
 
 input shared_block_prototypeWhereInput {
-  Block: ParagraphPropertyWhereInput
   Shared_block: ContentReferenceWhereInput
   _and: [shared_block_prototypeWhereInput]
   _fulltext: SearchableStringFilterInput

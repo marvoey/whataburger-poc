@@ -1,5 +1,6 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
+import { fileURLToPath } from 'node:url';
 
 import netlify from '@astrojs/netlify';
 
@@ -7,4 +8,11 @@ import netlify from '@astrojs/netlify';
 export default defineConfig({
   output: 'server',
   adapter: netlify(),
+  vite: {
+    resolve: {
+      alias: {
+        '@styles': fileURLToPath(new URL('./src/styles', import.meta.url)),
+      },
+    },
+  },
 });

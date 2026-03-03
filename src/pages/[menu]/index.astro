@@ -1,13 +1,81 @@
 ---
 import Layout from '@layouts/Layout.astro';
-import { loadCategories } from '@lib/menu';
-import { slugify, label } from '@lib/utils';
+import { GraphClient } from '@optimizely/cms-sdk';
+
+const cmsClient = new GraphClient(import.meta.env.OPTIMIZELY_GRAPH_SINGLE_KEY, {
+  graphUrl: `${import.meta.env.OPTIMIZELY_GRAPH_GATEWAY}/content/v2`,
+});
 
 const { menu } = Astro.params;
-const raw = loadCategories();
-const found = raw.find((c) => c.category === menu);
-if (!found) return Astro.redirect('/404');
-const { category, items } = found;
+
+// --- Domain resolution ---
+const CMS_ORIGIN = import.meta.env.CMS_ORIGIN as string | undefined;
+const DOMAIN_ALIASES = import.meta.env.DOMAIN_ALIASES as string | undefined;
+const aliases = new Set((DOMAIN_ALIASES ?? '').split(',').map((s) => s.trim()).filter(Boolean));
+const base = CMS_ORIGIN && aliases.has(Astro.url.host) ? CMS_ORIGIN : Astro.url.origin;
+
+const result = await cmsClient.request(`
+  query MenuPageByPath($base: String!, $menu: String!) {
+    _Page(
+      where: {
+        _metadata: {
+          url: {
+            base: { eq: $base }
+            default: { eq: $menu }
+          }
+        }
+      }
+      limit: 1
+    ) {
+      items {
+        _metadata {
+          key
+          displayName
+          url { base default hierarchical }
+        }
+      }
+    }
+  }
+`, { base, menu: `/${menu}/` });
+
+const page = result?._Page?.items?.[0];
+const pageHierarchical = page?._metadata?.url?.hierarchical;
+
+const childrenResult = pageHierarchical ? await cmsClient.request(`
+  query ChildPages($base: String!, $menu: String!) {
+    _Page(
+      where: {
+        _metadata: {
+          url: {
+            base: { eq: $base }
+            hierarchical: { startsWith: $menu, notEq: $menu }
+          }
+        }
+      }
+    ) {
+      items {
+        _metadata {
+          displayName
+          url { default hierarchical }
+        }
+      }
+    }
+  }
+`, { base, menu: pageHierarchical }) : null;
+
+type PageItem = { _metadata?: { displayName?: string; url?: { default?: string; hierarchical?: string } } };
+
+const parentDepth = (pageHierarchical?.match(/\//g) ?? []).length;
+const children = ((childrenResult?._Page?.items ?? []) as PageItem[]).filter((item) => {
+  const path = item._metadata?.url?.hierarchical ?? '';
+  return (path.match(/\//g) ?? []).length === parentDepth + 1;
+});
+
+const menus = children.map((item) => {
+  const name = item._metadata?.displayName ?? '';
+  const slug = item._metadata?.url?.default;
+  return { name, slug };
+});
 ---
 
 <Layout>
@@ -19,17 +87,23 @@ const { category, items } = found;
     </header>
 
     <div class="content">
-      <h1 class="page-title">{label(category)}</h1>
+      <h1 class="page-title">{page._metadata.displayName}</h1>
+
+      <div class="section-divider">
+        <span class="divider-line" />
+        <span class="divider-text">Categories</span>
+        <span class="divider-line" />
+      </div>
 
       <ul class="category-grid">
-        {items.map((item) => (
+        {menus.map((menu) => (
           <li>
-            <a class="cat-card" href={`/${menu}/${slugify(item.name)}`}>
+            <a class="cat-card" href={menu.slug}>
               <div class="card-img-wrap">
-                <img src="/images/Whataburger30.png" alt={item.name} class="card-img" />
+                <img src="/images/Whataburger30.png" alt={menu.name} class="card-img" />
               </div>
               <div class="caption">
-                <h4>{item.name}</h4>
+                <h4>{menu.name}</h4>
               </div>
             </a>
           </li>

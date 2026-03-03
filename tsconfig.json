@@ -10,7 +10,8 @@
       "@lib/*": ["src/lib/*"],
       "@layouts/*": ["src/layouts/*"],
       "@cms/*": ["src/cms/*"],
-      "@pages/*": ["src/pages/*"]
+      "@pages/*": ["src/pages/*"],
+      "@styles/*": ["src/styles/*"]
     },
     "plugins": [
       {

@@ -1,0 +1,137 @@
+---
+import Layout from "@layouts/Layout.astro";
+import { GraphClient } from "@optimizely/cms-sdk";
+import "@styles/item.css";
+
+const { menu, category, item: itemSlug } = Astro.params;
+
+const cmsClient = new GraphClient(import.meta.env.OPTIMIZELY_GRAPH_SINGLE_KEY, {
+  graphUrl: `${import.meta.env.OPTIMIZELY_GRAPH_GATEWAY}/content/v2`,
+});
+
+const CMS_ORIGIN = import.meta.env.CMS_ORIGIN as string | undefined;
+const DOMAIN_ALIASES = import.meta.env.DOMAIN_ALIASES as string | undefined;
+const aliases = new Set(
+  (DOMAIN_ALIASES ?? "")
+    .split(",")
+    .map((s) => s.trim())
+    .filter(Boolean),
+);
+const base =
+  CMS_ORIGIN && aliases.has(Astro.url.host) ? CMS_ORIGIN : Astro.url.origin;
+
+const result = await cmsClient.request(
+  `
+  query ItemPageByPath($base: String!, $path: String!) {
+    WhataItemPage(
+      where: {
+        _metadata: {
+          url: {
+            base: { eq: $base }
+            default: { eq: $path }
+          }
+        }
+      }
+      limit: 1
+    ) {
+      items {
+        _metadata {
+          displayName
+          url { default hierarchical }
+        }
+        CustomOptions {
+          ... on WhataCustomOptionsGroup {
+            _metadata { displayName }
+            chooseOne
+            Options {
+              ... on WhataOption {
+                _metadata { displayName }
+                Calories
+                addedCost
+                Quantity
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`,
+  { base, path: `/${menu}/${category}/${itemSlug}/` },
+);
+
+const page = result?.WhataItemPage?.items?.[0];
+const itemName = page?._metadata?.displayName ?? itemSlug;
+
+type CmsOption = {
+  _metadata?: { displayName?: string | null } | null;
+  Calories?: number | null;
+  addedCost?: number | null;
+  Quantity?: number | null;
+};
+
+type CmsGroup = {
+  _metadata?: { displayName?: string | null } | null;
+  chooseOne?: boolean | null;
+  Options?: (CmsOption | null)[] | null;
+};
+
+function optionInfo(opt: CmsOption): string {
+  const parts: string[] = [];
+  if (opt.Calories) parts.push(`${opt.Calories} cal`);
+  if (opt.addedCost) parts.push(`+$${opt.addedCost.toFixed(2)}`);
+  return parts.join(" · ");
+}
+
+const groups = (page?.CustomOptions ?? []) as CmsGroup[];
+---
+
+<Layout>
+  <div class="page">
+    <header>
+      <a class="back" href={`/${menu}/${category}`}>&lsaquo; BACK</a>
+      <span class="brand">WHATABURGER</span>
+      <span class="spacer"></span>
+    </header>
+
+    <div class="content">
+      <h1 class="page-title">{itemName}</h1>
+
+      <div class="section-divider">
+        <span class="divider-line" />
+        <span class="divider-text">{category}</span>
+        <span class="divider-line" />
+      </div>
+
+      <div class="item-hero">
+        <div class="hero-img-wrap">
+          <img src="/images/Whataburger30.png" alt={itemName} class="hero-img" />
+        </div>
+      </div>
+
+      {
+        groups.map((group) => (
+          <div class="group">
+            <div class="group-header">
+              <span class="group-name">{group._metadata?.displayName}</span>
+              <span class="group-type">{group.chooseOne ? "radio" : "checkbox"}</span>
+            </div>
+            <ul class="options-list">
+              {(group.Options ?? []).map((opt) => {
+                if (!opt) return null;
+                const info = optionInfo(opt);
+                return (
+                  <li class="option-row">
+                    <div class={`option-control ${group.chooseOne ? "radio" : "checkbox"}`} />
+                    <span class="option-name">{opt._metadata?.displayName}</span>
+                    {info && <span class="option-info">{info}</span>}
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</Layout>
