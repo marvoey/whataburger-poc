@@ -40,6 +40,13 @@ const result = await cmsClient.request(
           displayName
           url { default hierarchical }
         }
+        Image {
+          ... on ImageMedia {
+            _assetMetadata {
+              url
+            }
+          }
+        }
         CustomOptions {
           ... on WhataCustomOptionsGroup {
             _metadata { displayName }
@@ -71,7 +78,7 @@ const groups = page?.CustomOptions ?? [];
   <Page title={itemName} dividerLabel={category ?? ''} backHref={`/${menu}/${category}`}>
     <div class="item-hero">
       <div class="hero-img-wrap">
-        <img src="/images/Whataburger30.png" alt={itemName} class="hero-img" />
+        <img src={page?.Image?._assetMetadata?.url ?? '/images/Whataburger30.png'} alt={itemName} class="hero-img" />
       </div>
     </div>
 

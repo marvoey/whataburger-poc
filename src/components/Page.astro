@@ -10,13 +10,13 @@ const { title, dividerLabel, backHref } = Astro.props;
 
 <div class="page">
   <header>
+    <a class="brand" href="/"><img src="https://whataburger.com/assets/images/navigation/whataburger-footer-logo.png" alt="Whataburger" /></a>
+    <span class="spacer" />
     {backHref ? (
       <a class="back" href={backHref}>&lsaquo; BACK</a>
     ) : (
       <span class="back">&lsaquo; BACK</span>
     )}
-    <span class="brand">WHATABURGER</span>
-    <span class="spacer" />
   </header>
 
   <div class="content">

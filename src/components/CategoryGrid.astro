@@ -1,6 +1,6 @@
 ---
 interface Props {
-  items: { name: string; slug?: string | null }[];
+  items: { name: string; slug?: string | null; image?: string | null }[];
 }
 
 const { items } = Astro.props;
@@ -11,7 +11,7 @@ const { items } = Astro.props;
     <li>
       <a class="cat-card" href={item.slug}>
         <div class="card-img-wrap">
-          <img src="/images/Whataburger30.png" alt={item.name} class="card-img" />
+          <img src={item.image ?? `https://picsum.photos/seed/${encodeURIComponent(item.name)}/400/300`} alt={item.name} class="card-img" />
         </div>
         <div class="caption">
           <h4>{item.name}</h4>

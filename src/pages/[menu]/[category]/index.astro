@@ -45,7 +45,7 @@ const pageHierarchical = page?._metadata?.url?.hierarchical;
 
 const childrenResult = pageHierarchical ? await cmsClient.request(`
   query ChildPages($base: String!, $menu: String!) {
-    _Page(
+    WhataItemPage(
       where: {
         _metadata: {
           url: {
@@ -54,7 +54,7 @@ const childrenResult = pageHierarchical ? await cmsClient.request(`
           }
         }
       }
-      orderBy: {                                                                                              
+      orderBy: {
         _metadata: {
           sortOrder: ASC
         }
@@ -65,15 +65,22 @@ const childrenResult = pageHierarchical ? await cmsClient.request(`
           displayName
           url { default hierarchical }
         }
+        Image {
+          ... on ImageMedia {
+            _assetMetadata {
+              url
+            }
+          }
+        }
       }
     }
   }
 `, { base, menu: pageHierarchical }) : null;
 
-type PageItem = { _metadata?: { displayName?: string; url?: { default?: string; hierarchical?: string } } };
+type PageItem = { _metadata?: { displayName?: string; url?: { default?: string; hierarchical?: string } }; Image?: { _assetMetadata?: { url?: string } } };
 
 const parentDepth = (pageHierarchical?.match(/\//g) ?? []).length;
-const children = ((childrenResult?._Page?.items ?? []) as PageItem[]).filter((item) => {
+const children = ((childrenResult?.WhataItemPage?.items ?? []) as PageItem[]).filter((item) => {
   const path = item._metadata?.url?.hierarchical ?? '';
   return (path.match(/\//g) ?? []).length === parentDepth + 1;
 });
@@ -81,7 +88,8 @@ const children = ((childrenResult?._Page?.items ?? []) as PageItem[]).filter((it
 const menus = children.map((item) => {
   const name = item._metadata?.displayName ?? '';
   const slug = item._metadata?.url?.default;
-  return { name, slug };
+  const image = item.Image?._assetMetadata?.url;
+  return { name, slug, image };
 });
 ---
 

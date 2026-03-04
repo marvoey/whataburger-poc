@@ -6610,7 +6610,6 @@ export type Query = {
   WhataItemPage?: Maybe<WhataItemPageOutput>;
   WhataMenuPage?: Maybe<WhataMenuPageOutput>;
   WhataOption?: Maybe<WhataOptionOutput>;
-  WhataRoot?: Maybe<WhataRootOutput>;
   _AssetItem?: Maybe<_AssetItemOutput>;
   _Component?: Maybe<_ComponentOutput>;
   _Content?: Maybe<_ContentOutput>;
@@ -7587,20 +7586,6 @@ export type QueryWhataOptionArgs = {
 };
 
 
-export type QueryWhataRootArgs = {
-  cursor?: InputMaybe<Scalars['String']['input']>;
-  ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  limit?: Scalars['Int']['input'];
-  locale?: InputMaybe<Array<InputMaybe<Locales>>>;
-  orderBy?: InputMaybe<WhataRootOrderByInput>;
-  pinned?: InputMaybe<PinnedInput>;
-  skip?: Scalars['Int']['input'];
-  track?: InputMaybe<Scalars['String']['input']>;
-  variation?: InputMaybe<VariationInput>;
-  where?: InputMaybe<WhataRootWhereInput>;
-};
-
-
 export type Query_AssetItemArgs = {
   cursor?: InputMaybe<Scalars['String']['input']>;
   ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
@@ -8159,7 +8144,6 @@ export type QueryRef = {
   WhataItemPage?: Maybe<WhataItemPageOutput>;
   WhataMenuPage?: Maybe<WhataMenuPageOutput>;
   WhataOption?: Maybe<WhataOptionOutput>;
-  WhataRoot?: Maybe<WhataRootOutput>;
   _AssetItem?: Maybe<_AssetItemOutput>;
   _Component?: Maybe<_ComponentOutput>;
   _Content?: Maybe<_ContentOutput>;
@@ -9133,20 +9117,6 @@ export type QueryRefWhataOptionArgs = {
   track?: InputMaybe<Scalars['String']['input']>;
   variation?: InputMaybe<VariationInput>;
   where?: InputMaybe<WhataOptionWhereInput>;
-};
-
-
-export type QueryRefWhataRootArgs = {
-  cursor?: InputMaybe<Scalars['String']['input']>;
-  ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  limit?: Scalars['Int']['input'];
-  locale?: InputMaybe<Array<InputMaybe<Locales>>>;
-  orderBy?: InputMaybe<WhataRootOrderByInput>;
-  pinned?: InputMaybe<PinnedInput>;
-  skip?: Scalars['Int']['input'];
-  track?: InputMaybe<Scalars['String']['input']>;
-  variation?: InputMaybe<VariationInput>;
-  where?: InputMaybe<WhataRootWhereInput>;
 };
 
 
@@ -10766,6 +10736,7 @@ export type VideoWhereInput = {
 
 export type WhataCategoryPage = IData & _IContent & _IItem & _IPage & {
   __typename?: 'WhataCategoryPage';
+  Image?: Maybe<_IContent>;
   /** @deprecated Use `_link` field instead */
   _children?: Maybe<QueryRef>;
   _deleted?: Maybe<Scalars['Bool']['output']>;
@@ -10792,17 +10763,20 @@ export type WhataCategoryPage_LinkArgs = {
 
 export type WhataCategoryPageAutocomplete = {
   __typename?: 'WhataCategoryPageAutocomplete';
+  Image?: Maybe<_IContentAutocomplete>;
   _itemMetadata?: Maybe<_MetadataAutocomplete>;
   _metadata?: Maybe<IContentMetadataAutocomplete>;
 };
 
 export type WhataCategoryPageFacet = {
   __typename?: 'WhataCategoryPageFacet';
+  Image?: Maybe<_IContentFacet>;
   _itemMetadata?: Maybe<_MetadataFacet>;
   _metadata?: Maybe<IContentMetadataFacet>;
 };
 
 export type WhataCategoryPageOrderByInput = {
+  Image?: InputMaybe<_IContentOrderByInput>;
   _itemMetadata?: InputMaybe<_MetadataOrderByInput>;
   _metadata?: InputMaybe<IContentMetadataOrderByInput>;
   _minimumScore?: InputMaybe<Scalars['Float']['input']>;
@@ -10828,6 +10802,7 @@ export type WhataCategoryPageOutputTotalArgs = {
 };
 
 export type WhataCategoryPageWhereInput = {
+  Image?: InputMaybe<_IContentWhereInput>;
   _and?: InputMaybe<Array<InputMaybe<WhataCategoryPageWhereInput>>>;
   _fulltext?: InputMaybe<SearchableStringFilterInput>;
   _itemMetadata?: InputMaybe<_MetadataWhereInput>;
@@ -10919,6 +10894,7 @@ export type WhataCustomOptionsGroupWhereInput = {
 export type WhataItemPage = IData & _IContent & _IItem & _IPage & {
   __typename?: 'WhataItemPage';
   CustomOptions?: Maybe<Array<Maybe<_IContent>>>;
+  Image?: Maybe<_IContent>;
   /** @deprecated Use `_link` field instead */
   _children?: Maybe<QueryRef>;
   _deleted?: Maybe<Scalars['Bool']['output']>;
@@ -10946,6 +10922,7 @@ export type WhataItemPage_LinkArgs = {
 export type WhataItemPageAutocomplete = {
   __typename?: 'WhataItemPageAutocomplete';
   CustomOptions?: Maybe<_IContentAutocomplete>;
+  Image?: Maybe<_IContentAutocomplete>;
   _itemMetadata?: Maybe<_MetadataAutocomplete>;
   _metadata?: Maybe<IContentMetadataAutocomplete>;
 };
@@ -10953,12 +10930,14 @@ export type WhataItemPageAutocomplete = {
 export type WhataItemPageFacet = {
   __typename?: 'WhataItemPageFacet';
   CustomOptions?: Maybe<_IContentFacet>;
+  Image?: Maybe<_IContentFacet>;
   _itemMetadata?: Maybe<_MetadataFacet>;
   _metadata?: Maybe<IContentMetadataFacet>;
 };
 
 export type WhataItemPageOrderByInput = {
   CustomOptions?: InputMaybe<_IContentOrderByInput>;
+  Image?: InputMaybe<_IContentOrderByInput>;
   _itemMetadata?: InputMaybe<_MetadataOrderByInput>;
   _metadata?: InputMaybe<IContentMetadataOrderByInput>;
   _minimumScore?: InputMaybe<Scalars['Float']['input']>;
@@ -10985,6 +10964,7 @@ export type WhataItemPageOutputTotalArgs = {
 
 export type WhataItemPageWhereInput = {
   CustomOptions?: InputMaybe<_IContentWhereInput>;
+  Image?: InputMaybe<_IContentWhereInput>;
   _and?: InputMaybe<Array<InputMaybe<WhataItemPageWhereInput>>>;
   _fulltext?: InputMaybe<SearchableStringFilterInput>;
   _itemMetadata?: InputMaybe<_MetadataWhereInput>;
@@ -11141,79 +11121,6 @@ export type WhataOptionWhereInput = {
   _modified?: InputMaybe<DateFilterInput>;
   _not?: InputMaybe<Array<InputMaybe<WhataOptionWhereInput>>>;
   _or?: InputMaybe<Array<InputMaybe<WhataOptionWhereInput>>>;
-};
-
-export type WhataRoot = IData & _IContent & _IItem & _IPage & {
-  __typename?: 'WhataRoot';
-  /** @deprecated Use `_link` field instead */
-  _children?: Maybe<QueryRef>;
-  _deleted?: Maybe<Scalars['Bool']['output']>;
-  _fulltext?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
-  _id?: Maybe<Scalars['String']['output']>;
-  _itemMetadata?: Maybe<_Metadata>;
-  _json?: Maybe<Scalars['JSON']['output']>;
-  _link?: Maybe<QueryRef>;
-  _metadata?: Maybe<IContentMetadata>;
-  _modified?: Maybe<Scalars['Date']['output']>;
-  _score?: Maybe<Scalars['Float']['output']>;
-  _track?: Maybe<Scalars['String']['output']>;
-};
-
-
-export type WhataRoot_FulltextArgs = {
-  highlight?: InputMaybe<HighlightOptions>;
-};
-
-
-export type WhataRoot_LinkArgs = {
-  type?: InputMaybe<LinkTypes>;
-};
-
-export type WhataRootAutocomplete = {
-  __typename?: 'WhataRootAutocomplete';
-  _itemMetadata?: Maybe<_MetadataAutocomplete>;
-  _metadata?: Maybe<IContentMetadataAutocomplete>;
-};
-
-export type WhataRootFacet = {
-  __typename?: 'WhataRootFacet';
-  _itemMetadata?: Maybe<_MetadataFacet>;
-  _metadata?: Maybe<IContentMetadataFacet>;
-};
-
-export type WhataRootOrderByInput = {
-  _itemMetadata?: InputMaybe<_MetadataOrderByInput>;
-  _metadata?: InputMaybe<IContentMetadataOrderByInput>;
-  _minimumScore?: InputMaybe<Scalars['Float']['input']>;
-  _modified?: InputMaybe<OrderBy>;
-  _ranking?: InputMaybe<Ranking>;
-  /** The value needs to be a positive value, but cannot exceed the maximum value of an integer. In case it is exceeded, the maximum of an integer is used. In case of a negative value, semantic search will be disabled. */
-  _semanticWeight?: InputMaybe<Scalars['Float']['input']>;
-};
-
-export type WhataRootOutput = {
-  __typename?: 'WhataRootOutput';
-  autocomplete?: Maybe<WhataRootAutocomplete>;
-  cursor?: Maybe<Scalars['String']['output']>;
-  facets?: Maybe<WhataRootFacet>;
-  item?: Maybe<WhataRoot>;
-  items?: Maybe<Array<Maybe<WhataRoot>>>;
-  total?: Maybe<Scalars['Int']['output']>;
-};
-
-
-export type WhataRootOutputTotalArgs = {
-  all?: InputMaybe<Scalars['Boolean']['input']>;
-};
-
-export type WhataRootWhereInput = {
-  _and?: InputMaybe<Array<InputMaybe<WhataRootWhereInput>>>;
-  _fulltext?: InputMaybe<SearchableStringFilterInput>;
-  _itemMetadata?: InputMaybe<_MetadataWhereInput>;
-  _metadata?: InputMaybe<IContentMetadataWhereInput>;
-  _modified?: InputMaybe<DateFilterInput>;
-  _not?: InputMaybe<Array<InputMaybe<WhataRootWhereInput>>>;
-  _or?: InputMaybe<Array<InputMaybe<WhataRootWhereInput>>>;
 };
 
 export type _AssetItem = IData & _IAssetItem & _IItem & {
@@ -16949,7 +16856,6 @@ export type TestQuery = { __typename?: 'Query', Data?: { __typename?: 'DataOutpu
       | { __typename?: 'WhataItemPage', _json?: any | null }
       | { __typename?: 'WhataMenuPage', _json?: any | null }
       | { __typename?: 'WhataOption', _json?: any | null }
-      | { __typename?: 'WhataRoot', _json?: any | null }
       | { __typename?: '_AssetItem', _json?: any | null }
       | { __typename?: '_Component', _json?: any | null }
       | { __typename?: '_Content', _json?: any | null }

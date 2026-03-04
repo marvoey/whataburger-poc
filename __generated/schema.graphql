@@ -4454,7 +4454,6 @@ type Query {
   WhataItemPage(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: WhataItemPageOrderByInput, pinned: PinnedInput, skip: Int! = 0, track: String, variation: VariationInput, where: WhataItemPageWhereInput): WhataItemPageOutput
   WhataMenuPage(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: WhataMenuPageOrderByInput, pinned: PinnedInput, skip: Int! = 0, track: String, variation: VariationInput, where: WhataMenuPageWhereInput): WhataMenuPageOutput
   WhataOption(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: WhataOptionOrderByInput, pinned: PinnedInput, skip: Int! = 0, track: String, variation: VariationInput, where: WhataOptionWhereInput): WhataOptionOutput
-  WhataRoot(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: WhataRootOrderByInput, pinned: PinnedInput, skip: Int! = 0, track: String, variation: VariationInput, where: WhataRootWhereInput): WhataRootOutput
   _AssetItem(cursor: String, ids: [String], limit: Int! = 20, locale: [cmp_Locales], orderBy: _AssetItemOrderByInput, pinned: PinnedInput, skip: Int! = 0, track: String, variation: VariationInput, where: _AssetItemWhereInput): _AssetItemOutput
   _Component(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: _ComponentOrderByInput, pinned: PinnedInput, skip: Int! = 0, track: String, variation: VariationInput, where: _ComponentWhereInput): _ComponentOutput
   _Content(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: _ContentOrderByInput, pinned: PinnedInput, skip: Int! = 0, track: String, variation: VariationInput, where: _ContentWhereInput): _ContentOutput
@@ -4560,7 +4559,6 @@ type QueryRef {
   WhataItemPage(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: WhataItemPageOrderByInput, pinned: PinnedInput, skip: Int! = 0, track: String, variation: VariationInput, where: WhataItemPageWhereInput): WhataItemPageOutput
   WhataMenuPage(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: WhataMenuPageOrderByInput, pinned: PinnedInput, skip: Int! = 0, track: String, variation: VariationInput, where: WhataMenuPageWhereInput): WhataMenuPageOutput
   WhataOption(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: WhataOptionOrderByInput, pinned: PinnedInput, skip: Int! = 0, track: String, variation: VariationInput, where: WhataOptionWhereInput): WhataOptionOutput
-  WhataRoot(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: WhataRootOrderByInput, pinned: PinnedInput, skip: Int! = 0, track: String, variation: VariationInput, where: WhataRootWhereInput): WhataRootOutput
   _AssetItem(cursor: String, ids: [String], limit: Int! = 20, locale: [cmp_Locales], orderBy: _AssetItemOrderByInput, pinned: PinnedInput, skip: Int! = 0, track: String, variation: VariationInput, where: _AssetItemWhereInput): _AssetItemOutput
   _Component(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: _ComponentOrderByInput, pinned: PinnedInput, skip: Int! = 0, track: String, variation: VariationInput, where: _ComponentWhereInput): _ComponentOutput
   _Content(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: _ContentOrderByInput, pinned: PinnedInput, skip: Int! = 0, track: String, variation: VariationInput, where: _ContentWhereInput): _ContentOutput
@@ -5420,6 +5418,7 @@ input VideoWhereInput {
 }
 
 type WhataCategoryPage implements IData & _IContent & _IItem & _IPage {
+  Image: _IContent
   _children: QueryRef @deprecated(reason: "Use `_link` field instead")
   _deleted: Bool
   _fulltext(highlight: HighlightOptions): [String]
@@ -5434,16 +5433,19 @@ type WhataCategoryPage implements IData & _IContent & _IItem & _IPage {
 }
 
 type WhataCategoryPageAutocomplete {
+  Image: _IContentAutocomplete
   _itemMetadata: _MetadataAutocomplete
   _metadata: IContentMetadataAutocomplete
 }
 
 type WhataCategoryPageFacet {
+  Image: _IContentFacet
   _itemMetadata: _MetadataFacet
   _metadata: IContentMetadataFacet
 }
 
 input WhataCategoryPageOrderByInput {
+  Image: _IContentOrderByInput
   _itemMetadata: _MetadataOrderByInput
   _metadata: IContentMetadataOrderByInput
   _minimumScore: Float
@@ -5465,6 +5467,7 @@ type WhataCategoryPageOutput {
 }
 
 input WhataCategoryPageWhereInput {
+  Image: _IContentWhereInput
   _and: [WhataCategoryPageWhereInput]
   _fulltext: SearchableStringFilterInput
   _itemMetadata: _MetadataWhereInput
@@ -5537,6 +5540,7 @@ input WhataCustomOptionsGroupWhereInput {
 
 type WhataItemPage implements IData & _IContent & _IItem & _IPage {
   CustomOptions: [_IContent]
+  Image: _IContent
   _children: QueryRef @deprecated(reason: "Use `_link` field instead")
   _deleted: Bool
   _fulltext(highlight: HighlightOptions): [String]
@@ -5552,18 +5556,21 @@ type WhataItemPage implements IData & _IContent & _IItem & _IPage {
 
 type WhataItemPageAutocomplete {
   CustomOptions: _IContentAutocomplete
+  Image: _IContentAutocomplete
   _itemMetadata: _MetadataAutocomplete
   _metadata: IContentMetadataAutocomplete
 }
 
 type WhataItemPageFacet {
   CustomOptions: _IContentFacet
+  Image: _IContentFacet
   _itemMetadata: _MetadataFacet
   _metadata: IContentMetadataFacet
 }
 
 input WhataItemPageOrderByInput {
   CustomOptions: _IContentOrderByInput
+  Image: _IContentOrderByInput
   _itemMetadata: _MetadataOrderByInput
   _metadata: IContentMetadataOrderByInput
   _minimumScore: Float
@@ -5586,6 +5593,7 @@ type WhataItemPageOutput {
 
 input WhataItemPageWhereInput {
   CustomOptions: _IContentWhereInput
+  Image: _IContentWhereInput
   _and: [WhataItemPageWhereInput]
   _fulltext: SearchableStringFilterInput
   _itemMetadata: _MetadataWhereInput
@@ -5706,61 +5714,6 @@ input WhataOptionWhereInput {
   _modified: DateFilterInput
   _not: [WhataOptionWhereInput]
   _or: [WhataOptionWhereInput]
-}
-
-type WhataRoot implements IData & _IContent & _IItem & _IPage {
-  _children: QueryRef @deprecated(reason: "Use `_link` field instead")
-  _deleted: Bool
-  _fulltext(highlight: HighlightOptions): [String]
-  _id: String
-  _itemMetadata: _Metadata
-  _json: JSON
-  _link(type: LinkTypes): QueryRef
-  _metadata: IContentMetadata
-  _modified: Date
-  _score: Float
-  _track: String
-}
-
-type WhataRootAutocomplete {
-  _itemMetadata: _MetadataAutocomplete
-  _metadata: IContentMetadataAutocomplete
-}
-
-type WhataRootFacet {
-  _itemMetadata: _MetadataFacet
-  _metadata: IContentMetadataFacet
-}
-
-input WhataRootOrderByInput {
-  _itemMetadata: _MetadataOrderByInput
-  _metadata: IContentMetadataOrderByInput
-  _minimumScore: Float
-  _modified: OrderBy
-  _ranking: Ranking
-  """
-  The value needs to be a positive value, but cannot exceed the maximum value of an integer. In case it is exceeded, the maximum of an integer is used. In case of a negative value, semantic search will be disabled.
-  """
-  _semanticWeight: Float
-}
-
-type WhataRootOutput {
-  autocomplete: WhataRootAutocomplete
-  cursor: String
-  facets: WhataRootFacet
-  item: WhataRoot
-  items: [WhataRoot]
-  total(all: Boolean): Int
-}
-
-input WhataRootWhereInput {
-  _and: [WhataRootWhereInput]
-  _fulltext: SearchableStringFilterInput
-  _itemMetadata: _MetadataWhereInput
-  _metadata: IContentMetadataWhereInput
-  _modified: DateFilterInput
-  _not: [WhataRootWhereInput]
-  _or: [WhataRootWhereInput]
 }
 
 type _AssetItem implements IData & _IAssetItem & _IItem {
