@@ -1,0 +1,73 @@
+---
+interface Props {
+  current: 'index' | 'whata-menu-page' | 'whata-category-page' | 'whata-item-page';
+}
+
+const { current } = Astro.props;
+
+const items = [
+  { id: 'index',               label: 'Overview',             href: '/content-model' },
+  { id: 'whata-menu-page',     label: 'WhataMenuPage',        href: '/content-model/whata-menu-page' },
+  { id: 'whata-category-page', label: 'WhataCategoryPage',    href: '/content-model/whata-category-page' },
+  { id: 'whata-item-page',     label: 'WhataItemPage',        href: '/content-model/whata-item-page' },
+] as const;
+---
+
+<nav class="cm-nav" aria-label="Content model sections">
+  {items.map(item => (
+    <a
+      class:list={['cm-nav-item', { active: item.id === current }]}
+      href={item.href}
+      aria-current={item.id === current ? 'page' : undefined}
+    >
+      {item.label}
+    </a>
+  ))}
+</nav>
+
+<style>
+  .cm-nav {
+    max-width: 860px;
+    margin: 0 auto 28px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    border-bottom: 1px solid #444;
+    padding-bottom: 0;
+  }
+
+  .cm-nav-item {
+    display: inline-block;
+    padding: 7px 14px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    font-family: monospace;
+    color: #999;
+    text-decoration: none;
+    border-radius: 6px 6px 0 0;
+    border: 1px solid transparent;
+    border-bottom: none;
+    position: relative;
+    bottom: -1px;
+    transition: color 0.12s, background 0.12s;
+  }
+
+  .cm-nav-item:hover {
+    color: #e8e8e8;
+    background: #2a2a2a;
+  }
+
+  .cm-nav-item.active {
+    color: #f47920;
+    background: #2a2a2a;
+    border-color: #444;
+    border-bottom-color: #2a2a2a;
+  }
+
+  /* Overview pill is plain text, not monospace */
+  .cm-nav-item:first-child {
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 0.78rem;
+    letter-spacing: 0.03em;
+  }
+</style>

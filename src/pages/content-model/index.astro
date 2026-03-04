@@ -1,0 +1,217 @@
+---
+import Layout from '@layouts/Layout.astro';
+import Page from '@components/Page.astro';
+import Breadcrumb from '@components/Breadcrumb.astro';
+import ContentModelNav from '@components/ContentModelNav.astro';
+---
+
+<Layout>
+  <Page title="Content Model" dividerLabel="Content Types" backHref="/">
+    <Breadcrumb crumbs={[
+      { label: 'Home', href: '/' },
+      { label: 'Content Model' },
+    ]} />
+    <ContentModelNav current="index" />
+    <div class="cm-grid">
+
+      <a class="cm-card" href="/content-model/whata-menu-page">
+        <div class="cm-card-icon">M</div>
+        <div class="cm-card-body">
+          <h2 class="cm-type-name">WhataMenuPage</h2>
+          <p class="cm-type-desc">Top-level menu container (e.g. Burgers, Breakfast). Groups related categories together.</p>
+          <ul class="cm-fields-preview">
+            <li><code>_metadata</code> — IContentMetadata</li>
+          </ul>
+          <div class="cm-url-pattern">/[menu]/</div>
+        </div>
+      </a>
+
+      <a class="cm-card" href="/content-model/whata-category-page">
+        <div class="cm-card-icon">C</div>
+        <div class="cm-card-body">
+          <h2 class="cm-type-name">WhataCategoryPage</h2>
+          <p class="cm-type-desc">A category within a menu (e.g. Chicken, Salads). Holds an image and groups menu items.</p>
+          <ul class="cm-fields-preview">
+            <li><code>Image</code> — _IContent</li>
+            <li><code>_metadata</code> — IContentMetadata</li>
+          </ul>
+          <div class="cm-url-pattern">/[menu]/[category]/</div>
+        </div>
+      </a>
+
+      <a class="cm-card" href="/content-model/whata-item-page">
+        <div class="cm-card-icon">I</div>
+        <div class="cm-card-body">
+          <h2 class="cm-type-name">WhataItemPage</h2>
+          <p class="cm-type-desc">An individual menu item (e.g. Crispy Chicken Sandwich). Contains an image and customization options.</p>
+          <ul class="cm-fields-preview">
+            <li><code>Image</code> — _IContent</li>
+            <li><code>CustomOptions</code> — [_IContent]</li>
+            <li><code>_metadata</code> — IContentMetadata</li>
+          </ul>
+          <div class="cm-url-pattern">/[menu]/[category]/[item]/</div>
+        </div>
+      </a>
+
+    </div>
+
+    <div class="cm-hierarchy">
+      <h3 class="cm-section-heading">Content Hierarchy</h3>
+      <div class="cm-tree">
+        <div class="cm-tree-node level-0">
+          <span class="cm-node-label menu">WhataMenuPage</span>
+          <span class="cm-node-url">/burgers/</span>
+        </div>
+        <div class="cm-tree-node level-1">
+          <span class="cm-node-label category">WhataCategoryPage</span>
+          <span class="cm-node-url">/burgers/chicken/</span>
+        </div>
+        <div class="cm-tree-node level-2">
+          <span class="cm-node-label item">WhataItemPage</span>
+          <span class="cm-node-url">/burgers/chicken/crispy-chicken-sandwich/</span>
+        </div>
+      </div>
+    </div>
+
+  </Page>
+</Layout>
+
+<style>
+  .cm-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 16px;
+    max-width: 900px;
+    margin: 0 auto 40px;
+  }
+
+  .cm-card {
+    background: #2a2a2a;
+    border: 1px solid #555;
+    border-radius: 10px;
+    overflow: hidden;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
+  }
+
+  .cm-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+    border-color: #f47920;
+  }
+
+  .cm-card-icon {
+    background: #f47920;
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 900;
+    text-align: center;
+    padding: 18px 0;
+    letter-spacing: 0.05em;
+  }
+
+  .cm-card-body {
+    padding: 16px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .cm-type-name {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #f47920;
+    font-family: monospace;
+  }
+
+  .cm-type-desc {
+    margin: 0;
+    font-size: 0.82rem;
+    color: #bbb;
+    line-height: 1.5;
+  }
+
+  .cm-fields-preview {
+    list-style: none;
+    padding: 0;
+    margin: 4px 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .cm-fields-preview li {
+    font-size: 0.75rem;
+    color: #999;
+  }
+
+  .cm-fields-preview code {
+    color: #e8c47a;
+    font-size: 0.78rem;
+  }
+
+  .cm-url-pattern {
+    margin-top: auto;
+    padding-top: 10px;
+    font-size: 0.75rem;
+    font-family: monospace;
+    color: #7abfe8;
+    border-top: 1px solid #444;
+  }
+
+  .cm-hierarchy {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .cm-section-heading {
+    color: #aaa;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin: 0 0 16px;
+  }
+
+  .cm-tree {
+    background: #2a2a2a;
+    border: 1px solid #555;
+    border-radius: 10px;
+    padding: 20px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .cm-tree-node {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .cm-tree-node.level-1 { padding-left: 28px; }
+  .cm-tree-node.level-2 { padding-left: 56px; }
+
+  .cm-node-label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    font-family: monospace;
+    padding: 3px 10px;
+    border-radius: 4px;
+    white-space: nowrap;
+  }
+
+  .cm-node-label.menu    { background: #8b3c00; color: #f47920; }
+  .cm-node-label.category { background: #1a3a5c; color: #7abfe8; }
+  .cm-node-label.item    { background: #1a4a2a; color: #7ae8a0; }
+
+  .cm-node-url {
+    font-size: 0.75rem;
+    font-family: monospace;
+    color: #777;
+  }
+</style>

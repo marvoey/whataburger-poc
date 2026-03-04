@@ -1,0 +1,314 @@
+---
+import Layout from '@layouts/Layout.astro';
+import Page from '@components/Page.astro';
+import Breadcrumb from '@components/Breadcrumb.astro';
+import ContentModelNav from '@components/ContentModelNav.astro';
+---
+
+<Layout>
+  <Page title="WhataMenuPage" dividerLabel="Content Type" backHref="/content-model">
+    <Breadcrumb crumbs={[
+      { label: 'Home', href: '/' },
+      { label: 'Content Model', href: '/content-model' },
+      { label: 'WhataMenuPage' },
+    ]} />
+    <ContentModelNav current="whata-menu-page" />
+
+    <div class="doc-body">
+
+      <section class="doc-section">
+        <p class="doc-summary">
+          A <strong>WhataMenuPage</strong> is a top-level page that represents a named menu section
+          (e.g. <em>Burgers</em>, <em>Breakfast</em>, <em>Drinks</em>). It acts as a container for
+          <a href="/content-model/whata-category-page">WhataCategoryPage</a> children and has no
+          custom fields beyond standard CMS metadata.
+        </p>
+      </section>
+
+      <section class="doc-section">
+        <h2 class="doc-section-title">Fields</h2>
+        <table class="doc-table">
+          <thead>
+            <tr>
+              <th>Field</th>
+              <th>Type</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>_metadata.displayName</code></td>
+              <td>String</td>
+              <td>The menu name shown in the UI (e.g. <em>"Burgers"</em>).</td>
+            </tr>
+            <tr>
+              <td><code>_metadata.url.default</code></td>
+              <td>String</td>
+              <td>Short slug path used for routing (e.g. <code>/burgers/</code>).</td>
+            </tr>
+            <tr>
+              <td><code>_metadata.url.hierarchical</code></td>
+              <td>String</td>
+              <td>Full hierarchical path, used to scope child queries.</td>
+            </tr>
+            <tr>
+              <td><code>_metadata.url.base</code></td>
+              <td>String</td>
+              <td>Origin of the site. Supports multi-tenant deployments.</td>
+            </tr>
+            <tr>
+              <td><code>_metadata.sortOrder</code></td>
+              <td>Int</td>
+              <td>Controls the display order of menus on the home page.</td>
+            </tr>
+            <tr>
+              <td><code>_metadata.key</code></td>
+              <td>String</td>
+              <td>Unique content key used for cache invalidation and preview.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="doc-section">
+        <h2 class="doc-section-title">Relationships</h2>
+        <div class="doc-rel-grid">
+          <div class="doc-rel-card parent">
+            <div class="doc-rel-label">Parent</div>
+            <div class="doc-rel-type">Home Page <code>/</code></div>
+            <div class="doc-rel-desc">The root page lists all WhataMenuPage items ordered by <code>sortOrder</code>.</div>
+          </div>
+          <div class="doc-rel-card children">
+            <div class="doc-rel-label">Children</div>
+            <a class="doc-rel-type" href="/content-model/whata-category-page">WhataCategoryPage</a>
+            <div class="doc-rel-desc">
+              Queried by matching <code>url.hierarchical</code> with <code>startsWith</code> against
+              this page's hierarchical path.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="doc-section">
+        <h2 class="doc-section-title">URL Pattern</h2>
+        <div class="doc-url-block">
+          <span class="doc-url-route">Route file</span>
+          <code>src/pages/[menu]/index.astro</code>
+          <span class="doc-url-route">URL</span>
+          <code>/[menu]/</code>
+          <span class="doc-url-route">Example</span>
+          <code>/burgers/</code>
+        </div>
+      </section>
+
+      <section class="doc-section">
+        <h2 class="doc-section-title">GraphQL Query</h2>
+        <pre class="doc-code"><code>{`query MenuPageByPath($base: String!, $menu: String!) {
+  _Page(
+    where: {
+      _metadata: {
+        url: { base: { eq: $base }, default: { eq: $menu } }
+      }
+    }
+    limit: 1
+  ) {
+    items {
+      _metadata {
+        key
+        displayName
+        url { base default hierarchical }
+      }
+    }
+  }
+}
+
+# Children query (WhataCategoryPage)
+query ChildPages($base: String!, $menu: String!) {
+  WhataCategoryPage(
+    where: {
+      _metadata: {
+        url: {
+          base: { eq: $base }
+          hierarchical: { startsWith: $menu, notEq: $menu }
+        }
+      }
+    }
+    orderBy: { _metadata: { sortOrder: ASC } }
+  ) {
+    items {
+      _metadata { displayName url { default hierarchical } }
+      Image {
+        ... on ImageMedia { _assetMetadata { url } }
+      }
+    }
+  }
+}`}</code></pre>
+      </section>
+
+    </div>
+
+  </Page>
+</Layout>
+
+<style>
+  .doc-body {
+    max-width: 860px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .doc-summary {
+    color: #ccc;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  .doc-summary strong { color: #f47920; }
+  .doc-summary a { color: #7abfe8; text-decoration: none; }
+  .doc-summary a:hover { text-decoration: underline; }
+
+  .doc-section {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .doc-section-title {
+    margin: 0;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #aaa;
+  }
+
+  .doc-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+    background: #2a2a2a;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #444;
+  }
+
+  .doc-table th {
+    background: #333;
+    color: #ccc;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 10px 14px;
+    text-align: left;
+  }
+
+  .doc-table td {
+    padding: 10px 14px;
+    color: #ccc;
+    border-top: 1px solid #3a3a3a;
+    vertical-align: top;
+    line-height: 1.5;
+  }
+
+  .doc-table td:first-child { white-space: nowrap; }
+
+  .doc-table code {
+    color: #e8c47a;
+    font-size: 0.82rem;
+  }
+
+  .doc-table em { color: #999; font-style: italic; }
+
+  .doc-rel-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .doc-rel-card {
+    background: #2a2a2a;
+    border: 1px solid #444;
+    border-radius: 8px;
+    padding: 14px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .doc-rel-card.parent { border-left: 3px solid #888; }
+  .doc-rel-card.children { border-left: 3px solid #f47920; }
+
+  .doc-rel-label {
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #888;
+  }
+
+  .doc-rel-type {
+    font-family: monospace;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #f47920;
+    text-decoration: none;
+  }
+
+  a.doc-rel-type:hover { text-decoration: underline; }
+
+  .doc-rel-desc {
+    font-size: 0.8rem;
+    color: #999;
+    line-height: 1.5;
+  }
+
+  .doc-rel-desc code { color: #e8c47a; font-size: 0.78rem; }
+
+  .doc-url-block {
+    background: #2a2a2a;
+    border: 1px solid #444;
+    border-radius: 8px;
+    padding: 14px 16px;
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 6px 16px;
+    align-items: center;
+    font-size: 0.85rem;
+  }
+
+  .doc-url-route {
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #888;
+  }
+
+  .doc-url-block code {
+    color: #7abfe8;
+    font-size: 0.85rem;
+  }
+
+  .doc-code {
+    margin: 0;
+    background: #1e1e1e;
+    border: 1px solid #444;
+    border-radius: 8px;
+    padding: 16px 18px;
+    overflow-x: auto;
+    font-size: 0.78rem;
+    line-height: 1.6;
+    color: #ccc;
+  }
+
+  .doc-code code { font-family: monospace; }
+
+  @media (max-width: 600px) {
+    .doc-rel-grid { grid-template-columns: 1fr; }
+    .doc-url-block { grid-template-columns: 1fr; }
+  }
+</style>

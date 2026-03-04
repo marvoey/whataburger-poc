@@ -83,5 +83,29 @@ const groups = page?.CustomOptions ?? [];
     </div>
 
     <CustomizationGroups groups={groups} />
+    <div class="docs-link-wrap">
+      <a class="docs-link" href="/content-model">Content Model Docs &rsaquo;</a>
+    </div>
   </Page>
 </Layout>
+
+<style>
+  .docs-link-wrap {
+    max-width: 900px;
+    margin: 32px auto 0;
+    text-align: right;
+  }
+
+  .docs-link {
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    color: #888;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  .docs-link:hover {
+    color: #f47920;
+  }
+</style>
